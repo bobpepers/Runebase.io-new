@@ -1,0 +1,76 @@
+.button1 {
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: white;
+    text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px, rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(76, 175, 80);
+    border-image: initial;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+.button1:hover {
+  background-color: rgb(76, 175, 80) !important;
+}
+.nav-link.active {
+  background-color: rgb(76, 175, 80) !important;
+}
+
+a, button {
+    transition: all 0.2s ease-in-out 0s;
+}
+.underline {
+    width: 50%;
+    height: 4px;
+    background-color: black;
+}
+.titleStyled {
+    font-weight: 300;
+    margin-bottom: .9rem;
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+}
+.textStyled{
+  line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+.textBorder {
+  color: #ccc;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  background: #fff;
+}
+.fa{
+    font-family: FontAwesome !important;
+   }
+   .fab {
+    font-family: FontAwesome !important;
+    -webkit-font-smoothing: antialiased !important;
+    display: inline-block !important ;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+}
+.brand-icon-size {
+    text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px, rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px !important;
+    font-size: 100px !important;
+}
+
