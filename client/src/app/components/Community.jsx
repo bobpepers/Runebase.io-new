@@ -46,7 +46,11 @@ export default class Community extends Component{
 		  TelegramStyle = theme.hover.out;
 		}
         return (
-        	<Grid container className={`mt-${theme.spacing.section} mb-${theme.spacing.section}`}>
+        	<Grid container id='community' className={`mt-${theme.spacing.section} mb-${theme.spacing.section}`}>
+	        	<Grid item xs={12}>
+	        		<h3 className="textBorder w-100 text-center">Community</h3>
+	   				<div className="underline mx-auto mb-5"></div>
+	   			</Grid>
         		<Grid item xs={3}>
         			<div className="w-100 d-flex">
         				<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")} className="mx-auto" href="https://discord.gg/hYhZB9m">

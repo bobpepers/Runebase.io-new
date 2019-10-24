@@ -66,8 +66,8 @@ class DownloadOS extends Component {
   render() {
 
     return (
-      <div className="form-container">
-        <Button variant="contained" color="primary" href={this.renderDownloadLink(Platform.OS)}>{this.renderDownloadName(Platform.OS)}</Button>
+      <div className="single_slider pt-3 w-100 my-auto">
+        <a className='button1 showpointer' href={this.renderDownloadLink(Platform.OS)}>{this.renderDownloadName(Platform.OS)}</a>
       </div>
     )
   }

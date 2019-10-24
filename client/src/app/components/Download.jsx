@@ -4,15 +4,15 @@ import { Tabs, Tab, Nav } from 'react-bootstrap';
 import theme from '../theme'
 import {RUNEBASE_VERSION} from '../config';
 
-export default class Pools extends Component{
+export default class Download extends Component{
   constructor(props) {
     super(props)
   }
 
     render(){
         return (
-          <Grid container className={`mt-${theme.spacing.section} mb-${theme.spacing.section}`}>
-            <h3 class="textBorder mt-3 mt-md-5 w-100 text-center">Choose your Runebase Wallet</h3>
+          <Grid container id='wallets' className={`pt-${theme.spacing.section} pb-${theme.spacing.section} downloadBG`}>
+            <h3 className="textBorder w-100 text-center">Choose your Runebase Wallet</h3>
             <div className="underline mx-auto mb-5"></div>
             <Tab.Container defaultActiveKey="Desktop">
               <Grid container>
@@ -40,16 +40,16 @@ export default class Pools extends Component{
                           <div className="col-md-12">
                             <i className="fab fa-windows brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Windows</h3>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win64-setup.exe`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win64-setup.exe`}>
                               64bit.exe
                             </a>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-0.17.5-win64.zip`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-0.17.5-win64.zip`}>
                               64bit.zip
                             </a>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win32-setup.exe`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win32-setup.exe`}>
                               32bit.exe
                             </a>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win32.zip`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win32.zip`}>
                               32bit.zip
                             </a>
                           </div>
@@ -58,16 +58,16 @@ export default class Pools extends Component{
                           <div className="col-md-12">
                             <i className="fab fa-apple brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Mac OS</h3>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx.dmg`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx.dmg`}>
                               osx.dmg
                             </a>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx.tar.gz`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx.tar.gz`}>
                               osx.tar.gz
                             </a>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx64.tar.gz`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx64.tar.gz`}>
                               osx64.tar.gz
                             </a>
-                            <a class="w-100 button1" href="https://github.com/runebase/runebase">
+                            <a className="w-100 button1" href="https://github.com/runebase/runebase">
                               Core
                             </a>
                           </div>
@@ -76,16 +76,16 @@ export default class Pools extends Component{
                           <div className="col-md-12">
                             <i className="fab fa-linux brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Linux</h3>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-x86_64-linux-gnu.tar.gz`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-x86_64-linux-gnu.tar.gz`}>
                               x86_64.tar.gz
                             </a>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-i686-pc-linux-gnu.tar.gz`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-i686-pc-linux-gnu.tar.gz`}>
                               i686.tar.gz
                             </a>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-arm-linux-gnueabihf.tar.gz`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-arm-linux-gnueabihf.tar.gz`}>
                               arm.tar.gz
                             </a>
-                            <a class="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-aarch64-linux-gnu.tar.gz`}>
+                            <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-aarch64-linux-gnu.tar.gz`}>
                               aarch64.tar.gz
                             </a>
                           </div>
@@ -94,7 +94,7 @@ export default class Pools extends Component{
                           <div className="col-md-12">
                             <i className="fab fa-chrome brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Google Chrome</h3>
-                            <a class="w-100 button1" href="https://chrome.google.com/webstore/detail/runebasechrome/gnfdbibmnlkehibhabjohlbiehhbhkhd">
+                            <a className="w-100 button1" href="https://chrome.google.com/webstore/detail/runebasechrome/gnfdbibmnlkehibhabjohlbiehhbhkhd">
                               osx.dmg
                             </a>
                           </div>
@@ -103,13 +103,13 @@ export default class Pools extends Component{
                           <div className="col-md-12">
                             <i className="fab fa-github brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Source</h3>
-                            <a class="w-100 button1" href="">
+                            <a className="w-100 button1" href="">
                               Core
                             </a>
-                            <a class="w-100 button1" href="">
+                            <a className="w-100 button1" href="">
                               RunebaseChrome
                             </a>
-                            <a class="w-100 button1" href="">
+                            <a className="w-100 button1" href="">
                               WebWallet
                             </a>
                           </div>
@@ -125,7 +125,7 @@ export default class Pools extends Component{
                           <div className="col-md-12">
                             <i className="fab fa-android brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Android</h3>
-                            <a class="w-100 button1" href='https://play.google.com/store/apps/details?id=org.runebase.wallet'>
+                            <a className="w-100 button1" href='https://play.google.com/store/apps/details?id=org.runebase.wallet'>
                               Google Play
                             </a>
                           </div>
@@ -134,7 +134,7 @@ export default class Pools extends Component{
                           <div className="col-md-12">
                             <i className="fab fa-apple brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>IOS</h3>
-                            <a class="w-100 button1" href="#">
+                            <a className="w-100 button1" href="#">
                               Not Available
                             </a>
                           </div>

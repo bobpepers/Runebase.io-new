@@ -35,7 +35,11 @@ export default class Pools extends Component{
 		  StakingWorldStyle = theme.hover.out;
 		}
         return (
-        	<Grid container className={`mt-${theme.spacing.section} mb-${theme.spacing.section}`}>
+        	<Grid container id='pools' className={`mt-${theme.spacing.section} mb-${theme.spacing.section}`}>
+        		<Grid item xs={12}>
+	        		<h3 className="textBorder w-100 text-center">Stake RUNES on a Pool</h3>
+	   				<div className="underline mx-auto mb-5"></div>
+	   			</Grid>
         		<Grid item xs={6}>
         			<div className="w-100 d-flex">
         				<a style={FourStakeStyle} onMouseLeave={() => this.updateHoverState(false, "FourStake")} onMouseEnter={() => this.updateHoverState(true, "FourStake")} className="mx-auto" href="https://staking.world">

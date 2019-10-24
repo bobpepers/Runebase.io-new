@@ -1,7 +1,15 @@
+/*Added*/.clearfix {
+  clear: both;
+}
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
 
 header {
-  height: 70px;
-  line-height: 70px;
+  width: 100%;
+  height: auto;
   background-color: $white;
   border-bottom: 1px solid $gray;
 

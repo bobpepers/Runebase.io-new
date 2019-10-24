@@ -1,0 +1,42 @@
+.position-relative {
+    position: relative!important;
+}
+.bot-0 {
+    bottom: 0;
+}
+.nopointer {
+    pointer-events: none;
+}
+.position-absolute {
+    position: absolute!important;
+}
+img {
+    max-width: 100%;
+}
+.shadow-w {
+    color: white;
+    text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px, rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px;
+}
+.main_top_area {
+    text-align: center;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.main_top_area .single_slider a {
+    line-height: 1 !important;
+}
+
+.showpointer {
+    pointer-events: all;
+}
+
+.main_top_area {
+    text-align: center;
+    clear:both;
+}
+.mb-auto, .my-auto {
+    margin-bottom: auto!important;
+}

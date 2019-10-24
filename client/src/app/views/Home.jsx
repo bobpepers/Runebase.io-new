@@ -1,36 +1,60 @@
 import React, { Component } from 'react';
+import ScrollableSection from 'react-update-url-on-scroll';
+import {withRouter} from 'react-router-dom';
 import * as actions from '../actions/auth';
 import { connect } from 'react-redux';
 import Team from '../components/Team';
 import WorkSection from '../components/WorkSection';
 import ProductSection from '../components/ProductSection';
-import DownloadOS from '../components/DownloadOS';
+import Product from '../components/Product';
 import ParticlesRunebase from '../components/ParticlesRunebase';
 import Community from '../components/Community';
 import Exchanges from '../components/Exchanges';
 import Pools from '../components/Pools';
 import Download from '../components/Download';
+import ChainInfo from '../components/ChainInfo';
+import Roadmap from '../components/Roadmap';
 
 import './Home.scss';
 
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.myRef = React.createRef();
   }
-  render() {
 
+  render() {
     return (
       <div>
-        <h1>sdf</h1>
-        <ParticlesRunebase />
-        <DownloadOS />
-        <Download />
-        <ProductSection />
-        <Exchanges />
-        <Pools />
-        <Community />
-        <Team />
-        <WorkSection />
+        <ScrollableSection hash={'info'} ref={this.myRef}>
+          <ParticlesRunebase />
+          <ChainInfo />
+        </ScrollableSection>
+        <ScrollableSection hash={'wallets'} ref={this.myRef}>
+          <Download />
+        </ScrollableSection>
+        <ScrollableSection hash={'product'} ref={this.myRef}>
+          <ProductSection />
+          <Product />
+        </ScrollableSection>
+        <ScrollableSection hash={'exchanges'} ref={this.myRef}>
+          <Exchanges />
+        </ScrollableSection>
+        <ScrollableSection hash={'pools'} ref={this.myRef}>
+          <Pools />
+        </ScrollableSection>
+        <ScrollableSection hash={'community'} ref={this.myRef}>
+          <Community />
+        </ScrollableSection>
+        <ScrollableSection hash={'team'} ref={this.myRef}>
+          <Team />
+        </ScrollableSection>
+        <ScrollableSection hash={'roadmap'} ref={this.myRef}>
+          <Roadmap />
+        </ScrollableSection>
+        <ScrollableSection hash={'work'} ref={this.myRef}>
+          <WorkSection />
+        </ScrollableSection>
       </div>
     )
   }
@@ -42,4 +66,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, actions)(Home);
+export default withRouter(connect(mapStateToProps, actions)(Home));

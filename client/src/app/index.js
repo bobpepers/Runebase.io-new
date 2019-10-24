@@ -12,7 +12,7 @@ import history from './history';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import 'font-awesome/css/font-awesome.min.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import './assets/fonts/opensans.ttf';
 import './components/bundle.scss';
 
@@ -27,7 +27,7 @@ if (user && user.token) {
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router onUpdate={() => window.scrollTo(0, 0)} history={history} routes={routes}>
+    <Router history={history} routes={routes}>
      <Header />
      {routes}
      <Footer />
