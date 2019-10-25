@@ -20,7 +20,7 @@ class Contact extends React.Component {
   }
 
   handleFormSubmit(props) {
-    this.props.constactSend(props);
+    this.props.contactSend(props);
   }
   render() {
     const { classes, handleSubmit } = this.props;

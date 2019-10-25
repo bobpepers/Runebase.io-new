@@ -15,3 +15,5 @@ export const UNAUTH_USER = 'UNAUTH_USER';
 export const FETCH_USERS = 'FETCH_USERS';
 
 export const CONTACT_SEND = 'CONTACT_SEND';
+export const CONTACT_RESET = 'CONTACT_RESET';
+

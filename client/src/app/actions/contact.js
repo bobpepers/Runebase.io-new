@@ -3,23 +3,27 @@ import { API_URL } from '../config';
 import history from '../history';
 import {
   CONTACT_SEND,
+  CONTACT_RESET,
 } from './types/index';
 
 
 /**
  * CONTACT SEND
  */
-export function constactSend(props) {
+export function contactSend(props) {
   const { name, email, message } = props;
 
   return function (dispatch) {
-    axios.post(`${API_URL}/contactsend`, { name, email, message })
+    axios.post(`${API_URL}/contact/send`, { name, email, message })
       .then(response => {
         console.log(response);
 
-        dispatch({ type: CONTACT_SEND });
+        dispatch({
+          type: CONTACT_SEND,
+          payload: response.data
+        });
 
-        history.push('/users');
+        history.push('/contact/success');
       })
       .catch((error) => {
         console.log(error);
@@ -27,3 +31,6 @@ export function constactSend(props) {
   }
 }
 
+export const contactReset = () => {
+  return { type: CONTACT_RESET };
+};

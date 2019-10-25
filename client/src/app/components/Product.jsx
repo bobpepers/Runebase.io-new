@@ -11,7 +11,7 @@ export default class Product extends Component{
 
     render(){
         return (
-        	<Grid container id='product' className={`backgroundProduct text-center`} direction="row" justify="center" alignItems="stretch">
+        	<Grid container id='product' className={`backgroundProduct text-center textBorder`} direction="row" justify="center" alignItems="stretch">
         		<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
 	        		<h3 className="textBorder w-100 text-center">Let's talk Product</h3>
 	   				<div className="underline mx-auto"></div>
@@ -25,7 +25,7 @@ Combining a modified Bitcoin Core infrastructure with an intercompatible version
         					<img className="mx-auto" src={FourStake} height="128px" width="128px" alt="" />
         			</div>
         			<div className="w-100 d-flex">
-	            			<h4 className='productTitle mx-auto'>Decentralized</h4>
+	            			<h4 className='mx-auto titleStyled textBorder'>Decentralized</h4>
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            			<p className='text-center'>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
@@ -36,7 +36,7 @@ Combining a modified Bitcoin Core infrastructure with an intercompatible version
         					<img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
         			</div>
         			<div className="w-100 d-flex">
-	            			<h4 className='productTitle mx-auto'>Smart Contracts</h4>
+	            			<h4 className='mx-auto titleStyled textBorder'>Smart Contracts</h4>
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            			<p className='text-center'>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
@@ -47,7 +47,7 @@ Combining a modified Bitcoin Core infrastructure with an intercompatible version
         					<img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
         			</div>
         			<div className="w-100 d-flex">
-	            			<h4 className='productTitle mx-auto'>Staking Reward</h4>
+	            			<h4 className='mx-auto titleStyled textBorder'>Staking Reward</h4>
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            			<p className='text-center'>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
@@ -58,7 +58,7 @@ Combining a modified Bitcoin Core infrastructure with an intercompatible version
                             <img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
                     </div>
                     <div className="w-100 d-flex">
-                            <h4 className='productTitle mx-auto'>Green</h4>
+                            <h4 className='mx-auto titleStyled textBorder'>Green</h4>
                     </div>
                     <div className="w-100 d-flex">
                             <p className='text-center'>Some info why proof of stake uses less energy</p>
@@ -69,7 +69,7 @@ Combining a modified Bitcoin Core infrastructure with an intercompatible version
                             <img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
                     </div>
                     <div className="w-100 d-flex">
-                            <h4 className='productTitle mx-auto'>Community</h4>
+                            <h4 className='mx-auto titleStyled textBorder'>Community</h4>
                     </div>
                     <div className="w-100 d-flex">
                             <p className='text-center'>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>

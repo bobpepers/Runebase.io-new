@@ -69,9 +69,6 @@ export default class Download extends Component{
                             <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx64.tar.gz`}>
                               osx64.tar.gz
                             </a>
-                            <a className="w-100 button1" href="https://github.com/runebase/runebase">
-                              Core
-                            </a>
                           </div>
                         </Grid>
                         <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
@@ -97,7 +94,7 @@ export default class Download extends Component{
                             <i className="fab fa-chrome brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Google Chrome</h3>
                             <a className="w-100 button1" href="https://chrome.google.com/webstore/detail/runebasechrome/gnfdbibmnlkehibhabjohlbiehhbhkhd">
-                              osx.dmg
+                              RunebaseChrome
                             </a>
                           </div>
                         </Grid>

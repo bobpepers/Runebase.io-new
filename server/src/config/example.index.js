@@ -13,6 +13,7 @@ export const emailConfig = {
 
 export const telegramConfig = {
   token: 'YourSuperSecretToken',
+  chatId: '-338893523'
 };
 
 export const ROOT_URL = process.env.NODE_ENV === 'production' ? 'http://dimitrimikadze.com:3000' : 'http://localhost:3000';

@@ -17,7 +17,7 @@ const router = (app) => {
   app.post('/reset-password', resetPassword);
   app.post('/reset-password/verify', verifyResetPassword);
   app.post('/reset-password/new', resetPasswordNew);
-  app.post('/contactsend', contactSend);
+  app.post('/contact/send', contactSend);
 };
 
 export default router;

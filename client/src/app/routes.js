@@ -10,6 +10,7 @@ import SignupVerify from './components/auth/SignupVerify';
 import ResetPassword from './components/resetPassword/ResetPassword';
 import ResetPasswordVerify from './components/resetPassword/ResetPasswordVerify';
 import ResetPasswordNew from './components/resetPassword/ResetPasswordNew';
+import ContactSuccess from './components/ContactSuccess';
 
 import Radio from './views/Radio';
 import Download from './views/Download';
@@ -34,5 +35,6 @@ export default (
         <Route path="/reset-password/verify" component={ResetPasswordVerify} />
         <Route path="/reset-password/new" component={requireNotAuth(ResetPasswordNew)} />
         <Route path="/users" component={requireAuth(UserList)} />
+        <Route path="/contact/success" component={ContactSuccess} />
     </div>
 )
