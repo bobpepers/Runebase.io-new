@@ -11,6 +11,8 @@ const theme = {
   },
   spacing: {
     section: "5",
+    title: "1",
+    item: "3",
     marginTopItem: "3",
   },
   iconVertical: {

@@ -46,12 +46,12 @@ export default class Community extends Component{
 		  TelegramStyle = theme.hover.out;
 		}
         return (
-        	<Grid container id='community' className={`text-center mt-${theme.spacing.section} mb-${theme.spacing.section}`} direction="row" justify="center" alignItems="stretch">
-	        	<Grid item xs={12}>
+        	<Grid container id='community' className={`text-center`} direction="row" justify="center" alignItems="stretch">
+	        	<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
 	        		<h3 className="textBorder w-100 text-center">Community</h3>
-	   				<div className="underline mx-auto mb-5"></div>
+	   				<div className="underline mx-auto"></div>
 	   			</Grid>
-        		<Grid item xs={3}>
+        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
         				<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")} className="mx-auto" href="https://discord.gg/hYhZB9m">
         					<img className="mx-auto" src={Discord} height="128px" width="128px" alt="" />
@@ -68,7 +68,7 @@ export default class Community extends Component{
 	            		</a>
             		</div>
         		</Grid>
-        		<Grid item xs={3}>
+        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
         				<a style={MediumStyle} onMouseLeave={() => this.updateHoverState(false, "Medium")} onMouseEnter={() => this.updateHoverState(true, "Medium")} className="mx-auto" href="https://www.medium.com/@runebase">
         					<img className="mx-auto" src={Medium} height="128px" width="128px" alt="" />
@@ -85,7 +85,7 @@ export default class Community extends Component{
 	            		</a>
             		</div>
         		</Grid>
-        		<Grid item xs={3}>
+        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
         				<a style={TelegramStyle} onMouseLeave={() => this.updateHoverState(false, "Telegram")} onMouseEnter={() => this.updateHoverState(true, "Telegram")} className="mx-auto" href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">
         					<img className="mx-auto" src={Telegram} height="128px" width="128px" alt="" />
@@ -102,7 +102,7 @@ export default class Community extends Component{
 	            		</a>
             		</div>
         		</Grid>
-        		<Grid item xs={3}>
+        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
         				<a style={TwitterStyle} onMouseLeave={() => this.updateHoverState(false, "Twitter")} onMouseEnter={() => this.updateHoverState(true, "Twitter")} className="mx-auto" href="https://discord.gg/hYhZB9m">
         					<img className="mx-auto" src={Twitter} height="128px" width="128px" alt="" />

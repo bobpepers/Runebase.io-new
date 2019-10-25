@@ -14,7 +14,7 @@ export default class ParticlesRunebase extends Component{
 
     render(){
         return (
-            <section id='topsection' className="top">
+            <section id='info' className="top">
               <div id="foglayer_01" className="fog">
                       <div className="image01"></div>
                       <div className="image02"></div>

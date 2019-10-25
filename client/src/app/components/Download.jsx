@@ -11,12 +11,14 @@ export default class Download extends Component{
 
     render(){
         return (
-          <Grid container id='wallets' className={`pt-${theme.spacing.section} pb-${theme.spacing.section} downloadBG`}>
-            <h3 className="textBorder w-100 text-center">Choose your Runebase Wallet</h3>
-            <div className="underline mx-auto mb-5"></div>
+          <Grid container id='wallets' className={`downloadBG text-center`}>
+            <Grid item xs={12} className={`mt-${theme.spacing.section}`}>
+              <h3 className="textBorder w-100 text-center">Choose your Runebase Wallet</h3>
+            </Grid>
+            <div className="underline mx-auto"></div>
             <Tab.Container defaultActiveKey="Desktop">
               <Grid container>
-                <Grid item xs={12}>
+                <Grid item xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <Nav className="flex-row d-flex justify-content-center">
                     <Nav.Item className="text-center col-xs-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                       <Nav.Link className='textBorder button1' eventKey="Desktop">Desktop</Nav.Link>

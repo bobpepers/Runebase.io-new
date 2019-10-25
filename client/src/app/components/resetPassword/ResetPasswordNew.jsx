@@ -3,6 +3,7 @@ import { reduxForm, Field } from 'redux-form';
 import * as actions from '../../actions/resetPassword';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import * as qs from 'query-string';
 
 const renderField = ({ input, type, placeholder, meta: { touched, error } }) => (
   <div className={`input-group ${touched && error ? 'has-error' : ''}`}>
@@ -19,16 +20,17 @@ class ResetPasswordNew extends Component {
   }
 
   componentWillMount() {
-    const { email, token } = this.props.location.query;
+    const parsed = qs.parse(this.props.location.search);
+    const email = parsed.email;
+    const token = parsed.token;
 
     this.props.verifyResetPassword({ email, token });
   }
 
   handleFormSubmit(props) {
-    const { email, token } = this.props.location.query;
-
-    props.email = email;
-    props.token = token;
+    const parsed = qs.parse(this.props.location.search);
+    props.email = parsed.email;
+    props.token = parsed.token;
 
     this.props.resetPasswordNew(props);
   }
@@ -46,7 +48,7 @@ class ResetPasswordNew extends Component {
               <h3>{ this.props.errorMessage.verifyResetPassword.message }</h3>
               {
                 this.props.errorMessage.verifyResetPassword.resend &&
-                  <Link className="resend" to="/reduxauth/reset-password">Reset Password Again</Link>
+                  <Link className="resend" to="/reset-password">Reset Password Again</Link>
               }
             </div>
             :

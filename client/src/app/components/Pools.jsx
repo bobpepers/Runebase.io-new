@@ -35,12 +35,12 @@ export default class Pools extends Component{
 		  StakingWorldStyle = theme.hover.out;
 		}
         return (
-        	<Grid container id='pools' className={`text-center mt-${theme.spacing.section} mb-${theme.spacing.section}`} direction="row" justify="center" alignItems="stretch">
-        		<Grid item xs={12}>
+        	<Grid container id='pools' className={`text-center`} direction="row" justify="center" alignItems="stretch">
+        		<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
 	        		<h3 className="textBorder w-100 text-center">Stake RUNES on a Pool</h3>
-	   				<div className="underline mx-auto mb-5"></div>
+	   				<div className="underline mx-auto"></div>
 	   			</Grid>
-        		<Grid item xs={6}>
+        		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
         				<a style={FourStakeStyle} onMouseLeave={() => this.updateHoverState(false, "FourStake")} onMouseEnter={() => this.updateHoverState(true, "FourStake")} className="mx-auto" href="https://staking.world">
         					<img className="mx-auto" src={FourStake} height="128px" width="128px" alt="" />
@@ -57,7 +57,7 @@ export default class Pools extends Component{
 	            		</a>
             		</div>
         		</Grid>
-        		<Grid item xs={6}>
+        		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
         				<a style={StakingWorldStyle} onMouseLeave={() => this.updateHoverState(false, "StakingWorld")} onMouseEnter={() => this.updateHoverState(true, "StakingWorld")} className="mx-auto" href="https://www.4stake.com/">
         					<img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />

@@ -9,13 +9,14 @@ module.exports = (options) => {
   const webpackConfig = {
     devtool: options.devtool,
     entry: [
-      `webpack-dev-server/client?http://localhost:${+ options.port}`,
+      `webpack-dev-server/client?https://dev.runebase.io:${+ options.port}`,
       'webpack/hot/dev-server',
       Path.join(__dirname, '../src/app/index'),
     ],
     output: {
       path: Path.join(__dirname, '../dist'),
       filename: `./scripts/${options.jsFileName}`,
+      publicPath: '/',
     },
     resolve: {
       extensions: ['.js', '.jsx'],

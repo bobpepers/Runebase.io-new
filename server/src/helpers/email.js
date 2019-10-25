@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 import { emailConfig, ROOT_URL } from '../config';
 const transporter = nodemailer.createTransport(emailConfig);
 
-const from = 'Redux Auth Team';
+const from = 'Runebase Support Team';
 
 export function sendVerificationEmail(email, firstName, token) {
   const html = "<div style='margin: 0; padding: 0; width: 100%; font-family: Trebuchet MS, sans-serif;'>" +

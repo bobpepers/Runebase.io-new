@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as qs from 'query-string';
 import history from '../../history';
 import * as actions from '../../actions/auth';
 
@@ -11,7 +12,8 @@ class SignupVerify extends Component {
   }
 
   componentWillMount() {
-    this.email = this.props.location.query.email;
+    const parsed = qs.parse(this.props.location.search);
+    this.email = parsed.email;
 
     if(!this.props.signup || !this.email) {
       history.push('/signup');

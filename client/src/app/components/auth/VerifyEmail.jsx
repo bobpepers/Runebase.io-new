@@ -10,11 +10,13 @@ class VerifyEmail extends Component {
   }
 
   componentWillMount() {
-    const { email, token } =  this.props.location.query;
+    const parsed = qs.parse(this.props.location.search);
+    const email = parsed.email;
+    const token = parsed.token;
 
     this.user = {};
-    this.user.email = email;
-    this.user.token = token;
+    this.user.email = parsed.email;
+    this.user.token = parsed.token;
 
     this.props.verifyEmail({ email, token });
   }

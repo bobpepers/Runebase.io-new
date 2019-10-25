@@ -12,7 +12,7 @@ class ChainInfo extends Component {
   render() {
 
     return (
-      <section id='info' className='chainInfoBG'>
+      <section className='chainInfoBG'>
         <div className="chainInfo">
           <Grid container className="d-flex justify-content-around justify-content-md-center Grid itemst-unstyled categories ng-scope" ng-controller="myController">
             <Grid item className="text-center col-md-4 borderGray">

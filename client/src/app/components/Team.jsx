@@ -41,12 +41,12 @@ export default class Team extends Component{
   		  TxbitStyle = theme.hover.out;
   		}
         return (
-        	<Grid container id='team' className={`text-center mt-${theme.spacing.section} mb-${theme.spacing.section}`} direction="row" justify="center" alignItems="stretch">
-            <Grid item xs={12}>
+        	<Grid container id='team' className={`text-center`} direction="row" justify="center" alignItems="stretch">
+            <Grid item xs={12} className={`mt-${theme.spacing.section}`} >
               <h3 className="textBorder w-100 text-center">Meet the Team</h3>
-              <div className="underline mx-auto mb-5"></div>
+              <div className="underline mx-auto"></div>
             </Grid>
-        		<Grid item xs={4}>
+        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
         					<Image roundedCircle className="mx-auto imageBorderTeam" src={Jonas} height="128px" width="128px" alt="" />
         			</div>
@@ -75,7 +75,7 @@ export default class Team extends Component{
                   </div>
                 </div>
         		</Grid>
-        		<Grid item xs={4}>
+        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
         				<span className="mx-auto">
         					<Image roundedCircle className="mx-auto imageBorderTeam" src={Roberto} height="128px" width="128px" alt="" />
@@ -92,7 +92,7 @@ export default class Team extends Component{
 	            		</span>
             		</div>
         		</Grid>
-            <Grid item xs={4}>
+            <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
               <div className="w-100 d-flex">
                 <span className="mx-auto">
                   <Image roundedCircle className="mx-auto imageBorderTeam" src={Patricia} height="128px" width="128px" alt="" />
@@ -109,7 +109,7 @@ export default class Team extends Component{
                   </span>
                 </div>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
               <div className="w-100 d-flex">
                 <span className="mx-auto">
                   <Image roundedCircle className="mx-auto imageBorderTeam" src={Alex} height="128px" width="128px" alt="" />
@@ -126,7 +126,7 @@ export default class Team extends Component{
                   </span>
                 </div>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
               <div className="w-100 d-flex">
                 <span className="mx-auto">
                   <Image roundedCircle className="mx-auto imageBorderTeam" src={Lucas} height="128px" width="128px" alt="" />
@@ -143,7 +143,7 @@ export default class Team extends Component{
                   </span>
                 </div>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
               <div className="w-100 d-flex">
                 <span className="mx-auto">
                   <Image roundedCircle className="mx-auto imageBorderTeam" src={Marcio} height="128px" width="128px" alt="" />

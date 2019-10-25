@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import * as qs from 'query-string';
 import * as actions from '../../actions/resetPassword';
 
 class ResetPasswordVerify extends Component {
@@ -11,10 +12,11 @@ class ResetPasswordVerify extends Component {
   }
 
   componentWillMount() {
-    this.email = this.props.location.query.email;
+    const parsed = qs.parse(this.props.location.search);
+    this.email = parsed.email;
 
     if(!this.props.resetPasswordProgress || !this.email) {
-      BrowserRouter.push('/reduxauth/signup');
+      BrowserRouter.push('/signup');
     }
   }
 

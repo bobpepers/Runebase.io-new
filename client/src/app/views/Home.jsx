@@ -4,7 +4,7 @@ import {withRouter} from 'react-router-dom';
 import * as actions from '../actions/auth';
 import { connect } from 'react-redux';
 import Team from '../components/Team';
-import WorkSection from '../components/WorkSection';
+import Contact from '../components/Contact';
 import Product from '../components/Product';
 import ParticlesRunebase from '../components/ParticlesRunebase';
 import Community from '../components/Community';
@@ -50,8 +50,8 @@ class Home extends Component {
         <ScrollableSection hash={'roadmap'} ref={this.myRef}>
           <Roadmap />
         </ScrollableSection>
-        <ScrollableSection hash={'work'} ref={this.myRef}>
-          <WorkSection />
+        <ScrollableSection hash={'contact'} ref={this.myRef}>
+          <Contact />
         </ScrollableSection>
       </div>
     )
