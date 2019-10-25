@@ -39,9 +39,6 @@ module.exports = (options) => {
               },
               gifsicle: {
                 interlaced: false
-              },
-              webp: {
-                quality: 75
               }
             }
           }
@@ -116,6 +113,7 @@ module.exports = (options) => {
 
     webpackConfig.devServer = {
       contentBase: Path.join(__dirname, '../'),
+      disableHostCheck: true,
       hot: true,
       port: options.port,
       inline: true,

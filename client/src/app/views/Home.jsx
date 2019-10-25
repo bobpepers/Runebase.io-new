@@ -5,7 +5,6 @@ import * as actions from '../actions/auth';
 import { connect } from 'react-redux';
 import Team from '../components/Team';
 import WorkSection from '../components/WorkSection';
-import ProductSection from '../components/ProductSection';
 import Product from '../components/Product';
 import ParticlesRunebase from '../components/ParticlesRunebase';
 import Community from '../components/Community';
@@ -34,7 +33,6 @@ class Home extends Component {
           <Download />
         </ScrollableSection>
         <ScrollableSection hash={'product'} ref={this.myRef}>
-          <ProductSection />
           <Product />
         </ScrollableSection>
         <ScrollableSection hash={'exchanges'} ref={this.myRef}>

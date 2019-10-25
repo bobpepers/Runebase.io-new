@@ -1,48 +1,41 @@
 import React, { Component } from 'react';
+import { Helmet } from "react-helmet";
 import Particles from 'react-particles-js';
 import DownloadOS from './DownloadOS';
 import Mountain from '../assets/images/Mountain.png';
+import { Clouds } from './Clouds';
 
 
 export default class ParticlesRunebase extends Component{
-    componentDidMount () {
-        window.VANTA.CLOUDS({
-          el: "#clouds",
-          skyColor: 0x70a0c,
-          cloudColor: 0x2f4d7a,
-          sunColor: 0xae7e42,
-          sunlightColor: 0x4f2e0e,
-          scaleMobile: 1,
-          scale: 1,
-          speed: 1,
-        })
+    constructor(props){
+      super(props);
+
     }
 
     render(){
         return (
             <section id='topsection' className="top">
+              <div id="foglayer_01" className="fog">
+                      <div className="image01"></div>
+                      <div className="image02"></div>
+                    </div>
+                    <div id="foglayer_02" className="fog">
+                      <div className="image01"></div>
+                      <div className="image02"></div>
+                    </div>
+                    <div id="foglayer_03" className="fog">
+                      <div className="image01"></div>
+                      <div className="image02"></div>
+                    </div>
             	<div className="position-relative">
-                    <div id="foglayer_01" className="fog zIndex-3">
-                      <div className="image01"></div>
-                      <div className="image02"></div>
-                    </div>
-                    <div id="foglayer_02" className="fog zIndex-3">
-                      <div className="image01"></div>
-                      <div className="image02"></div>
-                    </div>
-                    <div id="foglayer_03" className="fog zIndex-3">
-                      <div className="image01"></div>
-                      <div className="image02"></div>
-                    </div>
-                    <div id='clouds'>
-                    </div>
+                      <Clouds />
             		<div id="particles-js">
                 		<img className="nopointer position-absolute bot-0" src={Mountain} alt="" />
 
                 	</div>
 
-                	<div className="main_top_area shadow-w nopointer position-absolute row justify-content-center .zIndex-4">
-                        <div className="position-relative align-self-center">
+                	<div className="main_top_area shadow-w nopointer position-absolute row justify-content-center">
+                        <div className="position-relative align-self-center osdlwrapper">
                             <h3 className="position-relative">Runebase</h3>
                             <p className="position-relative">Smart-Contract Platform</p>
                             <DownloadOS />

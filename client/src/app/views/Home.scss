@@ -68,7 +68,7 @@ a {
 }
 
 .borderGray{
-  border: 1px solid #c0c4c6;
+      border: 3px solid #000;
 }
 .chainInfo{
   padding: 0 !important;
@@ -76,10 +76,14 @@ a {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNiIgaGVpZ2h0PSI2Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2VlZWVlZSI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNlNmU2ZTYiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Q4ZDhkOCI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
 }
 .chainInfoBG{
-  background-color: rgb(0, 0, 2) !important;
+  background: linear-gradient(#000 40%, #283048 100%, rgba(255, 255, 255, 0));
+      z-index: 600;
+    position: relative;
 }
 .downloadBG{
   background: linear-gradient(#000 40%, #283048 100%, rgba(255, 255, 255, 0));
+  position: relative;
+  z-index: 100;
 }
 .productTitle{
   color: #3C4858;
@@ -149,6 +153,7 @@ body {
   height: 100%;
   position: absolute;
   width: 200%;
+  z-index: 5;
 }
 #foglayer_01 .image01, #foglayer_01 .image02,
 #foglayer_02 .image01, #foglayer_02 .image02,
@@ -176,11 +181,11 @@ body {
   'repeat-x' || 'no-repeat'; results remain the same
 */
 #foglayer_01 .image01, #foglayer_01 .image02 {
-  background: url("/static/images/fog1.png") center center/cover no-repeat transparent;
+  background: url("/static/fog1.png") center center/cover no-repeat transparent;
 }
 #foglayer_02 .image01, #foglayer_02 .image02,
 #foglayer_03 .image01, #foglayer_03 .image02{
-  background: url("/static/images/fog2.png") center center/cover no-repeat transparent;
+  background: url("/static/fog2.png") center center/cover no-repeat transparent;
 }
 
 /* ---------- Keyframe Layer 1 ---------- */
@@ -306,4 +311,11 @@ body {
   }
   #clouds > canvas{
     height: inherit !important;
+    z-index: -1 !important;
+  }
+  #particles-js{
+  min-height: 650px;
+  }
+  .osdlwrapper{
+   z-index: 700;
   }

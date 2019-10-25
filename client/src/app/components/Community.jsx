@@ -46,7 +46,7 @@ export default class Community extends Component{
 		  TelegramStyle = theme.hover.out;
 		}
         return (
-        	<Grid container id='community' className={`mt-${theme.spacing.section} mb-${theme.spacing.section}`}>
+        	<Grid container id='community' className={`text-center mt-${theme.spacing.section} mb-${theme.spacing.section}`} direction="row" justify="center" alignItems="stretch">
 	        	<Grid item xs={12}>
 	        		<h3 className="textBorder w-100 text-center">Community</h3>
 	   				<div className="underline mx-auto mb-5"></div>

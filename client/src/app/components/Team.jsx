@@ -41,7 +41,7 @@ export default class Team extends Component{
   		  TxbitStyle = theme.hover.out;
   		}
         return (
-        	<Grid container id='team' className={`mt-${theme.spacing.section} mb-${theme.spacing.section}`}>
+        	<Grid container id='team' className={`text-center mt-${theme.spacing.section} mb-${theme.spacing.section}`} direction="row" justify="center" alignItems="stretch">
             <Grid item xs={12}>
               <h3 className="textBorder w-100 text-center">Meet the Team</h3>
               <div className="underline mx-auto mb-5"></div>

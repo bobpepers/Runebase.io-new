@@ -36,7 +36,7 @@ export default class Download extends Component{
                         <Grid item xs={12} className='d-flex'>
                           <h3 className={`mx-auto textBorder mt-${theme.spacing.marginTopItem}`}>Desktop</h3>
                         </Grid>
-                        <Grid item xs={4} className={`mt-${theme.spacing.marginTopItem}`}>
+                        <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-windows brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Windows</h3>
@@ -54,7 +54,7 @@ export default class Download extends Component{
                             </a>
                           </div>
                         </Grid>
-                        <Grid item xs={4} className={`mt-${theme.spacing.marginTopItem}`}>
+                        <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-apple brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Mac OS</h3>
@@ -72,7 +72,7 @@ export default class Download extends Component{
                             </a>
                           </div>
                         </Grid>
-                        <Grid item xs={4} className={`mt-${theme.spacing.marginTopItem}`}>
+                        <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-linux brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Linux</h3>
@@ -90,7 +90,7 @@ export default class Download extends Component{
                             </a>
                           </div>
                         </Grid>
-                        <Grid item xs={4} className={`mt-${theme.spacing.marginTopItem}`}>
+                        <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-chrome brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Google Chrome</h3>
@@ -99,7 +99,7 @@ export default class Download extends Component{
                             </a>
                           </div>
                         </Grid>
-                        <Grid item xs={4} className={`mt-${theme.spacing.marginTopItem}`}>
+                        <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-github brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Source</h3>
@@ -121,7 +121,7 @@ export default class Download extends Component{
                         <Grid item xs={12} className='d-flex'>
                           <h3 className={`mx-auto textBorder mt-${theme.spacing.marginTopItem}`}>Mobile</h3>
                         </Grid>
-                        <Grid item xs={4} className='mt-5'>
+                        <Grid item lg={4} md={6} sm={12} className='mt-5'>
                           <div className="col-md-12">
                             <i className="fab fa-android brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>Android</h3>
@@ -130,7 +130,7 @@ export default class Download extends Component{
                             </a>
                           </div>
                         </Grid>
-                        <Grid item xs={4} className='mt-5'>
+                        <Grid item lg={4} md={6} sm={12} className='mt-5'>
                           <div className="col-md-12">
                             <i className="fab fa-apple brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>IOS</h3>
