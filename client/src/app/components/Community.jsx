@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
+import { withTranslation } from 'react-i18next';
 import Discord from '../assets/images/Discord.png';
 import Medium from '../assets/images/Medium.png';
 import Telegram from '../assets/images/Telegram.png';
@@ -7,7 +8,7 @@ import Twitter from '../assets/images/Twitter.png';
 
 import theme from "../theme";
 
-export default class Community extends Component{
+class Community extends Component{
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -25,6 +26,7 @@ export default class Community extends Component{
 	}
 
     render(){
+    	const { t } = this.props;
     	let DiscordStyle, TwitterStyle, TelegramStyle, MediumStyle;
 		if (this.state.hover) {
 			if (this.state.hoverCat == "Discord") {
@@ -48,7 +50,7 @@ export default class Community extends Component{
         return (
         	<Grid container id='community' className={`text-center`} direction="row" justify="center" alignItems="stretch">
 	        	<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
-	        		<h3 className="textBorder w-100 text-center">Community</h3>
+	        		<h3 className="textBorder w-100 text-center">{t('community')}</h3>
 	   				<div className="underline mx-auto"></div>
 	   			</Grid>
         		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
@@ -64,7 +66,7 @@ export default class Community extends Component{
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            		<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")}  className="mx-auto textStyled textBorder" href="https://discord.gg/hYhZB9m">
-	            			Talk to us on Discord
+	            			{t('discordDescription')}
 	            		</a>
             		</div>
         		</Grid>
@@ -81,7 +83,7 @@ export default class Community extends Component{
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            		<a style={MediumStyle} onMouseLeave={() => this.updateHoverState(false, "Medium")} onMouseEnter={() => this.updateHoverState(true, "Medium")}  className="mx-auto textStyled textBorder" href="https://www.medium.com/@runebase">
-	            			Follow us on Medium
+	            			{t('mediumDescription')}
 	            		</a>
             		</div>
         		</Grid>
@@ -98,7 +100,7 @@ export default class Community extends Component{
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            		<a style={TelegramStyle} onMouseLeave={() => this.updateHoverState(false, "Telegram")} onMouseEnter={() => this.updateHoverState(true, "Telegram")}  className="mx-auto textStyled textBorder" href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">
-	            			Talk to us on Telegram
+	            			{t('telegramDescription')}
 	            		</a>
             		</div>
         		</Grid>
@@ -115,7 +117,7 @@ export default class Community extends Component{
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            		<a style={TwitterStyle} onMouseLeave={() => this.updateHoverState(false, "Twitter")} onMouseEnter={() => this.updateHoverState(true, "Twitter")}  className="mx-auto textStyled textBorder" href="https://discord.gg/hYhZB9m">
-	            			Follow us on Twitter
+	            			{t('twitterDescription')}
 	            		</a>
             		</div>
         		</Grid>
@@ -124,3 +126,5 @@ export default class Community extends Component{
     };
 
 }
+
+export default withTranslation()(Community);

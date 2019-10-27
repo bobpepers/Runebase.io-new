@@ -2,7 +2,9 @@ import passport from 'passport';
 import { signin, signup, verifiEmail, resendVerification } from './controllers/authController';
 import { resetPassword, verifyResetPassword, resetPasswordNew } from './controllers/resetPasswordController';
 import { fetchUsers } from './controllers/usersController';
+import { fetchChainInfo } from './controllers/chainInfoController';
 import { contactSend } from './controllers/contactController';
+import { chainInfoBlock } from './controllers/chainInfoBlock';
 import passportService from './services/passport';
 
 const requireAuth = passport.authenticate('jwt', { session: false });
@@ -18,6 +20,8 @@ const router = (app) => {
   app.post('/reset-password/verify', verifyResetPassword);
   app.post('/reset-password/new', resetPasswordNew);
   app.post('/contact/send', contactSend);
+  app.post('/chaininfo/block', chainInfoBlock);
+  app.get('/chaininfo', fetchChainInfo);
 };
 
 export default router;

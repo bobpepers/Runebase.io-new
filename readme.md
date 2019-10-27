@@ -1,3 +1,15 @@
+#install mongod 4.2
+...
+
+#create replicate set
+console1:
+
+$ sudo mongod --port 27017 --storageEngine wiredTiger --dbpath /data/wiredTiger --replSet rs0
+console2:
+
+$ mongo
+  > rs.initiate()
+
 # Token authentication system using Node, Mongo, React, Redux
 
 ## Features

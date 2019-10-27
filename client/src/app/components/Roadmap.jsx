@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import * as actions from '../actions/auth';
 import { connect } from 'react-redux';
 import { Grid } from '@material-ui/core';
+import { withTranslation } from 'react-i18next';
 
-export default class Roadmap extends Component {
+class Roadmap extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
+    const { t } = this.props;
     return (
-        <div id='roadmap'>
+        <div id='roadmap' className='backgroundRoadmap'>
             <Grid container className='roadmap'>
-                <h3 className="textBorder w-100 text-center">Roadmap</h3>
+                <h3 className="textBorder w-100 text-center">{t('roadmap')}</h3>
                 <div className="underline mx-auto mb-5"></div>
 
                 <ul className="timeline">
@@ -92,3 +94,4 @@ export default class Roadmap extends Component {
   }
 }
 
+export default withTranslation()(Roadmap);

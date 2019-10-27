@@ -51,7 +51,10 @@ class Home extends Component {
           <Roadmap />
         </ScrollableSection>
         <ScrollableSection hash={'contact'} ref={this.myRef}>
-          <Contact />
+          <div id='contact'>
+              <Contact />
+          </div>
+
         </ScrollableSection>
       </div>
     )

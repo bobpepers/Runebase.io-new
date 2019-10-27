@@ -23,10 +23,10 @@ class Contact extends React.Component {
     this.props.contactSend(props);
   }
   render() {
-    const { classes, handleSubmit } = this.props;
+    const { handleSubmit } = this.props;
     return (
-      <div>
-        <Grid container justify="center" id='contact'>
+      <div className='backgroundContact'>
+        <Grid container justify="center">
           <Grid item lg={12} md={12} sm={12}>
             <h2>Work with us</h2>
             <h4>

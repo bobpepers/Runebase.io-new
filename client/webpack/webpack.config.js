@@ -46,15 +46,16 @@ module.exports = (options) => {
         ]
       },
       {
-        test: /^(?!.*\.generated\.ttf$).*\.ttf$/,
-        use: ['css-loader', 'fontface-loader'],
-      },
-      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: "url-loader?limit=10000&mimetype=application/font-woff" },
-      { test: /\.(eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: "file-loader" },
-      {
-        test: /\.generated.(ttf|eot|woff|woff2)$/,
-        use: ['file-loader'],
-      },
+                test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'Fonts/',
+                        publicPath: '../Fonts/'
+                    }
+                }]
+            },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],

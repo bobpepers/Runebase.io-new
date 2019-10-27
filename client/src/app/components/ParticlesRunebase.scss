@@ -40,3 +40,26 @@ img {
 .mb-auto, .my-auto {
     margin-bottom: auto!important;
 }
+
+.foggy {
+    position: absolute;
+  background: url(https://dev.runebase.io/static/fog-1.png) repeat 0 0;
+  background-size: 1000px 700px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding-top: 120px;
+  box-sizing: border-box;
+  -webkit-animation: slide 10s linear infinite;
+  height: 1000px;
+    z-index: 6;
+}
+
+.hero-bkg-animated h1 {
+  font-family: sans-serif;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -1000px 0; }
+}

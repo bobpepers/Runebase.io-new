@@ -1,32 +1,26 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import Particles from 'react-particles-js';
+import { withTranslation } from 'react-i18next';
 import DownloadOS from './DownloadOS';
 import Mountain from '../assets/images/Mountain.png';
 import { Clouds } from './Clouds';
 
 
-export default class ParticlesRunebase extends Component{
+class ParticlesRunebase extends Component{
     constructor(props){
       super(props);
 
     }
 
     render(){
+        const { t } = this.props;
         return (
             <section id='info' className="top">
-              <div id="foglayer_01" className="fog">
-                      <div className="image01"></div>
-                      <div className="image02"></div>
-                    </div>
-                    <div id="foglayer_02" className="fog">
-                      <div className="image01"></div>
-                      <div className="image02"></div>
-                    </div>
-                    <div id="foglayer_03" className="fog">
-                      <div className="image01"></div>
-                      <div className="image02"></div>
-                    </div>
+
+                <div className="foggy">
+
+                </div>
+
             	<div className="position-relative">
                       <Clouds />
             		<div id="particles-js">
@@ -37,11 +31,11 @@ export default class ParticlesRunebase extends Component{
                 	<div className="main_top_area shadow-w nopointer position-absolute row justify-content-center">
                         <div className="position-relative align-self-center osdlwrapper">
                             <h3 className="position-relative">Runebase</h3>
-                            <p className="position-relative">Smart-Contract Platform</p>
+                            <p className="position-relative">{t('smartPlatform')}</p>
                             <DownloadOS />
                             <div className="single_slider pt-3 w-100 my-auto">
                                 <a className="button1 showpointer" href="https://downloads.runebase.io/paper.pdf">
-                                    Project Info
+                                    {t('projectInfo')}
                                 </a>
                             </div>
                         </div>
@@ -52,3 +46,5 @@ export default class ParticlesRunebase extends Component{
     };
 
 }
+
+export default withTranslation()(ParticlesRunebase);

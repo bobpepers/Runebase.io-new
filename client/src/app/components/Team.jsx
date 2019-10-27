@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
+import { withTranslation } from 'react-i18next';
 import Image from 'react-bootstrap/Image';
 import Jonas from '../assets/images/Jonas.png';
 import Roberto from '../assets/images/Roberto.png';
@@ -10,7 +11,7 @@ import Marcio from '../assets/images/Marcio.png';
 
 import theme from '../theme';
 
-export default class Team extends Component{
+class Team extends Component{
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -28,6 +29,7 @@ export default class Team extends Component{
 	}
 
     render(){
+      const { t } = this.props;
     	let AltmarketsStyle, TxbitStyle;
   		if (this.state.hover) {
   			if (this.state.hoverCat == "Altmarkets") {
@@ -41,9 +43,9 @@ export default class Team extends Component{
   		  TxbitStyle = theme.hover.out;
   		}
         return (
-        	<Grid container id='team' className={`text-center`} direction="row" justify="center" alignItems="stretch">
+        	<Grid container id='team' className={`text-center backgroundTeam`} direction="row" justify="center" alignItems="stretch">
             <Grid item xs={12} className={`mt-${theme.spacing.section}`} >
-              <h3 className="textBorder w-100 text-center">Meet the Team</h3>
+              <h3 className="textBorder w-100 text-center">{t('meetTeam')}</h3>
               <div className="underline mx-auto"></div>
             </Grid>
         		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
@@ -57,7 +59,7 @@ export default class Team extends Component{
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            		<span className="mx-auto textStyled textBorder">
-	            			Developer
+	            			{t('developer')}
 	            		</span>
             		</div>
                 <div className="d-flex">
@@ -69,8 +71,7 @@ export default class Team extends Component{
                     </div>
                     <div className="socialIcon m-2">
                       <a className="community-text-link link-community" href="https://t.me/Bagosan" style={{color: 'rgb(255, 255, 255)'}}>
-                        <i className="fab fa-telegram fa-lg"></i><
-                      /a>
+                        <i className="fab fa-telegram fa-lg"></i></a>
                     </div>
                   </div>
                 </div>
@@ -88,9 +89,22 @@ export default class Team extends Component{
 	            	</div>
 	            	<div className="w-100 d-flex">
 	            		<span className="mx-auto textStyled textBorder">
-	            			Marketing Strategy
+	            			{t('marketingStrategy')}
 	            		</span>
             		</div>
+                <div className="d-flex">
+                  <div className="d-flex mx-auto">
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://www.linkedin.com/in/roberto-paixão-2ba07b18b" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-linkedin fa-lg"></i>
+                      </a>
+                    </div>
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://t.me/Robertopaixao" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-telegram fa-lg"></i></a>
+                    </div>
+                  </div>
+                </div>
         		</Grid>
             <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
               <div className="w-100 d-flex">
@@ -105,8 +119,21 @@ export default class Team extends Component{
                 </div>
                 <div className="w-100 d-flex">
                   <span className="mx-auto textStyled textBorder">
-                    Community Management
+                    {t('communityManagemet')}
                   </span>
+                </div>
+                <div className="d-flex">
+                  <div className="d-flex mx-auto">
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://www.linkedin.com/in/patricia-damiana-41824618a" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-linkedin fa-lg"></i>
+                      </a>
+                    </div>
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://t.me/YunaLuz" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-telegram fa-lg"></i></a>
+                    </div>
+                  </div>
                 </div>
             </Grid>
             <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
@@ -122,8 +149,16 @@ export default class Team extends Component{
                 </div>
                 <div className="w-100 d-flex">
                   <span className="mx-auto textStyled textBorder">
-                    Marketing
+                    {t('marketing')}
                   </span>
+                </div>
+                <div className="d-flex">
+                  <div className="d-flex mx-auto">
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://t.me/Alecspe" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-telegram fa-lg"></i></a>
+                    </div>
+                  </div>
                 </div>
             </Grid>
             <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
@@ -139,8 +174,21 @@ export default class Team extends Component{
                 </div>
                 <div className="w-100 d-flex">
                   <span className="mx-auto textStyled textBorder">
-                    Consultant & Graphic Design
+                    {t('consultant')} & {t('graphicDesign')}
                   </span>
+                </div>
+                <div className="d-flex">
+                  <div className="d-flex mx-auto">
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://www.linkedin.com/in/lucas-stevan-15809a18b" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-linkedin fa-lg"></i>
+                      </a>
+                    </div>
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://t.me/CRYPTOSENAOFC" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-telegram fa-lg"></i></a>
+                    </div>
+                  </div>
                 </div>
             </Grid>
             <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
@@ -156,8 +204,25 @@ export default class Team extends Component{
                 </div>
                 <div className="w-100 d-flex">
                   <span className="mx-auto textStyled textBorder">
-                    Social Media Strategist
+                    {t('socialMediaStrategist')}
                   </span>
+                </div>
+                <div className="d-flex">
+                  <div className="d-flex mx-auto">
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://www.linkedin.com/in/marcio-kipper-194738162" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-linkedin fa-lg"></i>
+                      </a>
+                    </div>
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://t.me/Marciokipper" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-telegram fa-lg"></i></a>
+                    </div>
+                    <div className="socialIcon m-2">
+                      <a className="community-text-link link-community" href="https://www.facebook.com/profile.php?id=100009550941843" style={{color: 'rgb(255, 255, 255)'}}>
+                        <i className="fab fa-facebook fa-lg"></i></a>
+                    </div>
+                  </div>
                 </div>
             </Grid>
         	</Grid>
@@ -165,3 +230,4 @@ export default class Team extends Component{
     };
 
 }
+export default withTranslation()(Team);

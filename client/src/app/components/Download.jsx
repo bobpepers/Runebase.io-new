@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import { Tabs, Tab, Nav } from 'react-bootstrap';
+import { withTranslation } from 'react-i18next';
 import theme from '../theme'
 import {RUNEBASE_VERSION} from '../config';
 
-export default class Download extends Component{
+class Download extends Component{
   constructor(props) {
     super(props)
   }
 
     render(){
+        const { t } = this.props;
         return (
           <Grid container id='wallets' className={`downloadBG text-center`}>
             <Grid item xs={12} className={`mt-${theme.spacing.section}`}>
-              <h3 className="textBorder w-100 text-center">Choose your Runebase Wallet</h3>
+              <h3 className="textBorder w-100 text-center">{t('chooseWallet')}</h3>
             </Grid>
             <div className="underline mx-auto"></div>
             <Tab.Container defaultActiveKey="Desktop">
@@ -21,13 +23,13 @@ export default class Download extends Component{
                 <Grid item xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <Nav className="flex-row d-flex justify-content-center">
                     <Nav.Item className="text-center col-xs-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <Nav.Link className='textBorder button1' eventKey="Desktop">Desktop</Nav.Link>
+                      <Nav.Link className='textBorder button1' eventKey="Desktop">{t('desktop')}</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="text-center col-xs-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <Nav.Link className='textBorder button1' eventKey="Mobile">Mobile</Nav.Link>
+                      <Nav.Link className='textBorder button1' eventKey="Mobile">{t('mobile')}</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="text-center col-xs-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <Nav.Link className='textBorder button1' eventKey="Web">Web</Nav.Link>
+                      <Nav.Link className='textBorder button1' eventKey="Web">{t('web')}</Nav.Link>
                     </Nav.Item>
                   </Nav>
                 </Grid>
@@ -41,7 +43,7 @@ export default class Download extends Component{
                         <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-windows brand-icon-size"></i>
-                            <h3 className='w-100 textBorder'>Windows</h3>
+                            <h3 className='w-100 textBorder'>{t('windows')}</h3>
                             <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win64-setup.exe`}>
                               64bit.exe
                             </a>
@@ -59,7 +61,7 @@ export default class Download extends Component{
                         <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-apple brand-icon-size"></i>
-                            <h3 className='w-100 textBorder'>Mac OS</h3>
+                            <h3 className='w-100 textBorder'>{t('macOS')}</h3>
                             <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx.dmg`}>
                               osx.dmg
                             </a>
@@ -74,7 +76,7 @@ export default class Download extends Component{
                         <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-linux brand-icon-size"></i>
-                            <h3 className='w-100 textBorder'>Linux</h3>
+                            <h3 className='w-100 textBorder'>{t('linux')}</h3>
                             <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-x86_64-linux-gnu.tar.gz`}>
                               x86_64.tar.gz
                             </a>
@@ -92,7 +94,7 @@ export default class Download extends Component{
                         <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-chrome brand-icon-size"></i>
-                            <h3 className='w-100 textBorder'>Google Chrome</h3>
+                            <h3 className='w-100 textBorder'>{t('chrome')}</h3>
                             <a className="w-100 button1" href="https://chrome.google.com/webstore/detail/runebasechrome/gnfdbibmnlkehibhabjohlbiehhbhkhd">
                               RunebaseChrome
                             </a>
@@ -101,7 +103,7 @@ export default class Download extends Component{
                         <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                           <div className="col-md-12">
                             <i className="fab fa-github brand-icon-size"></i>
-                            <h3 className='w-100 textBorder'>Source</h3>
+                            <h3 className='w-100 textBorder'>{t('source')}</h3>
                             <a className="w-100 button1" href="">
                               Core
                             </a>
@@ -109,7 +111,7 @@ export default class Download extends Component{
                               RunebaseChrome
                             </a>
                             <a className="w-100 button1" href="">
-                              WebWallet
+                              {t('webWallet')}
                             </a>
                           </div>
                         </Grid>
@@ -123,7 +125,7 @@ export default class Download extends Component{
                         <Grid item lg={4} md={6} sm={12} className='mt-5'>
                           <div className="col-md-12">
                             <i className="fab fa-android brand-icon-size"></i>
-                            <h3 className='w-100 textBorder'>Android</h3>
+                            <h3 className='w-100 textBorder'>{t('android')}</h3>
                             <a className="w-100 button1" href='https://play.google.com/store/apps/details?id=org.runebase.wallet'>
                               Google Play
                             </a>
@@ -134,7 +136,7 @@ export default class Download extends Component{
                             <i className="fab fa-apple brand-icon-size"></i>
                             <h3 className='w-100 textBorder'>IOS</h3>
                             <a className="w-100 button1" href="#">
-                              Not Available
+                              {t('notAvailable')}
                             </a>
                           </div>
                         </Grid>
@@ -156,3 +158,5 @@ export default class Download extends Component{
     };
 
 }
+
+export default withTranslation()(Download);

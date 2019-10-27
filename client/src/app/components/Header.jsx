@@ -5,6 +5,8 @@ import { HashLink } from 'react-router-hash-link';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import ScrollableSection, { ScrollableLink } from 'react-update-url-on-scroll';
 import {withRouter} from 'react-router-dom';
+import { withTranslation } from 'react-i18next';
+import ReactCountryFlag from "react-country-flag";
 import 'bootstrap/dist/css/bootstrap.css';
 
 class Header extends Component {
@@ -56,6 +58,32 @@ class Header extends Component {
 
   render() {
     const show = (this.state.menu) ? "show" : "" ;
+    const { t, i18n } = this.props;
+    const changeLanguage = lng => {
+      i18n.changeLanguage(lng);
+    };
+    const getCurrentLng = () => i18n.language || window.localStorage.i18nextLng || '';
+    console.log(getCurrentLng());
+    console.log(getCurrentLng());
+    console.log(getCurrentLng());
+    console.log(getCurrentLng());
+    console.log(getCurrentLng());
+    console.log(getCurrentLng());
+    console.log(getCurrentLng());
+    console.log(getCurrentLng());
+    console.log(getCurrentLng());
+    const countryCode = (country) => {
+      if (country == 'pt') {
+        return 'br';
+      }
+      if (country == 'en') {
+        return 'us';
+      }
+      if (country == 'nl') {
+        return 'nl';
+      }
+
+    }
     return (
       <header style={{height: this.state.height}}>
           <Navbar ref={ div => { this.div = div; } } fixed='top' className="navbar navbar-default" bg="light" expand="lg">
@@ -68,68 +96,84 @@ class Header extends Component {
                 <NavDropdown title="Home" id="basic-nav-dropdown">
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'info' ? "active" : "NotActive"}`} smooth to="/#info"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Info
+                      {t('info')}
                   </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'wallets' ? "active" : "NotActive"}`} smooth to="/#wallets"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Wallets
+                      {t('wallets')}
                   </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'product' ? "active" : "NotActive"}`} smooth to="/#product"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Product
+                      {t('product')}
                   </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'exchanges' ? "active" : "NotActive"}`} smooth to="/#exchanges"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Exchanges
+                      {t('exchanges')}
                   </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'pools' ? "active" : "NotActive"}`} smooth to="/#pools"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Pools
+                      {t('pools')}
                   </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'community' ? "active" : "NotActive"}`} smooth to="/#community"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Community
+                      {t('community')}
                   </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'team' ? "active" : "NotActive"}`} smooth to="/#team"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Team
+                      {t('team')}
                   </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'roadmap' ? "active" : "NotActive"}`} smooth to="/#roadmap"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Roadmap
+                      {t('roadmap')}
                   </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'contact' ? "active" : "NotActive"}`} smooth to="/#contact"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
-                      Contact
+                      {t('contact')}
                   </HashLink>
                 </NavDropdown>
                 <NavDropdown title="Services" id="basic-nav-dropdown">
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="#action/3.1">
-                    Explorer
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer.runebase.io">
+                    {t('explorer')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="#action/3.2">
-                    Faucet
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
+                    {t('faucet')}
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Link onClick={ this.toggleMenu } className="nav-link" to="/status">Status</Link>
+                <Link onClick={ this.toggleMenu } className="nav-link" to="/status">{t('status')}</Link>
               </Nav>
+
+              <NavDropdown title={<span><ReactCountryFlag code={countryCode(`${getCurrentLng()}`)} svg /> {t(`${getCurrentLng()}`)}</span>} id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={(event) => { this.toggleMenu; changeLanguage('en')}}>
+                    <div><ReactCountryFlag code="us" svg /> {t('en')}</div>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={(event) => { this.toggleMenu; changeLanguage('pt')}}>
+                    <div><ReactCountryFlag code="br" svg /> {t('pt')}</div>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={(event) => { this.toggleMenu; changeLanguage('nl')}}>
+                    <div><ReactCountryFlag code="nl" svg /> {t('nl')}</div>
+                  </NavDropdown.Item>
+              </NavDropdown>
+
+
+
+
               {
               this.props.authenticated ?
                 <ul>
                   <li>
-                    <Link className="nav-link" to="/users">Users</Link>
+                    <Link className="nav-link" to="/users">{t('users')}</Link>
                   </li>
                   <li>
-                    <Link className="nav-link" to="/signout">Signout</Link>
+                    <Link className="nav-link" to="/signout">{t('signout')}</Link>
                   </li>
                 </ul>
                 :
                 <ul>
                   <li>
-                    <Link className="nav-link" to="/signin">Sign in</Link>
+                    <Link className="nav-link" to="/signin">{t('signin')}</Link>
                   </li>
                   <li>
-                    <Link className="nav-link" to="/signup">Sign up</Link>
+                    <Link className="nav-link" to="/signup">{t('signup')}</Link>
                   </li>
                 </ul>
             }
@@ -144,4 +188,4 @@ function mapStateToProps(state) {
   return { authenticated: state.auth.authenticated };
 }
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(withTranslation()(Header));

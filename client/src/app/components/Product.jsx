@@ -1,78 +1,79 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
+import { withTranslation } from 'react-i18next';
 import FourStake from '../assets/images/FourStake.png';
 import StakingWorld from '../assets/images/StakingWorld.png';
 import theme from '../theme'
 
-export default class Product extends Component{
+class Product extends Component{
 	constructor(props) {
 		super(props)
 	}
 
     render(){
+        const { t } = this.props;
         return (
         	<Grid container id='product' className={`backgroundProduct text-center textBorder`} direction="row" justify="center" alignItems="stretch">
         		<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
-	        		<h3 className="textBorder w-100 text-center">Let's talk Product</h3>
+	        		<h3 className="textBorder w-100 text-center">{t('talkProduct')}</h3>
 	   				<div className="underline mx-auto"></div>
 	   			</Grid>
 	   			<Grid item xs={12} className={`mx-auto textBorder mt-${theme.spacing.marginTopItem}`}>
-	   				<p className='mx-auto text-center'>Runebase(Runes) is a Proof of Stake Coin and a Smart-Contract Platform.
-Combining a modified Bitcoin Core infrastructure with an intercompatible version of the Ethereum Virtual Machine (EVM), Runebase merges the reliability of Bitcoin’s unfailing blockchain with the endless possibilities provided by smart contracts.</p>
+	   				<p className='mx-auto text-center'>{t('productDescription')}</p>
 	   			</Grid>
         		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
-        					<img className="mx-auto" src={FourStake} height="128px" width="128px" alt="" />
+        					<i class="fas fa-network-wired mx-auto brand-icon-size"></i>
         			</div>
         			<div className="w-100 d-flex">
-	            			<h4 className='mx-auto titleStyled textBorder'>Decentralized</h4>
+	            			<h4 className='mx-auto titleStyled textBorder'>{t('decentralized')}</h4>
 	            	</div>
 	            	<div className="w-100 d-flex">
-	            			<p className='text-center'>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+	            			<p className='text-center'>{t('decentralizedDescription')}</p>
             		</div>
         		</Grid>
         		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
-        					<img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
+        					<i class="fas fa-file-signature mx-auto brand-icon-size"></i>
         			</div>
         			<div className="w-100 d-flex">
-	            			<h4 className='mx-auto titleStyled textBorder'>Smart Contracts</h4>
+	            			<h4 className='mx-auto titleStyled textBorder'>{t('smartContracts')}</h4>
 	            	</div>
 	            	<div className="w-100 d-flex">
-	            			<p className='text-center'>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+	            			<p className='text-center'>{t('smartContractsDescription')}</p>
             		</div>
         		</Grid>
         		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
-        					<img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
+        					<i class="fas fa-hand-holding-usd mx-auto brand-icon-size"></i>
         			</div>
         			<div className="w-100 d-flex">
-	            			<h4 className='mx-auto titleStyled textBorder'>Staking Reward</h4>
+	            			<h4 className='mx-auto titleStyled textBorder'>{t('stakingReward')}</h4>
 	            	</div>
 	            	<div className="w-100 d-flex">
-	            			<p className='text-center'>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+	            			<p className='text-center'>{t('stakingRewardDescription')}</p>
             		</div>
         		</Grid>
                 <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                     <div className="w-100 d-flex">
-                            <img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
+                            <i className="fas fa-leaf brand-icon-size mx-auto"></i>
                     </div>
                     <div className="w-100 d-flex">
-                            <h4 className='mx-auto titleStyled textBorder'>Green</h4>
+                            <h4 className='mx-auto titleStyled textBorder'>{t('green')}</h4>
                     </div>
                     <div className="w-100 d-flex">
-                            <p className='text-center'>Some info why proof of stake uses less energy</p>
+                            <p className='text-center'>{t('greenDescription')}</p>
                     </div>
                 </Grid>
                 <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
                     <div className="w-100 d-flex">
-                            <img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
+                            <i class="fas fa-comments brand-icon-size mx-auto"></i>
                     </div>
                     <div className="w-100 d-flex">
-                            <h4 className='mx-auto titleStyled textBorder'>Community</h4>
+                            <h4 className='mx-auto titleStyled textBorder'>{t('community')}</h4>
                     </div>
                     <div className="w-100 d-flex">
-                            <p className='text-center'>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                            <p className='text-center'>{t('communityDescription')}</p>
                     </div>
                 </Grid>
         	</Grid>
@@ -80,3 +81,5 @@ Combining a modified Bitcoin Core infrastructure with an intercompatible version
     };
 
 }
+
+export default withTranslation()(Product);
