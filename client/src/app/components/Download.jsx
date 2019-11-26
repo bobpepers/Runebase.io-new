@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import { Tabs, Tab, Nav } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
+import ScrollableSection from 'react-update-url-on-scroll';
 import theme from '../theme'
 import {RUNEBASE_VERSION} from '../config';
 
@@ -13,6 +14,7 @@ class Download extends Component{
     render(){
         const { t } = this.props;
         return (
+          <ScrollableSection hash={'wallets'}>
           <Grid container id='wallets' className={`downloadBG text-center`}>
             <Grid item xs={12} className={`mt-${theme.spacing.section}`}>
               <h3 className="textBorder w-100 text-center">{t('chooseWallet')}</h3>
@@ -154,6 +156,7 @@ class Download extends Component{
               </Grid>
             </Tab.Container>
           </Grid>
+          </ScrollableSection>
         );
     };
 

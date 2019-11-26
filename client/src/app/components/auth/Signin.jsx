@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
+import { reduxForm, Field, formValueSelector, change } from 'redux-form';
 import * as actions from '../../actions/auth';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Captcha from '../Captcha';
 
 const renderField = ({ input, type, placeholder, meta: { touched, error } }) => (
   <div className={`input-group ${touched && error ? 'has-error' : ''}`}>
@@ -40,7 +41,7 @@ class Signin extends Component {
           <div className="password-forgot">
             <Link to="/reset-password">I forgot my password</Link>
           </div>
-
+          <Field component={Captcha} change={change} name="captchaResponse"/>
           {/* Server error message */}
           { this.props.errorMessage && this.props.errorMessage.signin &&
               <div className="error-container signin-error">Oops! { this.props.errorMessage.signin }</div> }
@@ -61,7 +62,7 @@ class Signin extends Component {
 
 function validate(formProps) {
   const errors = {};
-
+  console.log(formProps);
   if(!formProps.email) {
     errors.email = 'Email is required'
   }
@@ -70,11 +71,18 @@ function validate(formProps) {
     errors.password = 'Password is required'
   }
 
+  if (!formProps.captchaResponse) {
+    errors.captchaResponse = 'Please validate the captcha.';
+  }
+
   return errors;
 }
-
+const selector = formValueSelector('signin');
 function mapStateToProps(state) {
-  return { errorMessage: state.auth.error }
+  return {
+    errorMessage: state.auth.error,
+    recaptchaValue: selector(state, 'captchaResponse'),
+  }
 }
 
 Signin = reduxForm({ form: 'signin', validate })(Signin);

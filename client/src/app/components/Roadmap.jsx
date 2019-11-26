@@ -3,6 +3,7 @@ import * as actions from '../actions/auth';
 import { connect } from 'react-redux';
 import { Grid } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
+import ScrollableSection from 'react-update-url-on-scroll';
 
 class Roadmap extends Component {
   constructor(props) {
@@ -12,12 +13,13 @@ class Roadmap extends Component {
   render() {
     const { t } = this.props;
     return (
-        <div id='roadmap' className='backgroundRoadmap'>
+        <ScrollableSection hash={'roadmap'}>
+        <div id='roadmap' className='backgroundRoadmap textBorder'>
             <Grid container className='roadmap'>
                 <h3 className="textBorder w-100 text-center">{t('roadmap')}</h3>
                 <div className="underline mx-auto mb-5"></div>
 
-                <ul className="timeline">
+                <ul className="timeline w-100">
                     <li>
                         <div className="timeline-badge">
                             <a>
@@ -29,8 +31,12 @@ class Roadmap extends Component {
                                 <h4>2018</h4>
                             </div>
                             <div className="timeline-body">
-                                <p>Invitamus me testatur sed quod non dum animae tuae lacrimis ut libertatem deum rogus aegritudinis causet. Dicens hoc contra serpentibus isto.</p>
-                            </div>
+                                    <p className="timeline__day-sum">{t('roadmap1')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                    <p className="timeline__day-sum">{t('roadmap2')}<i className="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                    <p className="timeline__day-sum">{t('roadmap3')}<i className="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                    <p className="timeline__day-sum">{t('roadmap4')}<i className="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                    <p className="timeline__day-sum">{t('roadmap5')}<i className="fas fa-check fa-lg ml-2 text-success"></i></p>
+                               </div>
                             <div className="timeline-footer">
                                 <p className="text-right">2018</p>
                             </div>
@@ -45,7 +51,17 @@ class Roadmap extends Component {
                                 <h4>2019</h4>
                             </div>
                             <div className="timeline-body">
-                                <p>Stranguillione in deinde cepit roseo commendavit patris super color est se sed. Virginis plus plorantes abscederem assignato ipsum ait regem Ardalio nos filiae Hellenicus mihi cum. Theophilo litore in lucem in modo invenit quasi nomen magni ergo est se est Apollonius, habet clementiae venit ad nomine sed dominum depressit filia navem.</p>
+                                <p class="timeline__day-sum">{t('roadmap6')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap7')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap8')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap9')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap10')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap11')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap12')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap13')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap14')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap15')}</p>
+                                <p class="timeline__day-sum">{t('roadmap16')}</p>
                             </div>
                             <div className="timeline-footer">
                                 <p className="text-right">2019</p>
@@ -62,7 +78,13 @@ class Roadmap extends Component {
                                 <h4>2020</h4>
                             </div>
                             <div className="timeline-body">
-                                <p>Advenientibus aliorum eam ad per te sed. Facere debetur aut veneris accedens.</p>
+                                <p class="timeline__day-sum">{t('roadmap17')}</p>
+                                <p class="timeline__day-sum">{t('roadmap18')}</p>
+                                <p class="timeline__day-sum">{t('roadmap19')}</p>
+                                <p class="timeline__day-sum">{t('roadmap20')}</p>
+                                <p class="timeline__day-sum">{t('roadmap21')}</p>
+                                <p class="timeline__day-sum">{t('roadmap22')}</p>
+                                <p class="timeline__day-sum">{t('roadmap23')}</p>
                             </div>
                             <div className="timeline-footer">
                                 <p className="text-right">2020</p>
@@ -79,7 +101,8 @@ class Roadmap extends Component {
                                 <h4>2021</h4>
                             </div>
                             <div className="timeline-body">
-                                <p>Volvitur ingreditur id ait mea vero cum autem quod ait Cumque ego illum vero cum unde beata. Commendavi si non dum est in. Dionysiadem tuos ratio puella ut casus, tunc lacrimas effunditis magister cives Tharsis. Puellae addita verbaque' capellam sanctissima quid, apollinem existimas filiam rex cum autem quod tamen adnuente rediens eam est se in. Peracta licet ad nomine Maria non ait in modo compungi mulierem volutpat.</p>
+                                <p class="timeline__day-sum">{t('roadmap22')}</p>
+                                <p class="timeline__day-sum">{t('roadmap23')}</p>
                             </div>
                             <div className="timeline-footer">
                                 <p className="text-right">2021</p>
@@ -89,7 +112,11 @@ class Roadmap extends Component {
                     <li className="clearfix no-float"></li>
                 </ul>
             </Grid>
+            <Grid container>
+            <div className='mx-auto'><p>{t('revisionNotice')}</p></div>
+            </Grid>
         </div>
+        </ScrollableSection>
     )
   }
 }

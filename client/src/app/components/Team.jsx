@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
 import Image from 'react-bootstrap/Image';
+import ScrollableSection from 'react-update-url-on-scroll';
 import Jonas from '../assets/images/Jonas.png';
 import Roberto from '../assets/images/Roberto.png';
 import Patricia from '../assets/images/Patricia.png';
@@ -43,6 +44,7 @@ class Team extends Component{
   		  TxbitStyle = theme.hover.out;
   		}
         return (
+          <ScrollableSection hash={'team'}>
         	<Grid container id='team' className={`text-center backgroundTeam`} direction="row" justify="center" alignItems="stretch">
             <Grid item xs={12} className={`mt-${theme.spacing.section}`} >
               <h3 className="textBorder w-100 text-center">{t('meetTeam')}</h3>
@@ -226,6 +228,7 @@ class Team extends Component{
                 </div>
             </Grid>
         	</Grid>
+          </ScrollableSection>
         );
     };
 

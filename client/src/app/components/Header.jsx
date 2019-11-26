@@ -28,6 +28,8 @@ class Header extends Component {
       this.setState({ menu: !this.state.menu });
     }
     componentDidMount() {
+      console.log('te laat');
+
        this.updateHeight();
        window.addEventListener("resize", this.updateHeight);
        window.addEventListener("scroll", this.detectHashChange);
@@ -63,15 +65,6 @@ class Header extends Component {
       i18n.changeLanguage(lng);
     };
     const getCurrentLng = () => i18n.language || window.localStorage.i18nextLng || '';
-    console.log(getCurrentLng());
-    console.log(getCurrentLng());
-    console.log(getCurrentLng());
-    console.log(getCurrentLng());
-    console.log(getCurrentLng());
-    console.log(getCurrentLng());
-    console.log(getCurrentLng());
-    console.log(getCurrentLng());
-    console.log(getCurrentLng());
     const countryCode = (country) => {
       if (country == 'pt') {
         return 'br';
@@ -153,9 +146,6 @@ class Header extends Component {
                     <div><ReactCountryFlag code="nl" svg /> {t('nl')}</div>
                   </NavDropdown.Item>
               </NavDropdown>
-
-
-
 
               {
               this.props.authenticated ?

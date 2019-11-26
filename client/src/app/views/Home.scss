@@ -347,3 +347,26 @@ li {
 ul {
     padding-inline-start: 0px;
 }
+
+.input-group {
+    display: block !important;
+}
+
+
+.text-area {
+
+}
+
+.has-error textarea[type='text'], .has-error textarea[type='password'] {
+    border: 1px solid #e15258;
+}
+
+textarea[type='text'], textarea[type='password'] {
+    border-radius: 5px;
+    border: 1px solid #c0c4c6;
+    width: 98%;
+    min-height: 200px;
+}
+.workFormButton {
+    width: 150px !important;
+}

@@ -3,13 +3,14 @@ import bcrypt from 'bcrypt-nodejs';
 import User from '../models/user';
 import { sendVerificationEmail } from '../helpers/email';
 import { tokenForUser } from '../helpers/token';
+import * as recaptchaHelpers from '../helpers/recaptcha';
 
 /**
  * Sign in
  */
 export const signin = (req, res) => {
   const { firstname, lastname, email } = req.user;
-
+  console.log(req.user);
   res.json({ token: tokenForUser(req.user), firstname, lastname, email });
 };
 
@@ -17,9 +18,17 @@ export const signin = (req, res) => {
  * Sign up
  */
 export const signup = (req, res, next) => {
-  const { firstname, lastname, email, password } = req.body;
+  console.log(req.body);
+  console.log(req.body.props);
+  console.log('made it to signup function!!!!!!!!!!!!!')
+  const { firstname, lastname, email, password } = req.body.props;
+  console.log(firstname);
+  console.log(lastname);
+  console.log(email);
+  console.log(password);
 
   if (!firstname || !lastname || !email || !password) {
+    console.log('something is missing');
     return res.status(422).send({ error: "all fields are required" });
   }
 
@@ -27,6 +36,7 @@ export const signup = (req, res, next) => {
     if (err) { return next(err); }
 
     if (existingUser) {
+      console.log('email already in use');
       return res.status(422).send({ error: "Email is in use" });
     }
 

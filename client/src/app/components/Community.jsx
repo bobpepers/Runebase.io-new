@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
+import ScrollableSection from 'react-update-url-on-scroll';
 import Discord from '../assets/images/Discord.png';
 import Medium from '../assets/images/Medium.png';
 import Telegram from '../assets/images/Telegram.png';
@@ -48,6 +49,7 @@ class Community extends Component{
 		  TelegramStyle = theme.hover.out;
 		}
         return (
+        	<ScrollableSection hash={'community'}>
         	<Grid container id='community' className={`text-center`} direction="row" justify="center" alignItems="stretch">
 	        	<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
 	        		<h3 className="textBorder w-100 text-center">{t('community')}</h3>
@@ -122,6 +124,7 @@ class Community extends Component{
             		</div>
         		</Grid>
         	</Grid>
+        	</ScrollableSection>
         );
     };
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
+import ScrollableSection from 'react-update-url-on-scroll';
 import Altmarkets from '../assets/images/Altmarkets.png';
 import Txbit from '../assets/images/Txbit.png';
 
@@ -38,6 +39,7 @@ class Exchanges extends Component{
 		  TxbitStyle = theme.hover.out;
 		}
         return (
+        	<ScrollableSection hash={'exchanges'}>
         	<Grid container id='exchanges' className='backgroundExchanges' direction="row" justify="center" alignItems="stretch">
         		<Grid item xs={12} className={`text-center mt-${theme.spacing.section}`}>
 	        		<h3 className="textBorder w-100 text-center">{t('tradeExchanges')}</h3>
@@ -78,6 +80,7 @@ class Exchanges extends Component{
             		</div>
         		</Grid>
         	</Grid>
+        	</ScrollableSection>
         );
     };
 

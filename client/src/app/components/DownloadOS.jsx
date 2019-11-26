@@ -8,15 +8,16 @@ class DownloadOS extends Component {
   constructor(props) {
     super(props);
   }
-  renderDownloadLink(Platform) {
+
+  renderDownloadLink(Platform, CPU) {
     switch(true) {
       case !!Platform.match(/Linux/):
         return 'https://downloads.runebase.io/runebase-0.17.5-x86_64-linux-gnu.tar.gz';
         break;
-      case !!Platform.match(/Win64/):
+      case !!Platform.match(/Windows/) && !!CPU.match(/64/):
         return 'https://downloads.runebase.io/runebase-0.17.5-win64-setup.exe';
         break;
-      case !!Platform.match(/Win32/):
+      case !!Platform.match(/Windows/) && !!CPU.match(/32/):
         return 'https://downloads.runebase.io/runebase-0.17.5-win32-setup.exe';
         break;
       case !!Platform.match(/Osx/):
@@ -35,18 +36,18 @@ class DownloadOS extends Component {
         return 'source link';
     }
   }
-  renderDownloadName(Platform) {
+  renderDownloadName(Platform, CPU) {
     switch(true) {
       case !!Platform.match(/Linux/):
         return 'runebase-0.17.5-x86_64-linux-gnu.tar.gz';
         break;
-      case !!Platform.match(/Win64/):
+      case !!Platform.match(/Windows/) && !!CPU.match(/64/):
         return 'runebase-0.17.5-win64-setup.exe';
         break;
-      case !!Platform.match(/Win32/):
+      case !!Platform.match(/Windows/) && !!CPU.match(/32/):
         return 'runebase-0.17.5-win32-setup.exe';
         break;
-      case !!Platform.match(/Osx/):
+      case !!Platform.match(/Mac OS/):
         return 'runebase-0.17.5-osx.dmg';
         break;
       case !!Platform.match(/Android/):
@@ -64,10 +65,12 @@ class DownloadOS extends Component {
   }
 
   render() {
-
+    console.log(Platform.OS);
+    console.log(Platform.OSVersion);
+    console.log(Platform.CPU);
     return (
       <div className="single_slider pt-3 w-100 my-auto">
-        <a className='button1 showpointer' href={this.renderDownloadLink(Platform.OS)}>{this.renderDownloadName(Platform.OS)}</a>
+        <a className='button1 showpointer' href={this.renderDownloadLink(Platform.OS, Platform.CPU)}>{this.renderDownloadName(Platform.OS, Platform.CPU)}</a>
       </div>
     )
   }

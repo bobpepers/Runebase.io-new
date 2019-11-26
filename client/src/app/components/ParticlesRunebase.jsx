@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
+import ScrollableSection from 'react-update-url-on-scroll';
 import DownloadOS from './DownloadOS';
 import Mountain from '../assets/images/Mountain.png';
 import { Clouds } from './Clouds';
@@ -15,7 +16,8 @@ class ParticlesRunebase extends Component{
     render(){
         const { t } = this.props;
         return (
-            <section id='info' className="top">
+            <ScrollableSection hash={'info'} ref={this.myRef}>
+            <section className="top">
 
                 <div className="foggy">
 
@@ -42,6 +44,7 @@ class ParticlesRunebase extends Component{
                     </div>
                 </div>
             </section>
+            </ScrollableSection>
         );
     };
 

@@ -21,12 +21,19 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     backend: options,
+    load: 'unspecific',
     fallbackLng: 'en',
+    whitelist: ['en', 'pt', 'nl'],
+    lngWhitelist: ['en', 'pt', 'nl'],
     debug: true,
+    initImmediate: true,
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
+    react: {
+      wait: false
+    }
   });
 
 export default i18n;

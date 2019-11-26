@@ -25,8 +25,9 @@ export function authError(CONST, error) {
  * Sign up
  */
 export function signupUser(props) {
+  const { captchaResponse } = props;
   return function (dispatch) {
-    axios.post(`${API_URL}/signup`, props)
+    axios.post(`${API_URL}/signup`, { props, captchaResponse })
       .then(() => {
         dispatch({ type: SIGNUP_SUCCESS });
 
@@ -43,10 +44,12 @@ export function signupUser(props) {
  * Sign in
  */
 export function signinUser(props) {
-  const { email, password } = props;
+  const { email, password, captchaResponse } = props;
+  console.log('1234');
+  console.log(captchaResponse);
 
   return function (dispatch) {
-    axios.post(`${API_URL}/signin`, { email, password })
+    axios.post(`${API_URL}/signin`, { email, password, captchaResponse })
       .then(response => {
         localStorage.setItem('user', JSON.stringify(response.data));
 
@@ -54,7 +57,7 @@ export function signinUser(props) {
 
         history.push('/users');
       })
-      .catch(() => dispatch(authError(SIGNIN_FAILURE, "Email or password isn't right")));
+      .catch(() => dispatch(authError(SIGNIN_FAILURE, "Email, password or captcha isn't right")));
   }
 }
 

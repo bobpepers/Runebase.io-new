@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
+import ScrollableSection from 'react-update-url-on-scroll';
 import FourStake from '../assets/images/FourStake.png';
 import StakingWorld from '../assets/images/StakingWorld.png';
 import theme from '../theme'
@@ -37,6 +38,7 @@ class Pools extends Component{
 		  StakingWorldStyle = theme.hover.out;
 		}
         return (
+        	<ScrollableSection hash={'pools'}>
         	<Grid container id='pools' className={`text-center`} direction="row" justify="center" alignItems="stretch">
         		<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
 	        		<h3 className="textBorder w-100 text-center">{t('stakesDescription')}</h3>
@@ -77,6 +79,7 @@ class Pools extends Component{
             		</div>
         		</Grid>
         	</Grid>
+        	</ScrollableSection>
         );
     };
 

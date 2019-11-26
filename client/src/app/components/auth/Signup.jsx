@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
+import { reduxForm, Field, formValueSelector, change } from 'redux-form';
 import * as actions from '../../actions/auth';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Captcha from '../Captcha';
 
 const renderField = ({ input, type, placeholder, meta: { touched, error } }) => (
   <div className={`input-group ${touched && error ? 'has-error' : ''}`}>
@@ -44,6 +45,8 @@ class Signup extends Component {
 
           {/* Email */}
           <Field name="repassword" component={renderField} type="password" placeholder="Repeat Password" />
+
+          <Field component={Captcha} change={change} name="captchaResponse"/>
 
           {/* Server error message */}
           <div>
@@ -103,12 +106,19 @@ const validate = props => {
     errors.repassword = "passwords doesn't match";
   }
 
+  if (!props.captchaResponse) {
+    errors.captchaResponse = 'Please validate the captcha.';
+  }
+
   return errors;
 };
-
+const selector = formValueSelector('signin');
 
 function mapStateToProps(state) {
-  return { errorMessage: state.auth.error };
+  return {
+    errorMessage: state.auth.error,
+    recaptchaValue: selector(state, 'captchaResponse'),
+  };
 }
 
 Signup = reduxForm({ form: 'signup', validate })(Signup);
