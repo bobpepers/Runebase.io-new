@@ -18,10 +18,10 @@ class Footer extends Component {
 render() {
     const { t } = this.props;
   return (
-    <Grid container style={{position: 'absolute', zIndex: '99999', width: '100%', height: '55%'}} className={`text-center`} direction="row" justify="center" alignItems="stretch">
+    <Grid container style={{position: 'absolute', zIndex: '0', width: '100%', height: '55%'}} className={`text-center`} direction="row" justify="center" alignItems="stretch">
         <canvas id='particlewave' style={{position: 'absolute', display: 'block', width: '100%', height: '100%'}}>
         </canvas>
-        <Grid container id='pariclewaveHeight' style={{position: 'absolute', zIndex: '99999', width: '100%', height: '100%'}} className={`pt-${theme.spacing.section}`}>
+        <Grid container id='pariclewaveHeight' style={{position: 'absolute', zIndex: '0', width: '100%', height: '100%'}} className={`pt-${theme.spacing.section}`}>
                 <Grid item xs={3}>
                 	<h2>{t('documentation')}</h2>
                 	<ul>

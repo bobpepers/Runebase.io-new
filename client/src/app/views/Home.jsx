@@ -32,7 +32,7 @@ class Home extends Component {
           <Download />
           <Product />
           <Exchanges />
-          <Pools />
+          {/* <Pools /> */}
           <Community />
           <Team />
           <Roadmap />

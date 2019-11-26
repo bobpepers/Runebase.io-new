@@ -22,6 +22,9 @@ class ChainInfo extends Component {
       reward: '100',
       type: 'Proof of Stake',
       time: '2min',
+      highlightPrice: false,
+      highlightBlockNumber: false,
+      highlightSupply: false,
     };
     this.updateChainInfo = this.updateChainInfo.bind(this);
   }
@@ -52,13 +55,31 @@ class ChainInfo extends Component {
           price: chainInfoUpdate.price,
           blockNumber: chainInfoUpdate.blockNumber,
           moneySupply: chainInfoUpdate.moneySupply,
+          highlightPrice: true,
+          highlightBlockNumber: true,
+          highlightSupply: true,
       }));
+      setTimeout(() => {
+        this.setState({
+          highlightPrice: false,
+          highlightBlockNumber: false,
+          highlightSupply: false,
+        });
+      }, 2000);
     }
     else {
       this.setState(() => ({
         blockNumber: chainInfoUpdate.blockNumber,
         moneySupply: chainInfoUpdate.moneySupply,
+        highlightBlockNumber: true,
+        highlightSupply: true,
     }));
+      setTimeout(() => {
+        this.setState({
+          highlightBlockNumber: false,
+          highlightSupply: false,
+        });
+      }, 2000);
     }
 
   }
@@ -85,7 +106,7 @@ class ChainInfo extends Component {
             </Grid>
             <Grid item className="text-center col-md-4 borderGray">
               <p className='noBottomMargin'>{t('mintedBlocks')}</p>
-              <p className='noBottomMargin'>{this.state.blockNumber}</p>
+              <p className={`element noBottomMargin ${this.state.highlightBlockNumber ? "highlight" : ""}`}>{this.state.blockNumber}</p>
             </Grid>
             <Grid item className="text-center col-md-4 borderGray">
               <p className='noBottomMargin'>{t('type')}</p>
@@ -97,11 +118,11 @@ class ChainInfo extends Component {
             </Grid>
             <Grid item className="text-center col-md-4 borderGray">
               <p className='noBottomMargin'>{t('supply')}</p>
-              <p className='noBottomMargin'>{this.state.moneySupply}</p>
+              <p className={`element noBottomMargin ${this.state.highlightSupply ? "highlight" : ""}`}>{this.state.moneySupply}</p>
             </Grid>
             <Grid item className="text-center col-md-4 borderGray">
               <p className='noBottomMargin'>{t('price')}</p>
-              <p className='noBottomMargin'>${this.state.price}</p>
+              <p className={`element noBottomMargin ${this.state.highlightPrice ? "highlight" : ""}`}>${this.state.price}</p>
             </Grid>
           </Grid>
         </div>

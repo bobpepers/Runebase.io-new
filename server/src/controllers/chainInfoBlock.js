@@ -3,8 +3,8 @@ import ChainInfo from '../models/chainInfo';
 const Client = require('bitcoin-core');
 const client = new Client({
   network: 'mainnet',
-  username: 'test',
-  password: 'test',
+  username: 'runebaseinfo',
+  password: 'runebaseinfo',
   port: 9432
 });
 

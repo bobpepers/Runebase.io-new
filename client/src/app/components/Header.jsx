@@ -104,9 +104,9 @@ class Header extends Component {
                       {t('exchanges')}
                   </HashLink>
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'pools' ? "active" : "NotActive"}`} smooth to="/#pools"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  {/* <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'pools' ? "active" : "NotActive"}`} smooth to="/#pools"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('pools')}
-                  </HashLink>
+                  </HashLink> */}
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'community' ? "active" : "NotActive"}`} smooth to="/#community"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('community')}
@@ -125,14 +125,90 @@ class Header extends Component {
                   </HashLink>
                 </NavDropdown>
                 <NavDropdown title="Services" id="basic-nav-dropdown">
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer.runebase.io">
+                  <NavDropdown.Item disabled onClick={ this.toggleMenu } href="https://explorer.runebase.io">
                     {t('explorer')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer2.runebase.io">
+                    {t('explorer')} 2
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer3.runebase.io">
+                    {t('explorer')} 3
+                  </NavDropdown.Item>
+                  <NavDropdown.Item disabled onClick={ this.toggleMenu } href="https://faucet.runebase.io">
                     {t('faucet')}
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Link onClick={ this.toggleMenu } className="nav-link" to="/status">{t('status')}</Link>
+
+                <NavDropdown title="Community" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer2.runebase.io">
+                    {t('Telegram Official')}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer3.runebase.io">
+                    {t('Telegram USA')}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
+                    {t('Telegram Brazil')}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
+                    {t('Discord')}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
+                    {t('Twitter')}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
+                    {t('Medium')}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
+                    {t('Facebook')}
+                  </NavDropdown.Item>
+                </NavDropdown>
+
+                <NavDropdown title="Ranking" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://www.coingecko.com/en/coins/runebase">
+                    CoinGecko
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://coinpaprika.com/coin/runes-runebase">
+                    CoinPaprika
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://blockspot.io/coin/runebase">
+                    BlockSpot
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://cmc.io/coins/runebase">
+                    CMC
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://athcoinindex.com/coin/runebase">
+                    AthCoinIndex
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://www.advfn.com/crypto/Runebase-RUNES">
+                     Advfn
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://cryptoprices123.com/cryptos/runes-runebase">
+                    CryptoPrices123
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://coinexpressway.com/Coin/runebase">
+                    CoinExpressWay
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://globalcoinlisting.com/currency/runebase">
+                    GlobalCoinListing
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://coincost.net/en/currency/runebase">
+                    CoinCost
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://www.moonstats.com/runes-runebase">
+                    MoonStats
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://comaps.io/coin/runebase">
+                    CoMaps
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://cryptocurrencyliveprices.com/coin.php?id=Runebase">
+                    CryptoCurrencyLivePrices
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://coingolive.com/en/coins/runebase/brl/">
+                    CoinGoLive
+                  </NavDropdown.Item>
+                </NavDropdown>
+
+                {/* <Link onClick={ this.toggleMenu } className="nav-link" to="/status">{t('status')}</Link> */}
               </Nav>
 
               <NavDropdown title={<span><ReactCountryFlag code={countryCode(`${getCurrentLng()}`)} svg /> {t(`${getCurrentLng()}`)}</span>} id="basic-nav-dropdown">
@@ -147,7 +223,7 @@ class Header extends Component {
                   </NavDropdown.Item>
               </NavDropdown>
 
-              {
+              {/*{
               this.props.authenticated ?
                 <ul>
                   <li>
@@ -166,7 +242,7 @@ class Header extends Component {
                     <Link className="nav-link" to="/signup">{t('signup')}</Link>
                   </li>
                 </ul>
-            }
+            }*/}
             </Navbar.Collapse>
           </Navbar>
       </header>
