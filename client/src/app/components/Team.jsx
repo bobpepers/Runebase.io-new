@@ -51,7 +51,7 @@ class Team extends Component{
                   <h3 className="textBorder w-100 text-center">{t('meetTeam')}</h3>
                   <div className="underline mx-auto"></div>
                 </Grid>
-            		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+            		<Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
             			<div className="w-100 d-flex">
             					<Image roundedCircle className="mx-auto imageBorderTeam" src={Jonas} height="128px" width="128px" alt="" />
             			</div>
@@ -79,7 +79,7 @@ class Team extends Component{
                       </div>
                     </div>
             		</Grid>
-            		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+            		<Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
             			<div className="w-100 d-flex">
             				<span className="mx-auto">
             					<Image roundedCircle className="mx-auto imageBorderTeam" src={Roberto} height="128px" width="128px" alt="" />
@@ -109,7 +109,7 @@ class Team extends Component{
                       </div>
                     </div>
             		</Grid>
-                <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <div className="w-100 d-flex">
                     <span className="mx-auto">
                       <Image roundedCircle className="mx-auto imageBorderTeam" src={Patricia} height="128px" width="128px" alt="" />
@@ -139,7 +139,7 @@ class Team extends Component{
                       </div>
                     </div>
                 </Grid>
-                <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <div className="w-100 d-flex">
                     <span className="mx-auto">
                       <Image roundedCircle className="mx-auto imageBorderTeam" src={Alex} height="128px" width="128px" alt="" />
@@ -164,7 +164,7 @@ class Team extends Component{
                       </div>
                     </div>
                 </Grid>
-                <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <div className="w-100 d-flex">
                     <span className="mx-auto">
                       <Image roundedCircle className="mx-auto imageBorderTeam" src={Lucas} height="128px" width="128px" alt="" />
@@ -194,7 +194,7 @@ class Team extends Component{
                       </div>
                     </div>
                 </Grid>
-                <Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <div className="w-100 d-flex">
                     <span className="mx-auto">
                       <Image roundedCircle className="mx-auto imageBorderTeam" src={Marcio} height="128px" width="128px" alt="" />

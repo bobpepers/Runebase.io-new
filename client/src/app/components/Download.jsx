@@ -107,14 +107,17 @@ class Download extends Component{
                               <div className="col-md-12">
                                 <i className="fab fa-github brand-icon-size"></i>
                                 <h3 className='w-100 textBorder'>{t('source')}</h3>
-                                <a className="w-100 button1" href="">
+                                <a className="w-100 button1" href="https://github.com/Runebase/runebase">
                                   Core
                                 </a>
-                                <a className="w-100 button1" href="">
-                                  RunebaseChrome
+                                <a className="w-100 button1" href="https://github.com/Runebase/runebase-chrome-wallet">
+                                  Runebase Chrome
                                 </a>
-                                <a className="w-100 button1" href="">
+                                <a className="w-100 button1" href="https://github.com/Runebase/web-wallet">
                                   {t('webWallet')}
+                                </a>
+                                <a className="w-100 button1" href="https://github.com/Runebase/runebase-android">
+                                  Android
                                 </a>
                               </div>
                             </Grid>
@@ -149,6 +152,15 @@ class Download extends Component{
                           <Grid container className='text-center' direction="row" justify="center" alignItems="stretch">
                             <Grid item xs={12} className='d-flex'>
                               <h3 className={`mx-auto textBorder mt-${theme.spacing.marginTopItem}`}>Web</h3>
+                            </Grid>
+                            <Grid item lg={4} md={6} sm={12} className='mt-5'>
+                              <div className="col-md-12">
+                                <i className="fas fa-globe brand-icon-size"></i>
+                                <h3 className='w-100 textBorder'>Web Wallet</h3>
+                                <a className="w-100 button1" href="/wallet">
+                                  https://www.runebase.io/wallet
+                                </a>
+                              </div>
                             </Grid>
                           </Grid>
                         </Tab.Pane>

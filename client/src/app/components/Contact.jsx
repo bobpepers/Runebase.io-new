@@ -79,7 +79,7 @@ class Contact extends React.Component {
 
 function validate(formProps) {
   const errors = {};
-  console.log(formProps);
+  //console.log(formProps);
 
   if(!formProps.name) {
     errors.name = 'Name is required'

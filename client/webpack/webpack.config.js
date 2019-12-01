@@ -1,10 +1,9 @@
 const Path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = (options) => {
-  const ExtractSASS = new ExtractTextPlugin(`/styles/${options.cssFileName}`);
 
   const webpackConfig = {
     devtool: options.devtool,
@@ -74,6 +73,16 @@ module.exports = (options) => {
         }
       }],
     },
+    optimization: {
+      minimizer: [
+        new TerserPlugin({
+          parallel: true,
+          terserOptions: {
+            ecma: 6,
+          },
+        }),
+      ]
+    },
     plugins: [
       new Webpack.DefinePlugin({
         'process.env': {
@@ -90,18 +99,16 @@ module.exports = (options) => {
     webpackConfig.entry = [Path.join(__dirname, '../src/app/index')];
 
     webpackConfig.plugins.push(
-      new Webpack.optimize.OccurenceOrderPlugin(),
-      new Webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false,
-        },
-      }),
-      ExtractSASS
+      new Webpack.optimize.OccurrenceOrderPlugin(),
     );
 
     webpackConfig.module.rules.push({
       test: /\.scss$/,
-      use: ExtractSASS.extract(['css', 'sass']),
+        use: [
+            'style-loader', // or MiniCssExtractPlugin.loader
+            { loader: 'css-loader', options: { sourceMap: true, importLoaders: 1 } },
+            { loader: 'sass-loader', options: { sourceMap: true } },
+        ]
     });
   } else {
     webpackConfig.plugins.push(

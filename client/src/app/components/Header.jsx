@@ -50,10 +50,10 @@ class Header extends Component {
       this.state.currentHash = window.location.hash.substring(1);
 
       if (this.state.currentHash == '') {
-        console.log('sip');
+        //console.log('sip');
         return;
       } else {
-        console.log(this.state.currentHash);
+        //console.log(this.state.currentHash);
         if(this.state.currentHash !== '' && this.state.currentHash !== this.state.prevHash){
           this.setState({currentHash: this.state.currentHash});
           this.state.prevHash = this.state.currentHash;

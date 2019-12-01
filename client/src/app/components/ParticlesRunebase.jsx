@@ -115,10 +115,10 @@ class ParticlesRunebase extends Component{
                 ],
                 "images": [
                     {
-                        "src": "/static/runebase.png",
+                        "src": "/static/images/runebase.png",
                         "height": 50,
                         "width": 50
-                    }
+                    },
                 ]
             },
         },

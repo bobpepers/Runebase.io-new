@@ -8,14 +8,6 @@ import theme from '../theme';
 
 class Footer extends Component {
 
-        componentDidMount () {
-            const script = document.createElement("script");
-
-            script.src = "/static/particle.js";
-            script.async = true;
-
-            document.body.appendChild(script);
-        }
 render() {
     const { t } = this.props;
   return (
@@ -77,7 +69,7 @@ render() {
     }} />
 
     </div>
-                <Grid item lg={4} md={6} sm={12} className='zindexThree'>
+                <Grid item lg={4} md={6} sm={12} xs={12} className='zindexThree'>
                 	<h2>{t('documentation')}</h2>
                 	<ul>
                 		<li>
@@ -88,7 +80,7 @@ render() {
                 		</li>
                 	</ul>
                 </Grid>
-                <Grid item lg={4} md={6} sm={12} className='zindexThree'>
+                <Grid item lg={4} md={6} sm={12} xs={12} className='zindexThree'>
                 	<h2>{t('resources')}</h2>
                 	<ul>
                 		<li>
@@ -99,7 +91,7 @@ render() {
                 		</li>
                 	</ul>
                 </Grid>
-                <Grid item lg={4} md={6} sm={12} className='zindexThree'>
+                <Grid item lg={4} md={6} sm={12} xs={12} className='zindexThree'>
                 	<h2>{t('channels')}</h2>
                 	<ul>
                 		<li>
@@ -115,14 +107,17 @@ render() {
                             <a href="https://twitter.com/Runebase_Tweet">Twitter</a>
                         </li>
                         <li>
-                            <a href="https://t.me/joinchat/KBGO3QwuMu-QTJKgPQjHmg">Telegram Official</a>
+                            <a href="https://t.me/joinchat/KBGO3QwuMu-QTJKgPQjHmg">{t('telegram_official')}</a>
                         </li>
                         <li>
-                            <a href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">Telegram Brazil</a>
+                            <a href="https://t.me/Runesbase">{t('telegram_international')}</a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/joinchat/KBGO3VjQ8BoqE_nABrU5vg">{t('telegram_brazil')}</a>
                         </li>
                 	</ul>
                 </Grid>
-                <Grid lg={4} md={6} sm={12} className='zindexThree'>
+                <Grid item lg={4} md={6} sm={12} xs={12} className='zindexThree'>
                 	<h2>{t('exchanges')}</h2>
                 	<ul>
                 		<li>
@@ -133,7 +128,7 @@ render() {
                         </li>
                 	</ul>
                 </Grid>
-                <Grid lg={4} md={6} sm={12} className='zindexThree'>
+                <Grid item lg={4} md={6} sm={12} xs={12} className='zindexThree'>
                 	<h2>{t('ranking')}</h2>
                 	<ul>
                 		<li>
@@ -193,7 +188,7 @@ render() {
                 	</ul>
                 </Grid>
                 */}
-                <Grid lg={4} md={6} sm={12} className='zindexThree'>
+                <Grid item lg={4} md={6} sm={12} xs={12} className='zindexThree'>
                 	<h2>{t('contact')}</h2>
                 	<ul>
                 		<li>

@@ -31,25 +31,25 @@ class ChainInfo extends Component {
 
   async componentDidMount() {
     await this.props.dispatch(fetchChainInfo());
-    console.log(this.props);
-    console.log(this.props.chaininfo);
+    //console.log(this.props);
+    //console.log(this.props.chaininfo);
     this.setState(() => ({
         price: this.props.chaininfo[0].price,
         blockNumber: this.props.chaininfo[0].blockNumber,
         moneySupply: this.props.chaininfo[0].moneySupply,
     }));
-    console.log(this.props);
+    //console.log(this.props);
     this.pusher = new Pusher(PUSHER_APP_KEY, {
       cluster: PUSHER_APP_CLUSTER,
       useTLS: true,
     });
     this.channel = this.pusher.subscribe('chainInfos');
-    console.log(this.channel);
+    //console.log(this.channel);
     this.channel.bind('inserted', this.updateChainInfo);
   }
   updateChainInfo(chainInfoUpdate) {
-    console.log('123');
-    console.log(chainInfoUpdate);
+    //console.log('123');
+    //console.log(chainInfoUpdate);
     if (chainInfoUpdate.price) {
       this.setState(() => ({
           price: chainInfoUpdate.price,

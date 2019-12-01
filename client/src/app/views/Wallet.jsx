@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import * as actions from '../actions/auth';
 import { connect } from 'react-redux';
 
@@ -11,8 +12,16 @@ class Wallet extends Component {
   render() {
 
     return (
-      <div className="form-container">
-        <h1>Wallet</h1>
+      <div>
+        <Helmet>
+          <script src="/static/js/vuetify.min.js" crossorigin="anonymous" />
+          <script src="/static/js/wallet.js" type="text/javascript" />
+          <link rel="stylesheet" type="text/css" href="/static/css/vuetify.min.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/material-icons.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+        </Helmet>
+        <div id='app'>
+        </div>
       </div>
     )
   }

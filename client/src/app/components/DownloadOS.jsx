@@ -10,9 +10,9 @@ class DownloadOS extends Component {
     this.version="0.18.1"
   }
 
-  renderDownloadLink(Platform, CPU) {
+  renderDownloadLink(Platform, CPU, UA) {
     switch(true) {
-      case !!Platform.match(/Linux/):
+      case !!UA.match(/Linux x86_64/):
         return `https://downloads.runebase.io/runebase-${this.version}-x86_64-linux-gnu.tar.gz`;
         break;
       case !!Platform.match(/Windows/) && !!CPU.match(/64/):
@@ -37,9 +37,9 @@ class DownloadOS extends Component {
         return 'source link';
     }
   }
-  renderDownloadName(Platform, CPU) {
+  renderDownloadName(Platform, CPU, UA) {
     switch(true) {
-      case !!Platform.match(/Linux/):
+      case !!UA.match(/Linux x86_64/):
         return `runebase-${this.version}-x86_64-linux-gnu.tar.gz`;
         break;
       case !!Platform.match(/Windows/) && !!CPU.match(/64/):
@@ -66,12 +66,14 @@ class DownloadOS extends Component {
   }
 
   render() {
+    console.log(Platform);
     console.log(Platform.OS);
     console.log(Platform.OSVersion);
     console.log(Platform.CPU);
+    console.log(Platform.UA);
     return (
       <div className="single_slider pt-3 w-100 my-auto">
-        <a className='button1 showpointer' href={this.renderDownloadLink(Platform.OS, Platform.CPU)}>{this.renderDownloadName(Platform.OS, Platform.CPU)}</a>
+        <a className='button1 showpointer' href={this.renderDownloadLink(Platform.OS, Platform.CPU, Platform.UA)}>{this.renderDownloadName(Platform.OS, Platform.CPU, Platform.UA)}</a>
       </div>
     )
   }
