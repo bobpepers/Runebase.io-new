@@ -139,9 +139,7 @@ body {
     height: inherit !important;
     z-index: -1 !important;
   }
-  #particles-js{
-  min-height: 650px;
-  }
+
   .osdlwrapper{
    z-index: 700;
   }
@@ -163,7 +161,7 @@ body {
   background: linear-gradient(#d6e0ff 40%, #f4f7f8 100%, rgba(255, 255, 255, 0));
 }
 .backgroundTeam {
-  background: linear-gradient(#f4f7f8 40%, #d6e0ff 100%, rgba(255, 255, 255, 0));
+  background: linear-gradient(#f4f7f8 40%, #d6e0ff 75%, #d6e0ff 100%, rgba(255, 255, 255, 0));
 }
 .backgroundRoadmap{
   background: linear-gradient(#d6e0ff 40%, #283048 100%, rgba(255, 255, 255, 0));
@@ -203,7 +201,7 @@ textarea[type='text'], textarea[type='password'] {
     min-height: 200px;
 }
 .workFormButton {
-    width: 150px !important;
+    width: auto !important;
 }
 
 .element {
@@ -221,4 +219,26 @@ textarea[type='text'], textarea[type='password'] {
     1px -1px 0 #4caf50,
     -1px 1px 0 #4caf50,
     1px 1px 0 #4caf50;
+}
+
+textarea {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#wallets::before, #product::before, #exchanges::before, #community::before, #team::before, #roadmap::before, #contact::before {
+  content: "";
+  display: block;
+  height: 100px; /* fixed header height*/
+  margin: -100px 0 0; /* negative fixed header height */
+}
+.langPadding {
+  padding-right: 50px;
+}
+
+#root {
+    overflow: hidden;
+    position: relative;
+}
+.zindexThree{
+  z-index: 3;
 }

@@ -40,46 +40,48 @@ class Exchanges extends Component{
 		}
         return (
         	<ScrollableSection hash={'exchanges'}>
-        	<Grid container id='exchanges' className='backgroundExchanges' direction="row" justify="center" alignItems="stretch">
-        		<Grid item xs={12} className={`text-center mt-${theme.spacing.section}`}>
-	        		<h3 className="textBorder w-100 text-center">{t('tradeExchanges')}</h3>
-	   				<div className="underline mx-auto"></div>
-	   			</Grid>
-        		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
-        			<div className="w-100 d-flex">
-        				<a style={AltmarketsStyle} onMouseLeave={() => this.updateHoverState(false, "Altmarkets")} onMouseEnter={() => this.updateHoverState(true, "Altmarkets")} className="mx-auto" href="https://discord.gg/hYhZB9m">
-        					<img className="mx-auto" src={Altmarkets} height="128px" width="128px" alt="" />
-        				</a>
-        			</div>
-        			<div className="w-100 d-flex">
-	        			<a style={AltmarketsStyle} onMouseLeave={() => this.updateHoverState(false, "Altmarkets")} onMouseEnter={() => this.updateHoverState(true, "Altmarkets")}  className="mx-auto titleStyled textBorder" href="https://discord.gg/hYhZB9m">
-	            			Altmarkets
-	            		</a>
-	            	</div>
-	            	<div className="w-100 d-flex">
-	            		<a style={AltmarketsStyle} onMouseLeave={() => this.updateHoverState(false, "Altmarkets")} onMouseEnter={() => this.updateHoverState(true, "Altmarkets")}  className="mx-auto textStyled textBorder" href="https://discord.gg/hYhZB9m">
-	            			{t('altmarketDescription')}
-	            		</a>
-            		</div>
-        		</Grid>
-        		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
-        			<div className="w-100 d-flex">
-        				<a style={TxbitStyle} onMouseLeave={() => this.updateHoverState(false, "Txbit")} onMouseEnter={() => this.updateHoverState(true, "Txbit")} className="mx-auto" href="https://www.medium.com/@runebase">
-        					<img className="mx-auto" src={Txbit} height="128px" width="128px" alt="" />
-        				</a>
-        			</div>
-        			<div className="w-100 d-flex">
-	        			<a style={TxbitStyle} onMouseLeave={() => this.updateHoverState(false, "Txbit")} onMouseEnter={() => this.updateHoverState(true, "Txbit")}  className="mx-auto titleStyled textBorder" href="https://www.medium.com/@runebase">
-	            			Txbit
-	            		</a>
-	            	</div>
-	            	<div className="w-100 d-flex">
-	            		<a style={TxbitStyle} onMouseLeave={() => this.updateHoverState(false, "Txbit")} onMouseEnter={() => this.updateHoverState(true, "Txbit")}  className="mx-auto textStyled textBorder" href="https://www.medium.com/@runebase">
-	            			{t('txbitDescription')}
-	            		</a>
-            		</div>
-        		</Grid>
-        	</Grid>
+	        	<div id='exchanges'>
+		        	<Grid container className='backgroundExchanges' direction="row" justify="center" alignItems="stretch">
+		        		<Grid item xs={12} className={`text-center mt-${theme.spacing.section}`}>
+			        		<h3 className="textBorder w-100 text-center">{t('tradeExchanges')}</h3>
+			   				<div className="underline mx-auto"></div>
+			   			</Grid>
+		        		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+		        			<div className="w-100 d-flex">
+		        				<a style={AltmarketsStyle} onMouseLeave={() => this.updateHoverState(false, "Altmarkets")} onMouseEnter={() => this.updateHoverState(true, "Altmarkets")} className="mx-auto" href="https://discord.gg/hYhZB9m">
+		        					<img className="mx-auto" src={Altmarkets} height="128px" width="128px" alt="" />
+		        				</a>
+		        			</div>
+		        			<div className="w-100 d-flex">
+			        			<a style={AltmarketsStyle} onMouseLeave={() => this.updateHoverState(false, "Altmarkets")} onMouseEnter={() => this.updateHoverState(true, "Altmarkets")}  className="mx-auto titleStyled textBorder" href="https://discord.gg/hYhZB9m">
+			            			Altmarkets
+			            		</a>
+			            	</div>
+			            	<div className="w-100 d-flex">
+			            		<a style={AltmarketsStyle} onMouseLeave={() => this.updateHoverState(false, "Altmarkets")} onMouseEnter={() => this.updateHoverState(true, "Altmarkets")}  className="mx-auto textStyled textBorder" href="https://discord.gg/hYhZB9m">
+			            			{t('altmarketDescription')}
+			            		</a>
+		            		</div>
+		        		</Grid>
+		        		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+		        			<div className="w-100 d-flex">
+		        				<a style={TxbitStyle} onMouseLeave={() => this.updateHoverState(false, "Txbit")} onMouseEnter={() => this.updateHoverState(true, "Txbit")} className="mx-auto" href="https://www.medium.com/@runebase">
+		        					<img className="mx-auto" src={Txbit} height="128px" width="128px" alt="" />
+		        				</a>
+		        			</div>
+		        			<div className="w-100 d-flex">
+			        			<a style={TxbitStyle} onMouseLeave={() => this.updateHoverState(false, "Txbit")} onMouseEnter={() => this.updateHoverState(true, "Txbit")}  className="mx-auto titleStyled textBorder" href="https://www.medium.com/@runebase">
+			            			Txbit
+			            		</a>
+			            	</div>
+			            	<div className="w-100 d-flex">
+			            		<a style={TxbitStyle} onMouseLeave={() => this.updateHoverState(false, "Txbit")} onMouseEnter={() => this.updateHoverState(true, "Txbit")}  className="mx-auto textStyled textBorder" href="https://www.medium.com/@runebase">
+			            			{t('txbitDescription')}
+			            		</a>
+		            		</div>
+		        		</Grid>
+		        	</Grid>
+	        	</div>
         	</ScrollableSection>
         );
     };

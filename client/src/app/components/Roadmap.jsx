@@ -14,14 +14,14 @@ class Roadmap extends Component {
     const { t } = this.props;
     return (
         <ScrollableSection hash={'roadmap'}>
-        <div id='roadmap' className='backgroundRoadmap textBorder'>
+        <div id='roadmap' className='backgroundRoadmap'>
             <Grid container className='roadmap'>
                 <h3 className="textBorder w-100 text-center">{t('roadmap')}</h3>
                 <div className="underline mx-auto mb-5"></div>
 
                 <ul className="timeline w-100">
                     <li>
-                        <div className="timeline-badge">
+                        <div className="timeline-badge textBorder">
                             <a>
                                 <i className="fa fa-circle"></i>
                             </a>
@@ -43,7 +43,7 @@ class Roadmap extends Component {
                         </div>
                     </li>
                     <li className="timeline-inverted">
-                        <div className="timeline-badge">
+                        <div className="timeline-badge textBorder">
                             <a><i className="fa fa-circle invert"></i></a>
                         </div>
                         <div className="timeline-panel">
@@ -52,8 +52,8 @@ class Roadmap extends Component {
                             </div>
                             <div className="timeline-body">
                                 <p class="timeline__day-sum">{t('roadmap6')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
-                                <p class="timeline__day-sum">{t('roadmap7')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
-                                <p class="timeline__day-sum">{t('roadmap8')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                {/* <p class="timeline__day-sum">{t('roadmap7')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p class="timeline__day-sum">{t('roadmap8')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p> */}
                                 <p class="timeline__day-sum">{t('roadmap9')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
                                 <p class="timeline__day-sum">{t('roadmap10')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
                                 <p class="timeline__day-sum">{t('roadmap11')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
@@ -70,7 +70,7 @@ class Roadmap extends Component {
                     </li>
 
                     <li>
-                        <div className="timeline-badge">
+                        <div className="timeline-badge textBorder">
                             <a><i className="fa fa-circle"></i></a>
                         </div>
                         <div className="timeline-panel">
@@ -78,13 +78,13 @@ class Roadmap extends Component {
                                 <h4>2020</h4>
                             </div>
                             <div className="timeline-body">
-                                <p class="timeline__day-sum">{t('roadmap17')}</p>
-                                <p class="timeline__day-sum">{t('roadmap18')}</p>
-                                <p class="timeline__day-sum">{t('roadmap19')}</p>
-                                <p class="timeline__day-sum">{t('roadmap20')}</p>
-                                <p class="timeline__day-sum">{t('roadmap21')}</p>
-                                <p class="timeline__day-sum">{t('roadmap22')}</p>
-                                <p class="timeline__day-sum">{t('roadmap23')}</p>
+                                <p className="timeline__day-sum">{t('roadmap17')}</p>
+                                <p className="timeline__day-sum">{t('roadmap18')}</p>
+                                <p className="timeline__day-sum">{t('roadmap19')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p className="timeline__day-sum">{t('roadmap20')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p className="timeline__day-sum">{t('roadmap21')}<i class="fas fa-check fa-lg ml-2 text-success"></i></p>
+                                <p className="timeline__day-sum">{t('roadmap22')}</p>
+                                <p className="timeline__day-sum">{t('roadmap23')}</p>
                             </div>
                             <div className="timeline-footer">
                                 <p className="text-right">2020</p>
@@ -93,7 +93,7 @@ class Roadmap extends Component {
                     </li>
 
                     <li className="timeline-inverted">
-                        <div className="timeline-badge">
+                        <div className="timeline-badge textBorder">
                             <a><i className="fa fa-circle invert"></i></a>
                         </div>
                         <div className="timeline-panel">
@@ -113,7 +113,7 @@ class Roadmap extends Component {
                 </ul>
             </Grid>
             <Grid container>
-            <div className='mx-auto'><p>{t('revisionNotice')}</p></div>
+            <div className='mx-auto textBorder'><p>{t('revisionNotice')}</p></div>
             </Grid>
         </div>
         </ScrollableSection>

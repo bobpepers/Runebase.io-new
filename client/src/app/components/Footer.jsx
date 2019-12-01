@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import { withTranslation, useTranslation } from 'react-i18next';
+import Particles from 'react-particles-js';
 
 import theme from '../theme';
 
@@ -18,11 +19,65 @@ class Footer extends Component {
 render() {
     const { t } = this.props;
   return (
-    <Grid container style={{position: 'absolute', zIndex: '0', width: '100%', height: '55%'}} className={`text-center`} direction="row" justify="center" alignItems="stretch">
-        <canvas id='particlewave' style={{position: 'absolute', display: 'block', width: '100%', height: '100%'}}>
-        </canvas>
-        <Grid container id='pariclewaveHeight' style={{position: 'absolute', zIndex: '0', width: '100%', height: '100%'}} className={`pt-${theme.spacing.section}`}>
-                <Grid item xs={3}>
+    <Grid container style={{backgroundColor: '#000', zIndex: '0', width: '100%', height: '100%'}} className={`text-center footerBG`} direction="row" justify="center" alignItems="stretch">
+        {/*<canvas id='particlewave' style={{position: 'absolute', display: 'block', width: '100%', height: '100%'}}>
+        </canvas>*/}
+        <Grid container id='pariclewaveHeight' style={{position: 'relative', zIndex: '0', width: '100%', height: '100%'}} className={`pt-${theme.spacing.section}`}>
+                <div style={{position: 'absolute', top: '0', bottom: '0', zIndex: '0', width: '100%', height: '100%'}}>
+                <Particles
+                style={{
+                position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%"
+              }}
+    params={{
+        "particles": {
+            "number": {
+                "value": 60,
+                "density": {
+                    "enable": true,
+                    "value_area": 1500
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "opacity": 0.02
+            },
+            "move": {
+                "direction": "right",
+                "speed": 0.05
+            },
+            "size": {
+                "value": 1
+            },
+            "opacity": {
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.05
+                }
+            }
+        },
+        "interactivity": {
+            "events": {
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                }
+            },
+            "modes": {
+                "push": {
+                    "particles_nb": 1
+                }
+            }
+        },
+        "retina_detect": true
+    }} />
+
+    </div>
+                <Grid item lg={4} md={6} sm={12} className='zindexThree'>
                 	<h2>{t('documentation')}</h2>
                 	<ul>
                 		<li>
@@ -33,7 +88,7 @@ render() {
                 		</li>
                 	</ul>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item lg={4} md={6} sm={12} className='zindexThree'>
                 	<h2>{t('resources')}</h2>
                 	<ul>
                 		<li>
@@ -44,7 +99,7 @@ render() {
                 		</li>
                 	</ul>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item lg={4} md={6} sm={12} className='zindexThree'>
                 	<h2>{t('channels')}</h2>
                 	<ul>
                 		<li>
@@ -67,7 +122,7 @@ render() {
                         </li>
                 	</ul>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid lg={4} md={6} sm={12} className='zindexThree'>
                 	<h2>{t('exchanges')}</h2>
                 	<ul>
                 		<li>
@@ -78,7 +133,7 @@ render() {
                         </li>
                 	</ul>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid lg={4} md={6} sm={12} className='zindexThree'>
                 	<h2>{t('ranking')}</h2>
                 	<ul>
                 		<li>
@@ -87,8 +142,45 @@ render() {
                 		<li>
                             <a href="https://www.coingecko.com/en/coins/runebase/">Coingecko</a>
                         </li>
+                        <li>
+                            <a href="https://blockspot.io/coin/runebase">BlockSpot</a>
+                        </li>
+                        <li>
+                            <a href="https://cmc.io/coins/runebase">CMC</a>
+                        </li>
+                        <li>
+                            <a href="https://athcoinindex.com/coin/runebase">AthCoinIndex</a>
+                        </li>
+                        <li>
+                            <a href="https://www.advfn.com/crypto/Runebase-RUNES">Advfn</a>
+                        </li>
+                        <li>
+                            <a href="https://cryptoprices123.com/cryptos/runes-runebase">CryptoPrices123</a>
+                        </li>
+                        <li>
+                            <a href="https://coinexpressway.com/Coin/runebase">CoinExpressWay</a>
+                        </li>
+                        <li>
+                            <a href="https://globalcoinlisting.com/currency/runebase">GlobalCoinListing</a>
+                        </li>
+                        <li>
+                            <a href="https://coincost.net/en/currency/runebase">CoinCost</a>
+                        </li>
+                        <li>
+                            <a href="https://www.moonstats.com/runes-runebase">MoonStats</a>
+                        </li>
+                        <li>
+                            <a href="https://comaps.io/coin/runebase">CoMaps</a>
+                        </li>
+                        <li>
+                            <a href="https://cryptocurrencyliveprices.com/coin.php?id=Runebase">CryptoCurrencyLivePrices</a>
+                        </li>
+                        <li>
+                            <a href="https://coingolive.com/en/coins/runebase/brl">CoinGoLive</a>
+                        </li>
                 	</ul>
                 </Grid>
+                {/*
                 <Grid item xs={3}>
                 	<h2>{t('pools')}</h2>
                 	<ul>
@@ -100,7 +192,8 @@ render() {
                         </li>
                 	</ul>
                 </Grid>
-                <Grid item xs={3}>
+                */}
+                <Grid lg={4} md={6} sm={12} className='zindexThree'>
                 	<h2>{t('contact')}</h2>
                 	<ul>
                 		<li>

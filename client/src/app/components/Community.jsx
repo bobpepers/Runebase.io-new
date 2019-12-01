@@ -50,80 +50,82 @@ class Community extends Component{
 		}
         return (
         	<ScrollableSection hash={'community'}>
-        	<Grid container id='community' className={`text-center`} direction="row" justify="center" alignItems="stretch">
-	        	<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
-	        		<h3 className="textBorder w-100 text-center">{t('community')}</h3>
-	   				<div className="underline mx-auto"></div>
-	   			</Grid>
-        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
-        			<div className="w-100 d-flex">
-        				<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")} className="mx-auto" href="https://discord.gg/hYhZB9m">
-        					<img className="mx-auto" src={Discord} height="128px" width="128px" alt="" />
-        				</a>
-        			</div>
-        			<div className="w-100 d-flex">
-	        			<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")}  className="mx-auto titleStyled textBorder" href="https://discord.gg/hYhZB9m">
-	            			Discord
-	            		</a>
-	            	</div>
-	            	<div className="w-100 d-flex">
-	            		<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")}  className="mx-auto textStyled textBorder" href="https://discord.gg/hYhZB9m">
-	            			{t('discordDescription')}
-	            		</a>
-            		</div>
-        		</Grid>
-        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
-        			<div className="w-100 d-flex">
-        				<a style={MediumStyle} onMouseLeave={() => this.updateHoverState(false, "Medium")} onMouseEnter={() => this.updateHoverState(true, "Medium")} className="mx-auto" href="https://www.medium.com/@runebase">
-        					<img className="mx-auto" src={Medium} height="128px" width="128px" alt="" />
-        				</a>
-        			</div>
-        			<div className="w-100 d-flex">
-	        			<a style={MediumStyle} onMouseLeave={() => this.updateHoverState(false, "Medium")} onMouseEnter={() => this.updateHoverState(true, "Medium")}  className="mx-auto titleStyled textBorder" href="https://www.medium.com/@runebase">
-	            			Medium
-	            		</a>
-	            	</div>
-	            	<div className="w-100 d-flex">
-	            		<a style={MediumStyle} onMouseLeave={() => this.updateHoverState(false, "Medium")} onMouseEnter={() => this.updateHoverState(true, "Medium")}  className="mx-auto textStyled textBorder" href="https://www.medium.com/@runebase">
-	            			{t('mediumDescription')}
-	            		</a>
-            		</div>
-        		</Grid>
-        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
-        			<div className="w-100 d-flex">
-        				<a style={TelegramStyle} onMouseLeave={() => this.updateHoverState(false, "Telegram")} onMouseEnter={() => this.updateHoverState(true, "Telegram")} className="mx-auto" href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">
-        					<img className="mx-auto" src={Telegram} height="128px" width="128px" alt="" />
-        				</a>
-        			</div>
-        			<div className="w-100 d-flex">
-	        			<a style={TelegramStyle} onMouseLeave={() => this.updateHoverState(false, "Telegram")} onMouseEnter={() => this.updateHoverState(true, "Telegram")}  className="mx-auto titleStyled textBorder" href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">
-	            			Telegram
-	            		</a>
-	            	</div>
-	            	<div className="w-100 d-flex">
-	            		<a style={TelegramStyle} onMouseLeave={() => this.updateHoverState(false, "Telegram")} onMouseEnter={() => this.updateHoverState(true, "Telegram")}  className="mx-auto textStyled textBorder" href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">
-	            			{t('telegramDescription')}
-	            		</a>
-            		</div>
-        		</Grid>
-        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
-        			<div className="w-100 d-flex">
-        				<a style={TwitterStyle} onMouseLeave={() => this.updateHoverState(false, "Twitter")} onMouseEnter={() => this.updateHoverState(true, "Twitter")} className="mx-auto" href="https://discord.gg/hYhZB9m">
-        					<img className="mx-auto" src={Twitter} height="128px" width="128px" alt="" />
-        				</a>
-        			</div>
-        			<div className="w-100 d-flex">
-	        			<a style={TwitterStyle} onMouseLeave={() => this.updateHoverState(false, "Twitter")} onMouseEnter={() => this.updateHoverState(true, "Twitter")}  className="mx-auto titleStyled textBorder" href="https://discord.gg/hYhZB9m">
-	            			Twitter
-	            		</a>
-	            	</div>
-	            	<div className="w-100 d-flex">
-	            		<a style={TwitterStyle} onMouseLeave={() => this.updateHoverState(false, "Twitter")} onMouseEnter={() => this.updateHoverState(true, "Twitter")}  className="mx-auto textStyled textBorder" href="https://discord.gg/hYhZB9m">
-	            			{t('twitterDescription')}
-	            		</a>
-            		</div>
-        		</Grid>
-        	</Grid>
+	        	<div id='community'>
+		        	<Grid container className={`text-center`} direction="row" justify="center" alignItems="stretch">
+			        	<Grid item xs={12} className={`mt-${theme.spacing.section}`}>
+			        		<h3 className="textBorder w-100 text-center">{t('community')}</h3>
+			   				<div className="underline mx-auto"></div>
+			   			</Grid>
+		        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+		        			<div className="w-100 d-flex">
+		        				<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")} className="mx-auto" href="https://discord.gg/hYhZB9m">
+		        					<img className="mx-auto" src={Discord} height="128px" width="128px" alt="" />
+		        				</a>
+		        			</div>
+		        			<div className="w-100 d-flex">
+			        			<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")}  className="mx-auto titleStyled textBorder" href="https://discord.gg/hYhZB9m">
+			            			Discord
+			            		</a>
+			            	</div>
+			            	<div className="w-100 d-flex">
+			            		<a style={DiscordStyle} onMouseLeave={() => this.updateHoverState(false, "Discord")} onMouseEnter={() => this.updateHoverState(true, "Discord")}  className="mx-auto textStyled textBorder" href="https://discord.gg/hYhZB9m">
+			            			{t('discordDescription')}
+			            		</a>
+		            		</div>
+		        		</Grid>
+		        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+		        			<div className="w-100 d-flex">
+		        				<a style={MediumStyle} onMouseLeave={() => this.updateHoverState(false, "Medium")} onMouseEnter={() => this.updateHoverState(true, "Medium")} className="mx-auto" href="https://www.medium.com/@runebase">
+		        					<img className="mx-auto" src={Medium} height="128px" width="128px" alt="" />
+		        				</a>
+		        			</div>
+		        			<div className="w-100 d-flex">
+			        			<a style={MediumStyle} onMouseLeave={() => this.updateHoverState(false, "Medium")} onMouseEnter={() => this.updateHoverState(true, "Medium")}  className="mx-auto titleStyled textBorder" href="https://www.medium.com/@runebase">
+			            			Medium
+			            		</a>
+			            	</div>
+			            	<div className="w-100 d-flex">
+			            		<a style={MediumStyle} onMouseLeave={() => this.updateHoverState(false, "Medium")} onMouseEnter={() => this.updateHoverState(true, "Medium")}  className="mx-auto textStyled textBorder" href="https://www.medium.com/@runebase">
+			            			{t('mediumDescription')}
+			            		</a>
+		            		</div>
+		        		</Grid>
+		        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+		        			<div className="w-100 d-flex">
+		        				<a style={TelegramStyle} onMouseLeave={() => this.updateHoverState(false, "Telegram")} onMouseEnter={() => this.updateHoverState(true, "Telegram")} className="mx-auto" href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">
+		        					<img className="mx-auto" src={Telegram} height="128px" width="128px" alt="" />
+		        				</a>
+		        			</div>
+		        			<div className="w-100 d-flex">
+			        			<a style={TelegramStyle} onMouseLeave={() => this.updateHoverState(false, "Telegram")} onMouseEnter={() => this.updateHoverState(true, "Telegram")}  className="mx-auto titleStyled textBorder" href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">
+			            			Telegram
+			            		</a>
+			            	</div>
+			            	<div className="w-100 d-flex">
+			            		<a style={TelegramStyle} onMouseLeave={() => this.updateHoverState(false, "Telegram")} onMouseEnter={() => this.updateHoverState(true, "Telegram")}  className="mx-auto textStyled textBorder" href="https://t.me/joinchat/IPVfFlPX-ieSK1QxfNc4Jw">
+			            			{t('telegramDescription')}
+			            		</a>
+		            		</div>
+		        		</Grid>
+		        		<Grid item lg={4} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+		        			<div className="w-100 d-flex">
+		        				<a style={TwitterStyle} onMouseLeave={() => this.updateHoverState(false, "Twitter")} onMouseEnter={() => this.updateHoverState(true, "Twitter")} className="mx-auto" href="https://discord.gg/hYhZB9m">
+		        					<img className="mx-auto" src={Twitter} height="128px" width="128px" alt="" />
+		        				</a>
+		        			</div>
+		        			<div className="w-100 d-flex">
+			        			<a style={TwitterStyle} onMouseLeave={() => this.updateHoverState(false, "Twitter")} onMouseEnter={() => this.updateHoverState(true, "Twitter")}  className="mx-auto titleStyled textBorder" href="https://discord.gg/hYhZB9m">
+			            			Twitter
+			            		</a>
+			            	</div>
+			            	<div className="w-100 d-flex">
+			            		<a style={TwitterStyle} onMouseLeave={() => this.updateHoverState(false, "Twitter")} onMouseEnter={() => this.updateHoverState(true, "Twitter")}  className="mx-auto textStyled textBorder" href="https://discord.gg/hYhZB9m">
+			            			{t('twitterDescription')}
+			            		</a>
+		            		</div>
+		        		</Grid>
+		        	</Grid>
+	        	</div>
         	</ScrollableSection>
         );
     };

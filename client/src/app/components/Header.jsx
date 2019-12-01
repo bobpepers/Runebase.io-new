@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { Link, NavHashLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
-import ScrollableSection, { ScrollableLink } from 'react-update-url-on-scroll';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import ReactCountryFlag from "react-country-flag";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -28,8 +27,6 @@ class Header extends Component {
       this.setState({ menu: !this.state.menu });
     }
     componentDidMount() {
-      console.log('te laat');
-
        this.updateHeight();
        window.addEventListener("resize", this.updateHeight);
        window.addEventListener("scroll", this.detectHashChange);
@@ -41,8 +38,8 @@ class Header extends Component {
      }
 
      componentDidUpdate() {
-       this.updateHeight();
-       this.detectHashChange();
+      this.updateHeight();
+      this.detectHashChange();
      }
 
      updateHeight() {
@@ -51,9 +48,16 @@ class Header extends Component {
      }
      detectHashChange() {
       this.state.currentHash = window.location.hash.substring(1);
-      if(this.state.currentHash !== this.state.prevHash){
-        this.setState({currentHash: this.state.currentHash});
-        this.state.prevHash = this.state.currentHash;
+
+      if (this.state.currentHash == '') {
+        console.log('sip');
+        return;
+      } else {
+        console.log(this.state.currentHash);
+        if(this.state.currentHash !== '' && this.state.currentHash !== this.state.prevHash){
+          this.setState({currentHash: this.state.currentHash});
+          this.state.prevHash = this.state.currentHash;
+        }
       }
      }
 
@@ -86,21 +90,21 @@ class Header extends Component {
             </button>
             <Navbar.Collapse id="basic-navbar-nav" className={"collapse navbar-collapse " + show}>
               <Nav className="mr-auto">
-                <NavDropdown title="Home" id="basic-nav-dropdown">
+                <NavDropdown title={t('home')} id="basic-nav-dropdown">
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'info' ? "active" : "NotActive"}`} smooth to="/#info"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'info' ? "active" : "NotActive"}`} smooth to="/#info"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#info'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('info')}
                   </HashLink>
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'wallets' ? "active" : "NotActive"}`} smooth to="/#wallets"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'wallets' ? "active" : "NotActive"}`} smooth to="/#wallets"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#wallets'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('wallets')}
                   </HashLink>
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'product' ? "active" : "NotActive"}`} smooth to="/#product"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'product' ? "active" : "NotActive"}`} smooth to="/#product"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#product'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('product')}
                   </HashLink>
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'exchanges' ? "active" : "NotActive"}`} smooth to="/#exchanges"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'exchanges' ? "active" : "NotActive"}`} smooth to="/#exchanges"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#exchanges'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('exchanges')}
                   </HashLink>
 
@@ -108,23 +112,23 @@ class Header extends Component {
                       {t('pools')}
                   </HashLink> */}
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'community' ? "active" : "NotActive"}`} smooth to="/#community"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'community' ? "active" : "NotActive"}`} smooth to="/#community"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#community'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('community')}
                   </HashLink>
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'team' ? "active" : "NotActive"}`} smooth to="/#team"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'team' ? "active" : "NotActive"}`} smooth to="/#team"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#team'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('team')}
                   </HashLink>
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'roadmap' ? "active" : "NotActive"}`} smooth to="/#roadmap"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'roadmap' ? "active" : "NotActive"}`} smooth to="/#roadmap"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#roadmap'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('roadmap')}
                   </HashLink>
 
-                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'contact' ? "active" : "NotActive"}`} smooth to="/#contact"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'contact' ? "active" : "NotActive"}`} smooth to="/#contact"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#contact'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('contact')}
                   </HashLink>
                 </NavDropdown>
-                <NavDropdown title="Services" id="basic-nav-dropdown">
+                <NavDropdown title={t('services')} id="basic-nav-dropdown">
                   <NavDropdown.Item disabled onClick={ this.toggleMenu } href="https://explorer.runebase.io">
                     {t('explorer')}
                   </NavDropdown.Item>
@@ -139,31 +143,31 @@ class Header extends Component {
                   </NavDropdown.Item>
                 </NavDropdown>
 
-                <NavDropdown title="Community" id="basic-nav-dropdown">
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer2.runebase.io">
-                    {t('Telegram Official')}
+                <NavDropdown title={t('community')} id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/joinchat/KBGO3QwuMu-QTJKgPQjHmg">
+                    {t('telegram_official')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer3.runebase.io">
-                    {t('Telegram USA')}
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/Runesbase">
+                    {t('telegram_international')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
-                    {t('Telegram Brazil')}
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/joinchat/KBGO3VjQ8BoqE_nABrU5vg">
+                    {t('telegram_brazil')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
-                    {t('Discord')}
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://discord.gg/uTUXr43">
+                    {t('discord')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
-                    {t('Twitter')}
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://twitter.com/Runebase_Tweet">
+                    {t('twitter')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
-                    {t('Medium')}
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://medium.com/@runebase">
+                    {t('medium')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
-                    {t('Facebook')}
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://www.facebook.com/runebaseofficial">
+                    {t('facebook')}
                   </NavDropdown.Item>
                 </NavDropdown>
 
-                <NavDropdown title="Ranking" id="basic-nav-dropdown">
+                <NavDropdown title={t('ranking')} id="basic-nav-dropdown">
                   <NavDropdown.Item onClick={ this.toggleMenu } href="https://www.coingecko.com/en/coins/runebase">
                     CoinGecko
                   </NavDropdown.Item>
@@ -211,7 +215,7 @@ class Header extends Component {
                 {/* <Link onClick={ this.toggleMenu } className="nav-link" to="/status">{t('status')}</Link> */}
               </Nav>
 
-              <NavDropdown title={<span><ReactCountryFlag code={countryCode(`${getCurrentLng()}`)} svg /> {t(`${getCurrentLng()}`)}</span>} id="basic-nav-dropdown">
+              <NavDropdown className='langPadding' title={<span><ReactCountryFlag code={countryCode(`${getCurrentLng()}`)} svg /> {t(`${getCurrentLng()}`)}</span>} id="basic-nav-dropdown">
                   <NavDropdown.Item onClick={(event) => { this.toggleMenu; changeLanguage('en')}}>
                     <div><ReactCountryFlag code="us" svg /> {t('en')}</div>
                   </NavDropdown.Item>

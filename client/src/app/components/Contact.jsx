@@ -5,7 +5,7 @@ import ScrollableSection from 'react-update-url-on-scroll';
 import * as actions from '../actions/contact';
 import { Grid } from '@material-ui/core';
 import Captcha from './Captcha';
-
+import { withTranslation, useTranslation } from 'react-i18next';
 
 
 const renderField = ({ input, type, placeholder, meta: { touched, error } }) => (
@@ -33,40 +33,45 @@ class Contact extends React.Component {
   }
 
   render() {
+    const { t } = this.props;
     const { handleSubmit } = this.props;
     return (
       <ScrollableSection hash={'contact'}>
-      <div id='contact' className='backgroundContact textBorder text-center'>
-        <Grid container justify="center">
-          <Grid item lg={12} md={12} sm={12}>
-            <h2>Work with us</h2>
-            <h4>
-              Provide details about your product or agency. Write a few lines about it and contact us. We will responde get back to you as soon as possible.
-            </h4>
-            <form onSubmit={handleSubmit(this.handleFormSubmit)}>
+        <div id='contact'>
+          <div className='backgroundContact textBorder text-center'>
+            <Grid container justify="center">
+              <Grid item lg={12} md={12} sm={12}>
+                <h2>{t('workWithUs')}</h2>
+                <h4>
+                  {t('workWithUsDescription')}
+                </h4>
+                <form onSubmit={handleSubmit(this.handleFormSubmit)}>
 
-              {/* Name */}
-              <Field name="name" component={renderField} type="text" placeholder="Your Name" />
+                  {/* Name */}
+                  <Field name="name" component={renderField} type="text" placeholder={t('yourName')} />
 
-              {/* Email */}
-              <Field name="email" component={renderField} type="text" placeholder="Your Email" />
+                  {/* Email */}
+                  <Field name="email" component={renderField} type="text" placeholder={t('yourEmail')} />
 
-              {/* Message */}
-              <Field name="message" component={textArea} type="text" placeholder="Your Message" />
+                  {/* Message */}
+                  <Field name="message" component={textArea} type="text" placeholder={t('yourMessage')} />
 
-              {/* Recaptcha */}
-              <Field component={Captcha} change={change} name="captchaResponse"/>
+                  {/* Recaptcha */}
+                  <div className='row d-flex justify-content-center'>
+                    <Field component={Captcha} change={change} name="captchaResponse"/>
+                  </div>
 
-              {/* Server error message */}
-              { this.props.errorMessage && this.props.errorMessage.contact &&
-                  <div className="error-container contact-error">Oops! { this.props.errorMessage.contact }</div> }
+                  {/* Server error message */}
+                  { this.props.errorMessage && this.props.errorMessage.contact &&
+                      <div className="error-container contact-error">Oops! { this.props.errorMessage.contact }</div> }
 
-              {/* Send Button */}
-              <button type="submit" className="btn workFormButton">Send Message</button>
-            </form>
-          </Grid>
-        </Grid>
-      </div>
+                  {/* Send Button */}
+                  <button type="submit" className="btn workFormButton">{t('sendMessage')} </button>
+                </form>
+              </Grid>
+            </Grid>
+          </div>
+        </div>
       </ScrollableSection>
     );
   }
@@ -105,4 +110,4 @@ function mapStateToProps(state) {
 
 Contact = reduxForm({ form: 'contact', validate })(Contact);
 
-export default connect(mapStateToProps, actions)(Contact);
+export default withTranslation()(connect(mapStateToProps, actions)(Contact));

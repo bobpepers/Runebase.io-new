@@ -66,7 +66,7 @@
   "graphicDesign": "Graphic Design",
   "socialMediaStrategist": "Social Media Strategist",
   "workWithUs": "Work With Us",
-  "workWithUsDescription": "Provide details about your product or agency. Write a few lines about and contact us. We will responde get back to you as soon as possible.",
+  "workWithUsDescription": "Provide details about your product or agency. Write a few lines about and contact us. We will respond back to you as soon as possible.",
   "sendMessage": "Send Message",
   "yourName": "Your Name",
   "yourEmail": "Your Email",
@@ -101,9 +101,21 @@
   "roadmap17": "RRC223 Decentralized Token Exchange Beta (desktop)",
   "roadmap18": "IOS Wallet",
   "roadmap19": "New and additional Explorer",
-  "roadmap20": "Update Core Software 0.18.x (HardFork)",
-  "roadmap21": "Successful HardFork",
+  "roadmap20": "Update Core Software 0.18.x (Swap)",
+  "roadmap21": "Successful Swap",
   "roadmap22": "Apply for Pools",
   "roadmap23": "Apply for Exchanges",
-  "allRightsReserved": "All Rights Reserved"
+  "allRightsReserved": "All Rights Reserved",
+
+  "telegram_official": "Telegram Official",
+  "telegram_USA":"Telegram International",
+  "telegram_brazil": "Telegram Brazil",
+  "discord": "Discord",
+  "twitter": "Twitter",
+  "medium": "Medium",
+  "facebook": "Facebook",
+  "type": "Type",
+  "blockReward": "Block Reward",
+  "channels": "Channels"
+
 }

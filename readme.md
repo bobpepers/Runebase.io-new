@@ -80,7 +80,16 @@ npm install dependencies
 cd node-redux-auth/client
 
 npm install
+npm install browserify -g
 ````
+
+
+#### Webwallet bundle
+Create the bundle with browerify-hmr disabled for production. remove from package before running 'npm i' (needs to be moved to dev-only dependencies). browerify-hmr is used in development only.
+
+```
+browserify -t vueify -e src/wallet/main.js -o static/js/bundle.js -v
+```
 
 Commands
 --------
