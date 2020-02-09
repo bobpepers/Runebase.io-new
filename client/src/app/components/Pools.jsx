@@ -46,35 +46,18 @@ class Pools extends Component{
 	   			</Grid>
         		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
         			<div className="w-100 d-flex">
-        				<a style={FourStakeStyle} onMouseLeave={() => this.updateHoverState(false, "FourStake")} onMouseEnter={() => this.updateHoverState(true, "FourStake")} className="mx-auto" href="https://staking.world">
+        				<a style={FourStakeStyle} onMouseLeave={() => this.updateHoverState(false, "FourStake")} onMouseEnter={() => this.updateHoverState(true, "FourStake")} className="mx-auto" href="https://4stake.com">
         					<img className="mx-auto" src={FourStake} height="128px" width="128px" alt="" />
         				</a>
         			</div>
         			<div className="w-100 d-flex">
-	        			<a style={FourStakeStyle} onMouseLeave={() => this.updateHoverState(false, "FourStake")} onMouseEnter={() => this.updateHoverState(true, "FourStake")}  className="mx-auto titleStyled textBorder" href="https://staking.world">
+	        			<a style={FourStakeStyle} onMouseLeave={() => this.updateHoverState(false, "FourStake")} onMouseEnter={() => this.updateHoverState(true, "FourStake")}  className="mx-auto titleStyled textBorder" href="https://4stake.com">
 	            			4Stake
 	            		</a>
 	            	</div>
 	            	<div className="w-100 d-flex">
-	            		<a style={FourStakeStyle} onMouseLeave={() => this.updateHoverState(false, "FourStake")} onMouseEnter={() => this.updateHoverState(true, "FourStake")}  className="mx-auto textStyled textBorder" href="https://staking.world">
+	            		<a style={FourStakeStyle} onMouseLeave={() => this.updateHoverState(false, "FourStake")} onMouseEnter={() => this.updateHoverState(true, "FourStake")}  className="mx-auto textStyled textBorder" href="https://4stake.com">
 	            			{t('FourStakeDescription')}
-	            		</a>
-            		</div>
-        		</Grid>
-        		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
-        			<div className="w-100 d-flex">
-        				<a style={StakingWorldStyle} onMouseLeave={() => this.updateHoverState(false, "StakingWorld")} onMouseEnter={() => this.updateHoverState(true, "StakingWorld")} className="mx-auto" href="https://www.4stake.com/">
-        					<img className="mx-auto" src={StakingWorld} height="128px" width="128px" alt="" />
-        				</a>
-        			</div>
-        			<div className="w-100 d-flex">
-	        			<a style={StakingWorldStyle} onMouseLeave={() => this.updateHoverState(false, "StakingWorld")} onMouseEnter={() => this.updateHoverState(true, "StakingWorld")}  className="mx-auto titleStyled textBorder" href="https://www.4stake.com/">
-	            			StakingWorld
-	            		</a>
-	            	</div>
-	            	<div className="w-100 d-flex">
-	            		<a style={StakingWorldStyle} onMouseLeave={() => this.updateHoverState(false, "StakingWorld")} onMouseEnter={() => this.updateHoverState(true, "StakingWorld")}  className="mx-auto textStyled textBorder" href="https://www.4stake.com/">
-	            			{t('StakingWorldDescription')}
 	            		</a>
             		</div>
         		</Grid>

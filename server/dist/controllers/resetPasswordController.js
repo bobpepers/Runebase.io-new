@@ -61,9 +61,9 @@ var resetPassword = exports.resetPassword = function resetPassword(req, res, nex
  * Verify reset password
  */
 var verifyResetPassword = exports.verifyResetPassword = function verifyResetPassword(req, res, next) {
-  var _req$body = req.body;
-  var email = _req$body.email;
-  var token = _req$body.token;
+  var _req$body = req.body,
+      email = _req$body.email,
+      token = _req$body.token;
 
 
   _user2.default.findOne({ email: email }, function (err, user) {
@@ -95,10 +95,10 @@ var verifyResetPassword = exports.verifyResetPassword = function verifyResetPass
  * Reset password, new password
  */
 var resetPasswordNew = exports.resetPasswordNew = function resetPasswordNew(req, res, next) {
-  var _req$body2 = req.body;
-  var email = _req$body2.email;
-  var newpassword = _req$body2.newpassword;
-  var token = _req$body2.token;
+  var _req$body2 = req.body,
+      email = _req$body2.email,
+      newpassword = _req$body2.newpassword,
+      token = _req$body2.token;
 
 
   _user2.default.findOne({ email: email }, function (err, user) {
@@ -133,9 +133,9 @@ var resetPasswordNew = exports.resetPasswordNew = function resetPasswordNew(req,
             return next(err);
           }
 
-          var firstname = user.firstname;
-          var lastname = user.lastname;
-          var email = user.email;
+          var firstname = user.firstname,
+              lastname = user.lastname,
+              email = user.email;
 
 
           res.json({ firstname: firstname, lastname: lastname, email: email, token: (0, _token.tokenForUser)(user) });

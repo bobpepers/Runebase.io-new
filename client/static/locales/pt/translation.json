@@ -48,6 +48,7 @@
   "tradeExchanges": "Comercialização de RUNES nas Exchanges",
   "altmarketDescription": "Comercialização de RUNES na Altmarkets",
   "txbitDescription": "Comercialização de RUNES na Txbit",
+  "fcexchangeDescription": "Comercialização de RUNES na Fanaticos Exchange",
   "stakesDescription": "Stake de RUNES em uma Pool",
   "FourStakeDescription": "Stake RUNES na 4Stake",
   "StakingWorldDescription": "Stake de RUNES na StakingWorld",
@@ -103,6 +104,8 @@
   "roadmap21": "Swap Bem Sucedido",
   "roadmap22": "Candidatar Pools",
   "roadmap23": "Solicitar Exchanges",
+  "roadmap24": "Update Core Software 0.18.x",
+  "roadmap25": "Revisão de papel",
   "allRightsReserved": "Todos os Direitos Reservados",
 
   "telegram_official": "Telegram Official",
@@ -114,5 +117,6 @@
   "facebook": "Facebook",
   "type": "Tipo",
   "blockReward": "Block Reward",
-  "channels": "Channels"
+  "channels": "Channels",
+  "translator_en_pt": "Tradutor Inglês-Português"
 }

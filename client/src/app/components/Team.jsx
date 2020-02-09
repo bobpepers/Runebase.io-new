@@ -6,7 +6,7 @@ import ScrollableSection from 'react-update-url-on-scroll';
 import Jonas from '../assets/images/Jonas.png';
 import Roberto from '../assets/images/Roberto.png';
 import Patricia from '../assets/images/Patricia.png';
-import Alex from '../assets/images/Alex.png';
+import Andrezin from '../assets/images/Andrezin.png';
 import Lucas from '../assets/images/Lucas.png';
 import Marcio from '../assets/images/Marcio.png';
 
@@ -142,23 +142,23 @@ class Team extends Component{
                 <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <div className="w-100 d-flex">
                     <span className="mx-auto">
-                      <Image roundedCircle className="mx-auto imageBorderTeam" src={Alex} height="128px" width="128px" alt="" />
+                      <Image roundedCircle className="mx-auto imageBorderTeam" src={Andrezin} height="128px" width="128px" alt="" />
                     </span>
                   </div>
                   <div className="w-100 d-flex">
                     <span className="mx-auto titleStyled textBorder">
-                        Alex De Jesus
+                        Andrezin Ferreira
                       </span>
                     </div>
                     <div className="w-100 d-flex">
                       <span className="mx-auto textStyled textBorder">
-                        {t('marketing')}
+                        {t('translator_en_pt')}
                       </span>
                     </div>
                     <div className="d-flex">
                       <div className="d-flex mx-auto">
                         <div className="socialIcon m-2">
-                          <a className="community-text-link link-community" href="https://t.me/Alecspe" style={{color: 'rgb(255, 255, 255)'}}>
+                          <a className="community-text-link link-community" href="https://t.me/AndrezinFerreira" style={{color: 'rgb(255, 255, 255)'}}>
                             <i className="fab fa-telegram fa-lg"></i></a>
                         </div>
                       </div>

@@ -23,7 +23,7 @@
   "blockTime": "Blok Spatie",
   "mintedBlocks": "Blok Hoogte",
   "supply": "Circulerende Munten",
-  "price": "Current Price",
+  "price": "Huidige Prijs",
   "chooseWallet": "Kies Jou Runebase Portemonnee",
   "desktop": "Desktop",
   "mobile": "Mobiel",
@@ -50,6 +50,7 @@
   "tradeExchanges": "Handel RUNES op Beurzen",
   "altmarketDescription": "Handel RUNES op Altmarkets",
   "txbitDescription": "Handel RUNES op Txbit",
+  "fcexchangeDescription": "Handel RUNES op Fanaticos Exchange",
   "stakesDescription": "Stake RUNES op een Pool",
   "FourStakeDescription": "Stake RUNES op 4Stake",
   "StakingWorldDescription": "Stake RUNES op StakingWorld",
@@ -103,8 +104,10 @@
   "roadmap19": "Nieuwe en Extra Explorer",
   "roadmap20": "Update Core Software 0.18.x (Swap)",
   "roadmap21": "Succesvolle Swap",
-  "roadmap22": "Aanvragen bij Pools",
-  "roadmap23": "Aanvragen bij Exchanges",
+  "roadmap22": "Listing Aanvragen bij Pools",
+  "roadmap23": "Listing Aanvragen bij Exchanges",
+  "roadmap24": "Update Core Software 0.18.x",
+  "roadmap25": "Paper revisie",
   "allRightsReserved": "Alle rechten voorbehouden",
 
   "telegram_official": "Telegram Officieel",
@@ -116,6 +119,7 @@
   "facebook": "Facebook",
   "type": "Type",
   "blockReward": "Blok Beloning",
-  "channels": "Kanalen"
+  "channels": "Kanalen",
+  "translator_en_pt": "Tolk Engels-Portugees"
 
 }

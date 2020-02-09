@@ -126,16 +126,22 @@ render() {
                 		<li>
                             <a href="https://txbit.io/Trade/RUNES/BTC">Txbit.io</a>
                         </li>
+                        <li>
+                            <a href="https://fanaticoscriptos.exchange/#/markets/BTC/RUNES">FanaticosCriptos.exchange</a>
+                        </li>
                 	</ul>
                 </Grid>
                 <Grid item lg={4} md={6} sm={12} xs={12} className='zindexThree'>
                 	<h2>{t('ranking')}</h2>
                 	<ul>
-                		<li>
-                            <a href="https://coinpaprika.com/coin/runes-runebase/">Coinpaprika</a>
+                        <li>
+                            <a href="https://coinmarketcap.com/currencies/runebase/">CoinMarketCap</a>
                         </li>
                 		<li>
-                            <a href="https://www.coingecko.com/en/coins/runebase/">Coingecko</a>
+                            <a href="https://coinpaprika.com/coin/runes-runebase/">CoinPaprika</a>
+                        </li>
+                		<li>
+                            <a href="https://www.coingecko.com/en/coins/runebase/">CoinGecko</a>
                         </li>
                         <li>
                             <a href="https://blockspot.io/coin/runebase">BlockSpot</a>

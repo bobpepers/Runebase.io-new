@@ -3,26 +3,26 @@ import * as actions from '../actions/auth';
 import { connect } from 'react-redux';
 import Platform from 'react-platform-js'
 import Button from '@material-ui/core/Button';
+import {RUNEBASE_VERSION} from '../config';
 
 class DownloadOS extends Component {
   constructor(props) {
     super(props);
-    this.version="0.18.1"
   }
 
   renderDownloadLink(Platform, CPU, UA) {
     switch(true) {
       case !!UA.match(/Linux x86_64/):
-        return `https://downloads.runebase.io/runebase-${this.version}-x86_64-linux-gnu.tar.gz`;
+        return `https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-x86_64-linux-gnu.tar.gz`;
         break;
       case !!Platform.match(/Windows/) && !!CPU.match(/64/):
-        return `https://downloads.runebase.io/runebase-${this.version}-win64-setup.exe`;
+        return `https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win64-setup.exe`;
         break;
       case !!Platform.match(/Windows/) && !!CPU.match(/32/):
-        return `https://downloads.runebase.io/runebase-${this.version}-win32-setup.exe`;
+        return `https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win32-setup.exe`;
         break;
       case !!Platform.match(/Osx/):
-        return `https://downloads.runebase.io/runebase-${this.version}-osx.dmg`;
+        return `https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-osx.dmg`;
         break;
       case !!Platform.match(/Android/):
         return `https://play.google.com/store/apps/details?id=org.runebase.wallet`;
@@ -40,19 +40,19 @@ class DownloadOS extends Component {
   renderDownloadName(Platform, CPU, UA) {
     switch(true) {
       case !!UA.match(/Linux x86_64/):
-        return `runebase-${this.version}-x86_64-linux-gnu.tar.gz`;
+        return `runebase-${RUNEBASE_VERSION}-x86_64-linux-gnu.tar.gz`;
         break;
       case !!Platform.match(/Windows/) && !!CPU.match(/64/):
-        return `runebase-${this.version}-win64-setup.exe`;
+        return `runebase-${RUNEBASE_VERSION}-win64-setup.exe`;
         break;
       case !!Platform.match(/Windows/) && !!CPU.match(/32/):
-        return `runebase-${this.version}-win32-setup.exe`;
+        return `runebase-${RUNEBASE_VERSION}-win32-setup.exe`;
         break;
       case !!Platform.match(/Mac OS/):
-        return `runebase-${this.version}-osx.dmg`;
+        return `runebase-${RUNEBASE_VERSION}-osx.dmg`;
         break;
       case !!Platform.match(/Android/):
-        return `Runebase Wallet`;
+        return `Runebase Android Wallet`;
         break;
       case !!Platform.match(/iPad/):
         return `Source`;

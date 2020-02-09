@@ -13,6 +13,7 @@ import ResetPasswordNew from './components/resetPassword/ResetPasswordNew';
 import ContactSuccess from './components/ContactSuccess';
 
 import Radio from './views/Radio';
+import Exchange from './views/Exchange';
 import Download from './views/Download';
 import Status from './views/Status';
 import Wallet from './views/Wallet';
@@ -26,6 +27,7 @@ export default (
         <Route exact path="/" component={Home} />
         <Route path="/download" component={Download} />
         <Route path="/radio" component={Radio} />
+        <Route path="/exchange" component={Exchange} />
         <Route path="/status" component={Status} />
         <Route path="/wallet" component={Wallet} />
         <Route path="/signin" component={requireNotAuth(Signin)} />

@@ -50,7 +50,7 @@ class Download extends Component{
                                 <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win64-setup.exe`}>
                                   64bit.exe
                                 </a>
-                                <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-0.17.5-win64.zip`}>
+                                <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win64.zip`}>
                                   64bit.zip
                                 </a>
                                 <a className="w-100 button1" href={`https://downloads.runebase.io/runebase-${RUNEBASE_VERSION}-win32-setup.exe`}>

@@ -47,7 +47,7 @@ app.use(cors());
 app.use(bodyParser.json({ type: '*/*' }));
 router(app);
 
-const port = process.env.PORT || 3333;
+const port = process.env.PORT || 3334;
 const server = http.createServer(app);
 
 db.once('open', () => {

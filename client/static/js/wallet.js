@@ -93648,7 +93648,7 @@ exports.default = {
   data: function data() {
     return {
       lan: loadConfig.lan,
-      lanSelect: [{ value: 'zh', text: '中文' }, { value: 'en', text: 'En' }, { value: 'ko', text: '한글' }],
+      lanSelect: [{ value: 'en', text: 'English' }, { value: 'pt', text: 'Portugues' }, { value: 'zh', text: '中文' }, { value: 'ko', text: '한글' }],
       network: loadConfig.network,
       networkSelect: [{ value: 'testnet', text: this.$t('common.testnet') }, { value: 'mainnet', text: this.$t('common.mainnet') }],
       mode: loadConfig.mode,
@@ -96049,6 +96049,10 @@ var _en = require('./en.js');
 
 var _en2 = _interopRequireDefault(_en);
 
+var _pt = require('./pt.js');
+
+var _pt2 = _interopRequireDefault(_pt);
+
 var _zh = require('./zh.js');
 
 var _zh2 = _interopRequireDefault(_zh);
@@ -96059,9 +96063,10 @@ var _ko2 = _interopRequireDefault(_ko);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var locales = ['en', 'zh', 'ko'];
+var locales = ['en', 'pt', 'zh', 'ko'];
 var messages = {
   en: _en2.default,
+  pt: _pt2.default,
   zh: _zh2.default,
   ko: _ko2.default
 };
@@ -96071,7 +96076,7 @@ exports.default = {
   messages: messages
 };
 
-},{"./en.js":430,"./ko.js":432,"./zh.js":433}],432:[function(require,module,exports){
+},{"./en.js":430,"./ko.js":432,"./pt.js":433,"./zh.js":434}],432:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -96267,6 +96272,194 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
   common: {
+    confirm: 'OK',
+    cancel: 'Cancelar',
+    search: 'Procurar',
+    copy: 'COPIAR',
+    next: 'SEGUINTE',
+    question_mark: '? ',
+    testnet: 'Testnet',
+    mainnet: 'Ignition-Main-net',
+    menu: {
+      create: 'Gerar Nova Carteira',
+      create_from_mnemonic: 'Criar Palavra Mnemônica',
+      restore_from_mnemonic: 'Restaurar Palavra Mnemônica',
+      restore_from_wif: 'Restaurar do WIF',
+      restore_from_mobile: 'Restaurar da Carteira Móvel',
+      restore_from_key_file: 'Restaurar da Chave do Arquivo',
+      restore_from_ledger: 'Restaurar da Ledger',
+      view: 'Ver Informação da Carteira',
+      dump_as_key_file: 'Baixar Arquivo Chave',
+      transactions: 'Ver Carteira Txs',
+      safe_send: 'Envio Seguro',
+      send: 'Enviar',
+      request_payment: 'Requisitar Pagamento',
+      create_contract: 'Criar Contrato',
+      send_to_contract: 'Enviar Para Contrato',
+      call_contract: 'Ligar Contrato',
+      settings: 'Configurações'
+    },
+    info: {
+      address: 'Endereço',
+      balance: 'Saldo',
+      unconfirmed_balance: 'Saldo Não Confirmado',
+      priv_key: 'Chave Privada'
+    },
+    notify: {
+      success: 'Successo',
+      fail: 'Falhou',
+      copy: 'Copiar',
+      password: 'Password',
+      is_required: 'é Obrigatório',
+      parse: 'Analisar',
+      file: 'Arquivo',
+      password_is_not_same_as_the_old_one: 'A Senha não é a mesma que a anterior',
+      mnemonics_are_not_same_as_the_words_should_remember: 'As palavras que você Precisa lembrar são diferentes',
+      mnemonics_can_not_restore: 'As Palavras não puderam restaurar a carteira, verifique novamente',
+      address_is_not_same_as_the_old_one: 'O Endereço não é o mesmo que o antigo',
+      from_address_is_not_same_as_the_wallet: 'O Endereço de Origem não é igual ao endereço da carteira',
+      restore_wif_fail: 'Não foi possível restaurar uma carteira deste WIF',
+      the_key_file_is_not_a_valid_format: 'A chave do arquivo não tem um formato válido',
+      restore_key_file_fail: 'A restauração da chave do arquivo falhou. Talvez a senha não esteja correta',
+      connect_ledger_fail: 'Falha ao conectar o Ledger. Reconecte sua Ledge e tente novamente',
+      token_contract_address_is_not_exists: 'O endereço do contrato do token não existe, confira e tente novamente'
+    },
+    mode: {
+      normal: 'Normal',
+      offline: 'Offline'
+    }
+  },
+  mnemonic: {
+    input_words: 'Por favor, entre com as palavras',
+    label: 'M'
+  },
+  password: {
+    enter: 'Por favor, coloque a senha',
+    password: 'senha'
+  },
+  file_reader: {
+    upload: 'Upload'
+  },
+  file_creator: {
+    download: 'Clique no botão para iniciar o download; se não começar, clique com o botão direito do mouse no botão e escolha "salvar o link como ..."'
+  },
+  ledger: {
+    comm_fail: 'Falha ao conectar o Ledger. Reconecte sua Ledge e tente novamente'
+  },
+  derive_path: {
+    title: 'Por favor, escolha um caminho',
+    default: 'Caminho Padrão',
+    add_custom: 'Personalizar caminho',
+    edit_custom: 'Editar Caminho',
+    del_custom: 'Confirmar a Exclusão do Caminho?',
+    path_name: 'Nome do Caminho',
+    path: 'Caminho',
+    prev_10: '10 Endereços Anteriores',
+    next_10: 'Próximos 10 Endereços'
+  },
+  safe_send: {
+    title: 'Envio Seguro',
+    from_address: 'Do Endereço',
+    to_address: 'Para o Endereço',
+    amount: 'Quantidade',
+    fee: 'Taxa',
+    info: 'você precisa de dois computadores (um online e outro offline) e um dispositivo de armazenamento removível para concluir um envio seguro. Se você seguir as dicas abaixo, não correrá o risco de vazar sua chave privada. No computador offline, entre em "Configurações" depois "Modo", escolha "offline" e, em seguida, restaure sua carteira.',
+    info1_online: 'Por favor, termine o formulário, salve o arquivo e copie para o computador offline. E a etapa 2 de conclusão será no computador offline',
+    info1_offline: 'Please finish step 1 on the online computer and copy the file from online computer and then go to step 2',
+    info2_online: 'Conclua esta etapa no computador off-line, copie o arquivo do computador off-line e vá para a etapa 3',
+    info2_offline: 'Faça o upload do arquivo do computador online, termine a assinatura, salve o arquivo e copie novamente no computador online',
+    info3_online: 'Faça o upload do arquivo no computador off-line e termine o envio com segurança',
+    info3_offline: 'Por favor, termine esta etapa no computador online'
+  },
+  send: {
+    send_tokens: 'Enviar tokens',
+    enter_address: 'Por favor, entre com o endereço novamente, (Checagem dupla)',
+    going_to_send: 'Você enviará',
+    to_address: 'para o endereço ',
+    token_address: 'Endereço do Contrato de Token'
+  },
+  request_payment: {
+    title: 'Requisitar pagamento'
+  },
+  create_contract: {
+    title: 'Criar Contrato',
+    confirm: 'Confirma a publicação deste contrato?',
+    compiler: 'Compilador'
+  },
+  send_to_contract: {
+    title: 'Enviar Para o Contrato',
+    confirm: 'Confirma?'
+  },
+  call_contract: {
+    title: 'Ligar Contrato',
+    result: 'Resultado'
+  },
+  create: {
+    title: 'Gerar Nova Carteira'
+  },
+  create_mnemonic: {
+    title: 'Gerar Nova Carteira',
+    remember: 'Lembre-se das Palavras Mnemônicas',
+    remembered: 'Lembrei! Vamos Conferir'
+  },
+  restore: {
+    title: 'Restaurar Carteira',
+    mnemonic_warning: 'As palavras não são mnemônicas do tipo bip39. Se o seu endereço foi gerado por este tipo, cancele esta caixa de diálogo e verifique suas palavras (sem espaço, sem letra maiúscula etc.). Se você checou suas palavras duas vezes, pode continuar.'
+  },
+  restore_wif: {
+    title: 'Restaurar carteira do WIF',
+    priv_key: 'WIF'
+  },
+  restore_mobile: {
+    title: 'Restaurar da Carteira Móvel'
+  },
+  restore_key_file: {
+    title: 'Restaurar da Chave do Arquivo',
+    password_title: 'digite sua senha para descriptografar a carteira'
+  },
+  restore_ledger: {
+    title: 'Restaurar da Ledger',
+    usage: 'Verifique se o seu firmware e aplicativo possuem a versão mais recente. Conecte seu Ledger, abra o Runebase APP e clique no botão "CONECTAR" abaixo.',
+    download: 'Sem o aplicativo da Runebase? Por favor, instale clicando aqui https://www.ledgerwallet.com/apps/manager',
+    connect: 'CONECTAR'
+  },
+  view: {
+    title: 'Ver informação da carteira'
+  },
+  view_tx: {
+    title: 'Ver Carteira Txs',
+    recent: '10 txs Recentes',
+    tx: 'Tx: ',
+    mined_at: 'Minerado em ',
+    total_in: 'TOTAL EM: ',
+    fee: 'TAXA: ',
+    total_out: 'TOTAL SAÍDA: '
+  },
+  dump_as_key_file: {
+    title: 'baixar arquivo chave',
+    password_title: 'Insira uma senha para criptografar sua carteira',
+    warning: 'Lembre-se desta senha, se você a perder, este arquivo de backup não poderá mais ser descriptografado'
+  },
+  config: {
+    title: 'Configurações',
+    lan: 'Linguagem',
+    network: 'Rede',
+    mode: 'Modo'
+  },
+  warning: {
+    title: 'Aguardando',
+    list: ['Não poderemos recuperar seu saldo se você visitar um site de phishing ou perder seu backup. Certifique-se de manter backups de suas chaves privadas / palavras iniciais e etc.', 'Não armazenamos suas chaves privadas e / ou palavras na carteira da web.', 'Você é totalmente responsável por seus saldos e sua própria segurança.', 'Certifique-se de manter um antivírus e o sistema operacional atualizados.', 'Por favor, mantenha suas chaves privadas ESCONDIDAS, não as entregue para ninguém.', 'Se você usar o Restaurar palavras Mnemônicas, as palavras-chave e a senha deverão estar exatamente corretas ou a carteira criará um novo endereço. Ao usar esta função, confirme se o endereço correto.']
+  }
+};
+
+},{}],434:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  common: {
     confirm: '确认',
     cancel: '取消',
     search: '搜索',
@@ -96447,7 +96640,7 @@ exports.default = {
   }
 };
 
-},{}],434:[function(require,module,exports){
+},{}],435:[function(require,module,exports){
 'use strict';
 
 var _vue = require('vue');
@@ -96476,7 +96669,7 @@ new _vue2.default({ el: "#app", render: function render(h) {
     return h(_wallet2.default);
   } }).$mount('#app');
 
-},{"./wallet.vue":435,"vue":392,"vue-clipboard2":388,"vuetify":394}],435:[function(require,module,exports){
+},{"./wallet.vue":436,"vue":392,"vue-clipboard2":388,"vuetify":394}],436:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -96712,4 +96905,4 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-65a92af0", __vue__options__)
   }
 })()}
-},{"./components/Notify.vue":400,"./components/Warning.vue":402,"./controllers/CallContract.vue":403,"./controllers/Config.vue":404,"./controllers/Create.vue":405,"./controllers/CreateContract.vue":406,"./controllers/CreateMnemonic.vue":407,"./controllers/DumpKeyFile.vue":408,"./controllers/RequestPayment.vue":409,"./controllers/Restore.vue":410,"./controllers/RestoreKeyFile.vue":411,"./controllers/RestoreLedger.vue":412,"./controllers/RestoreMobile.vue":413,"./controllers/RestoreWif.vue":414,"./controllers/SafeSend.vue":415,"./controllers/Send.vue":416,"./controllers/SendToContract.vue":417,"./controllers/View.vue":418,"./controllers/ViewTx.vue":419,"./libs/config.js":420,"./libs/i18n.js":421,"./libs/web-wallet.js":429,"./locales/en.js":430,"babel-runtime/helpers/defineProperty":197,"localstorage-logger":311,"vue":392,"vue-hot-reload-api":389}]},{},[434]);
+},{"./components/Notify.vue":400,"./components/Warning.vue":402,"./controllers/CallContract.vue":403,"./controllers/Config.vue":404,"./controllers/Create.vue":405,"./controllers/CreateContract.vue":406,"./controllers/CreateMnemonic.vue":407,"./controllers/DumpKeyFile.vue":408,"./controllers/RequestPayment.vue":409,"./controllers/Restore.vue":410,"./controllers/RestoreKeyFile.vue":411,"./controllers/RestoreLedger.vue":412,"./controllers/RestoreMobile.vue":413,"./controllers/RestoreWif.vue":414,"./controllers/SafeSend.vue":415,"./controllers/Send.vue":416,"./controllers/SendToContract.vue":417,"./controllers/View.vue":418,"./controllers/ViewTx.vue":419,"./libs/config.js":420,"./libs/i18n.js":421,"./libs/web-wallet.js":429,"./locales/en.js":430,"babel-runtime/helpers/defineProperty":197,"localstorage-logger":311,"vue":392,"vue-hot-reload-api":389}]},{},[435]);

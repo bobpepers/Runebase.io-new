@@ -108,9 +108,9 @@ class Header extends Component {
                       {t('exchanges')}
                   </HashLink>
 
-                  {/* <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'pools' ? "active" : "NotActive"}`} smooth to="/#pools"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
+                  <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'pools' ? "active" : "NotActive"}`} smooth to="/#pools"  onClick={ this.toggleMenu } scroll={el => { const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = -50; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('pools')}
-                  </HashLink> */}
+                  </HashLink>
 
                   <HashLink role='button' className={`dropdown-item ${this.state.currentHash == 'community' ? "active" : "NotActive"}`} smooth to="/#community"  onClick={ this.toggleMenu } scroll={el => { window.location.hash = '#community'; const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset; const yOffset = 40; window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); }}>
                       {t('community')}
@@ -129,7 +129,7 @@ class Header extends Component {
                   </HashLink>
                 </NavDropdown>
                 <NavDropdown title={t('services')} id="basic-nav-dropdown">
-                  <NavDropdown.Item disabled onClick={ this.toggleMenu } href="https://explorer.runebase.io">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer.runebase.io">
                     {t('explorer')}
                   </NavDropdown.Item>
                   <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer2.runebase.io">
@@ -168,6 +168,9 @@ class Header extends Component {
                 </NavDropdown>
 
                 <NavDropdown title={t('ranking')} id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://coinmarketcap.com/currencies/runebase/">
+                    CoinMarketCap
+                  </NavDropdown.Item>
                   <NavDropdown.Item onClick={ this.toggleMenu } href="https://www.coingecko.com/en/coins/runebase">
                     CoinGecko
                   </NavDropdown.Item>

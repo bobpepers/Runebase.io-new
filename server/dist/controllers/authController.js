@@ -21,18 +21,24 @@ var _email = require('../helpers/email');
 
 var _token = require('../helpers/token');
 
+var _recaptcha = require('../helpers/recaptcha');
+
+var recaptchaHelpers = _interopRequireWildcard(_recaptcha);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Sign in
  */
 var signin = exports.signin = function signin(req, res) {
-  var _req$user = req.user;
-  var firstname = _req$user.firstname;
-  var lastname = _req$user.lastname;
-  var email = _req$user.email;
+  var _req$user = req.user,
+      firstname = _req$user.firstname,
+      lastname = _req$user.lastname,
+      email = _req$user.email;
 
-
+  console.log(req.user);
   res.json({ token: (0, _token.tokenForUser)(req.user), firstname: firstname, lastname: lastname, email: email });
 };
 
@@ -40,14 +46,22 @@ var signin = exports.signin = function signin(req, res) {
  * Sign up
  */
 var signup = exports.signup = function signup(req, res, next) {
-  var _req$body = req.body;
-  var firstname = _req$body.firstname;
-  var lastname = _req$body.lastname;
-  var email = _req$body.email;
-  var password = _req$body.password;
+  console.log(req.body);
+  console.log(req.body.props);
+  console.log('made it to signup function!!!!!!!!!!!!!');
+  var _req$body$props = req.body.props,
+      firstname = _req$body$props.firstname,
+      lastname = _req$body$props.lastname,
+      email = _req$body$props.email,
+      password = _req$body$props.password;
 
+  console.log(firstname);
+  console.log(lastname);
+  console.log(email);
+  console.log(password);
 
   if (!firstname || !lastname || !email || !password) {
+    console.log('something is missing');
     return res.status(422).send({ error: "all fields are required" });
   }
 
@@ -57,6 +71,7 @@ var signup = exports.signup = function signup(req, res, next) {
     }
 
     if (existingUser) {
+      console.log('email already in use');
       return res.status(422).send({ error: "Email is in use" });
     }
 
@@ -94,8 +109,8 @@ var resendVerification = exports.resendVerification = function resendVerificatio
         return next(err);
       }
 
-      var firstname = user.firstname;
-      var email = user.email;
+      var firstname = user.firstname,
+          email = user.email;
 
 
       (0, _email.sendVerificationEmail)(email, firstname, user.auth.token);
@@ -109,9 +124,9 @@ var resendVerification = exports.resendVerification = function resendVerificatio
  * Verify email
  */
 var verifiEmail = exports.verifiEmail = function verifiEmail(req, res, next) {
-  var _req$body2 = req.body;
-  var email = _req$body2.email;
-  var token = _req$body2.token;
+  var _req$body = req.body,
+      email = _req$body.email,
+      token = _req$body.token;
 
 
   _user2.default.findOne({ email: email }, function (err, user) {
@@ -140,9 +155,9 @@ var verifiEmail = exports.verifiEmail = function verifiEmail(req, res, next) {
         return next(err);
       }
 
-      var email = user.email;
-      var firstname = user.firstname;
-      var lastname = user.lastname;
+      var email = user.email,
+          firstname = user.firstname,
+          lastname = user.lastname;
 
 
       res.json({ token: (0, _token.tokenForUser)(user), email: email, firstname: firstname, lastname: lastname });

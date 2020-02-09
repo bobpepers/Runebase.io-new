@@ -49,6 +49,7 @@
   "communityDescription": "Runebase has a positive and encouraging community with tangible impact on individual fulfillment. The community share similar values that cooperate to help accomplish several goals.",
   "tradeExchanges": "Trade RUNES on Exchanges",
   "altmarketDescription": "Trade RUNES on Altmarkets",
+  "fcexchangeDescription": "Trade RUNES on Fanaticos Exchange",
   "txbitDescription": "Trade RUNES on Txbit",
   "stakesDescription": "Stake RUNES on a Pool",
   "FourStakeDescription": "Stake RUNES on 4Stake",
@@ -66,7 +67,7 @@
   "graphicDesign": "Graphic Design",
   "socialMediaStrategist": "Social Media Strategist",
   "workWithUs": "Work With Us",
-  "workWithUsDescription": "Provide details about your product or agency. Write a few lines about and contact us. We will respond back to you as soon as possible.",
+  "workWithUsDescription": "Provide details about your product or agency. Write a few lines about it and contact us. We will respond back to you as soon as possible.",
   "sendMessage": "Send Message",
   "yourName": "Your Name",
   "yourEmail": "Your Email",
@@ -101,10 +102,12 @@
   "roadmap17": "RRC223 Decentralized Token Exchange Beta (desktop)",
   "roadmap18": "IOS Wallet",
   "roadmap19": "New and additional Explorer",
-  "roadmap20": "Update Core Software 0.18.x (Swap)",
+  "roadmap20": "Update Core Software 0.18.1 (Swap)",
   "roadmap21": "Successful Swap",
   "roadmap22": "Apply for Pools",
   "roadmap23": "Apply for Exchanges",
+  "roadmap24": "Update Core Software 0.18.2",
+  "roadmap25": "Paper revision",
   "allRightsReserved": "All Rights Reserved",
 
   "telegram_official": "Telegram Official",
@@ -116,6 +119,7 @@
   "facebook": "Facebook",
   "type": "Type",
   "blockReward": "Block Reward",
-  "channels": "Channels"
+  "channels": "Channels",
+  "translator_en_pt": "Translator English-Portuguese"
 
 }
