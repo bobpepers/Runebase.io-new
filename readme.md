@@ -1,7 +1,6 @@
 #install mongod 4.2
 ...
 
-
 #create replicate set
 console1:
 
