@@ -95,7 +95,7 @@ render() {
                 	<h2>{t('channels')}</h2>
                 	<ul>
                 		<li>
-                            <a href="https://discord.gg/hYhZB9m">Discord</a>
+                            <a href="https://discord.gg/uTUXr43">Discord</a>
                 		</li>
                 		<li>
                             <a href="https://www.medium.com/@runebase">Medium</a>
@@ -107,13 +107,16 @@ render() {
                             <a href="https://twitter.com/Runebase_Tweet">Twitter</a>
                         </li>
                         <li>
-                            <a href="https://t.me/joinchat/KBGO3QwuMu-QTJKgPQjHmg">{t('telegram_official')}</a>
+                            <a href="https://t.me/runebase_runes">{t('telegram_official')}</a>
                         </li>
                         <li>
                             <a href="https://t.me/Runesbase">{t('telegram_international')}</a>
                         </li>
                         <li>
-                            <a href="https://t.me/joinchat/KBGO3VjQ8BoqE_nABrU5vg">{t('telegram_brazil')}</a>
+                            <a href="https://t.me/Runebaseoficial">{t('telegram_brazil')}</a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/runesafrica">{t('telegram_africa')}</a>
                         </li>
                 	</ul>
                 </Grid>

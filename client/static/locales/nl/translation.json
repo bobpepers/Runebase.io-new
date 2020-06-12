@@ -113,6 +113,7 @@
   "telegram_official": "Telegram Officieel",
   "telegram_international":"Telegram Internationaal",
   "telegram_brazil": "Telegram Brazilië",
+  "telegram_africa": "Telegram Afrika",
   "discord": "Discord",
   "twitter": "Twitter",
   "medium": "Medium",
@@ -120,6 +121,7 @@
   "type": "Type",
   "blockReward": "Blok Beloning",
   "channels": "Kanalen",
-  "translator_en_pt": "Tolk Engels-Portugees"
+  "translator_en_pt": "Tolk Engels-Portugees",
+  "prepahDescription": "Public relations/brand manager & Social media marketing manager"
 
 }

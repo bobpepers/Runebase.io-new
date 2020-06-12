@@ -7,7 +7,7 @@ import Jonas from '../assets/images/Jonas.png';
 import Roberto from '../assets/images/Roberto.png';
 import Patricia from '../assets/images/Patricia.png';
 import Andrezin from '../assets/images/Andrezin.png';
-import Lucas from '../assets/images/Lucas.png';
+import Joshua from '../assets/images/Joshua.png';
 import Marcio from '../assets/images/Marcio.png';
 
 import theme from '../theme';
@@ -112,36 +112,6 @@ class Team extends Component{
                 <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <div className="w-100 d-flex">
                     <span className="mx-auto">
-                      <Image roundedCircle className="mx-auto imageBorderTeam" src={Patricia} height="128px" width="128px" alt="" />
-                    </span>
-                  </div>
-                  <div className="w-100 d-flex">
-                    <span className="mx-auto titleStyled textBorder">
-                        Patricia Damiana
-                      </span>
-                    </div>
-                    <div className="w-100 d-flex">
-                      <span className="mx-auto textStyled textBorder">
-                        {t('communityManagement')}
-                      </span>
-                    </div>
-                    <div className="d-flex">
-                      <div className="d-flex mx-auto">
-                        <div className="socialIcon m-2">
-                          <a className="community-text-link link-community" href="https://www.linkedin.com/in/patricia-damiana-41824618a" style={{color: 'rgb(255, 255, 255)'}}>
-                            <i className="fab fa-linkedin fa-lg"></i>
-                          </a>
-                        </div>
-                        <div className="socialIcon m-2">
-                          <a className="community-text-link link-community" href="https://t.me/YunaLuz" style={{color: 'rgb(255, 255, 255)'}}>
-                            <i className="fab fa-telegram fa-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                </Grid>
-                <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
-                  <div className="w-100 d-flex">
-                    <span className="mx-auto">
                       <Image roundedCircle className="mx-auto imageBorderTeam" src={Andrezin} height="128px" width="128px" alt="" />
                     </span>
                   </div>
@@ -167,29 +137,28 @@ class Team extends Component{
                 <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <div className="w-100 d-flex">
                     <span className="mx-auto">
-                      <Image roundedCircle className="mx-auto imageBorderTeam" src={Lucas} height="128px" width="128px" alt="" />
+                      <Image roundedCircle className="mx-auto imageBorderTeam" src={Joshua} height="128px" width="128px" alt="" />
                     </span>
                   </div>
                   <div className="w-100 d-flex">
                     <span className="mx-auto titleStyled textBorder">
-                        Lucas Stevan Rodrigues Oliveira
+                        Joshua Peprah
                       </span>
                     </div>
                     <div className="w-100 d-flex">
                       <span className="mx-auto textStyled textBorder">
-                        {t('consultant')} & {t('graphicDesign')}
+                        {t('prepahDescription')}
                       </span>
                     </div>
                     <div className="d-flex">
                       <div className="d-flex mx-auto">
                         <div className="socialIcon m-2">
-                          <a className="community-text-link link-community" href="https://www.linkedin.com/in/lucas-stevan-15809a18b" style={{color: 'rgb(255, 255, 255)'}}>
-                            <i className="fab fa-linkedin fa-lg"></i>
-                          </a>
+                          <a className="community-text-link link-community" href="https://t.me/jato77" style={{color: 'rgb(255, 255, 255)'}}>
+                            <i className="fab fa-telegram fa-lg"></i></a>
                         </div>
                         <div className="socialIcon m-2">
-                          <a className="community-text-link link-community" href="https://t.me/CRYPTOSENAOFC" style={{color: 'rgb(255, 255, 255)'}}>
-                            <i className="fab fa-telegram fa-lg"></i></a>
+                          <a className="community-text-link link-community" href="https://www.facebook.com/dhanyataj3" style={{color: 'rgb(255, 255, 255)'}}>
+                            <i className="fab fa-facebook fa-lg"></i></a>
                         </div>
                       </div>
                     </div>

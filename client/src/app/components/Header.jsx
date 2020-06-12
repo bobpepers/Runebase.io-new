@@ -144,14 +144,17 @@ class Header extends Component {
                 </NavDropdown>
 
                 <NavDropdown title={t('community')} id="basic-nav-dropdown">
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/joinchat/KBGO3QwuMu-QTJKgPQjHmg">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/runebase_runes">
                     {t('telegram_official')}
                   </NavDropdown.Item>
                   <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/Runesbase">
                     {t('telegram_international')}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/joinchat/KBGO3VjQ8BoqE_nABrU5vg">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/Runebaseoficial">
                     {t('telegram_brazil')}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://t.me/runesafrica">
+                    {t('telegram_africa')}
                   </NavDropdown.Item>
                   <NavDropdown.Item onClick={ this.toggleMenu } href="https://discord.gg/uTUXr43">
                     {t('discord')}
