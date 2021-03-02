@@ -78,6 +78,9 @@ render() {
                 		<li>
                 			<a href="https://github.com/Runebase/runebase/wiki/rrc223">{t('rrc223Token')}</a>
                 		</li>
+                        <li>
+                            <a href="/guides">General Guides</a>
+                        </li>
                 	</ul>
                 </Grid>
                 <Grid item lg={4} md={6} sm={12} xs={12} className='zindexThree'>

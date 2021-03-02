@@ -1,4 +1,5 @@
 {
+  "guides": "Guides",
   "en": "English",
   "pt": "Portuguese",
   "nl": "Dutch",
@@ -49,7 +50,7 @@
   "communityDescription": "Runebase has a positive and encouraging community with tangible impact on individual fulfillment. The community share similar values that cooperate to help accomplish several goals.",
   "tradeExchanges": "Trade RUNES on Exchanges",
   "altmarketDescription": "Trade RUNES on Altmarkets",
-  "fcexchangeDescription": "Trade RUNES on Fanaticos Exchange",
+  "bololexDescription": "Trade RUNES on Bololex",
   "txbitDescription": "Trade RUNES on Txbit",
   "stakesDescription": "Stake RUNES on a Pool",
   "FourStakeDescription": "Stake RUNES on 4Stake",
@@ -64,7 +65,7 @@
   "communityManagement": "Community Management",
   "marketing": "Marketing",
   "consultant": "Consultant",
-  "graphicDesign": "Graphic Design",
+  "graphicDesign": "Graphical Design",
   "socialMediaStrategist": "Social Media Strategist",
   "workWithUs": "Work With Us",
   "workWithUsDescription": "Provide details about your product or agency. Write a few lines about it and contact us. We will respond back to you as soon as possible.",

@@ -138,8 +138,11 @@ class Header extends Component {
                   <NavDropdown.Item onClick={ this.toggleMenu } href="https://explorer3.runebase.io">
                     {t('explorer')} 3
                   </NavDropdown.Item>
-                  <NavDropdown.Item disabled onClick={ this.toggleMenu } href="https://faucet.runebase.io">
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://faucet.runebase.io">
                     {t('faucet')}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={ this.toggleMenu } href="https://www.runesx.com">
+                    RunesX
                   </NavDropdown.Item>
                 </NavDropdown>
 

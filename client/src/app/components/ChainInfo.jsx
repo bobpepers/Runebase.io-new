@@ -98,7 +98,7 @@ class ChainInfo extends Component {
     }
     return (
       <section className='chainInfoBG'>
-        <div className="chainInfo">
+        <div className="chainInfo">          
           <Grid container className="d-flex justify-content-around justify-content-md-center Grid itemst-unstyled categories ng-scope" ng-controller="myController">
             <Grid item className="text-center col-md-4 borderGray">
               <p className='noBottomMargin'>{t('blockTime')}</p>
@@ -123,6 +123,19 @@ class ChainInfo extends Component {
             <Grid item className="text-center col-md-4 borderGray">
               <p className='noBottomMargin'>{t('price')}</p>
               <p className={`element noBottomMargin ${this.state.highlightPrice ? "highlight" : ""}`}>${this.state.price}</p>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid 
+            container 
+            item
+            xs={12}
+            justify="center"
+            style={{
+              backgroundColor: "#000",
+            }}
+            >
+              <div id="runesx-11"></div>
             </Grid>
           </Grid>
         </div>

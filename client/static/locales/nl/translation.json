@@ -1,4 +1,5 @@
 {
+  "guides": "Guides",
   "en": "Engels",
   "pt": "Portugees",
   "nl": "Nederlands",
@@ -50,7 +51,7 @@
   "tradeExchanges": "Handel RUNES op Beurzen",
   "altmarketDescription": "Handel RUNES op Altmarkets",
   "txbitDescription": "Handel RUNES op Txbit",
-  "fcexchangeDescription": "Handel RUNES op Fanaticos Exchange",
+  "bololexDescription": "Handel RUNES op Bololex",
   "stakesDescription": "Stake RUNES op een Pool",
   "FourStakeDescription": "Stake RUNES op 4Stake",
   "StakingWorldDescription": "Stake RUNES op StakingWorld",

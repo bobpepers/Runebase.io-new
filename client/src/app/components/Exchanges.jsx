@@ -4,7 +4,8 @@ import { withTranslation } from 'react-i18next';
 import ScrollableSection from 'react-update-url-on-scroll';
 import Altmarkets from '../assets/images/Altmarkets.png';
 import Txbit from '../assets/images/Txbit.png';
-import Fcexchange from '../assets/images/Fcexchange.png';
+import Bololex from '../assets/images/Bololex.png';
+import LocalRunes from '../assets/images/LocalRunes.png';
 
 import theme from '../theme';
 
@@ -27,7 +28,7 @@ class Exchanges extends Component{
 
     render(){
     	const { t } = this.props;
-    	let AltmarketsStyle, TxbitStyle, FcexchangeStyle;
+    	let AltmarketsStyle, TxbitStyle, BololexStyle, LocalRunesStyle;
 		if (this.state.hover) {
 			if (this.state.hoverCat == "Altmarkets") {
 		  		AltmarketsStyle = theme.hover.in;
@@ -35,13 +36,17 @@ class Exchanges extends Component{
 		  	if (this.state.hoverCat == "Txbit") {
 		  		TxbitStyle = theme.hover.in;
 		  	}
-		  	if (this.state.hoverCat == "Fcexchange") {
-		  		FcexchangeStyle = theme.hover.in;
-		  	}
+		  	if (this.state.hoverCat == "Bololex") {
+		  		BololexStyle = theme.hover.in;
+			  }
+			  if (this.state.hoverCat == "LocalRunes") {
+				LocalRunesStyle = theme.hover.in;
+			}
 		} else {
 		  AltmarketsStyle = theme.hover.out;
 		  TxbitStyle = theme.hover.out;
-		  FcexchangeStyle = theme.hover.out;
+		  BololexStyle = theme.hover.out;
+		  LocalRunesStyle = theme.hover.out;
 		}
         return (
         	<ScrollableSection hash={'exchanges'}>
@@ -87,18 +92,35 @@ class Exchanges extends Component{
 		        		</Grid>
 		        		<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
 		        			<div className="w-100 d-flex">
-		        				<a style={FcexchangeStyle} onMouseLeave={() => this.updateHoverState(false, "Fcexchange")} onMouseEnter={() => this.updateHoverState(true, "Fcexchange")} className="mx-auto" href="https://fanaticoscriptos.exchange/#/markets/BTC/RUNES">
-		        					<img className="mx-auto" src={Fcexchange} height="128px" width="128px" alt="" />
+		        				<a style={BololexStyle} onMouseLeave={() => this.updateHoverState(false, "Bololex")} onMouseEnter={() => this.updateHoverState(true, "Bololex")} className="mx-auto" href="https://bololex.com/trading/?symbol=RUNES-BTC">
+		        					<img className="mx-auto" src={Bololex} height="128px" width="128px" alt="" />
 		        				</a>
 		        			</div>
 		        			<div className="w-100 d-flex">
-			        			<a style={FcexchangeStyle} onMouseLeave={() => this.updateHoverState(false, "Fcexchange")} onMouseEnter={() => this.updateHoverState(true, "Fcexchange")}  className="mx-auto titleStyled textBorder" href="https://fanaticoscriptos.exchange/#/markets/BTC/RUNES">
-			            			Fanaticos Exchange
+			        			<a style={BololexStyle} onMouseLeave={() => this.updateHoverState(false, "Bololex")} onMouseEnter={() => this.updateHoverState(true, "Bololex")}  className="mx-auto titleStyled textBorder" href="https://bololex.com/trading/?symbol=RUNES-BTC">
+			            			Bololex
 			            		</a>
 			            	</div>
 			            	<div className="w-100 d-flex">
-			            		<a style={FcexchangeStyle} onMouseLeave={() => this.updateHoverState(false, "Fcexchange")} onMouseEnter={() => this.updateHoverState(true, "Fcexchange")}  className="mx-auto textStyled textBorder" href="https://fanaticoscriptos.exchange/#/markets/BTC/RUNES">
-			            			{t('fcexchangeDescription')}
+			            		<a style={BololexStyle} onMouseLeave={() => this.updateHoverState(false, "Bololex")} onMouseEnter={() => this.updateHoverState(true, "Bololex")}  className="mx-auto textStyled textBorder" href="https://bololex.com/trading/?symbol=RUNES-BTC">
+			            			{t('bololexDescription')}
+			            		</a>
+		            		</div>
+		        		</Grid>
+						<Grid item lg={6} md={6} sm={12} className={`mt-${theme.spacing.marginTopItem}`}>
+		        			<div className="w-100 d-flex">
+		        				<a style={LocalRunesStyle} onMouseLeave={() => this.updateHoverState(false, "LocalRunes")} onMouseEnter={() => this.updateHoverState(true, "LocalRunes")} className="mx-auto" href="https://www.localrunes.com/">
+		        					<img className="mx-auto" src={LocalRunes} height="128px" width="128px" alt="" />
+		        				</a>
+		        			</div>
+		        			<div className="w-100 d-flex">
+			        			<a style={LocalRunesStyle} onMouseLeave={() => this.updateHoverState(false, "LocalRunes")} onMouseEnter={() => this.updateHoverState(true, "LocalRunes")}  className="mx-auto titleStyled textBorder" href="https://www.localrunes.com/">
+			            			LocalRunes
+			            		</a>
+			            	</div>
+			            	<div className="w-100 d-flex">
+			            		<a style={LocalRunesStyle} onMouseLeave={() => this.updateHoverState(false, "LocalRunes")} onMouseEnter={() => this.updateHoverState(true, "LocalRunes")}  className="mx-auto textStyled textBorder" href="https://www.localrunes.com/">
+			            			{t('localRunesDescription')}
 			            		</a>
 		            		</div>
 		        		</Grid>

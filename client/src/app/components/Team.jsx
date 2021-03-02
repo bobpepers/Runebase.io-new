@@ -9,6 +9,7 @@ import Patricia from '../assets/images/Patricia.png';
 import Andrezin from '../assets/images/Andrezin.png';
 import Joshua from '../assets/images/Joshua.png';
 import Marcio from '../assets/images/Marcio.png';
+import JonasD from '../assets/images/JonasD.png'
 
 import theme from '../theme';
 
@@ -109,6 +110,31 @@ class Team extends Component{
                       </div>
                     </div>
             		</Grid>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
+                  <div className="w-100 d-flex">
+                    <span className="mx-auto">
+                      <Image roundedCircle className="mx-auto imageBorderTeam" src={JonasD} height="128px" width="128px" alt="" />
+                    </span>
+                  </div>
+                  <div className="w-100 d-flex">
+                    <span className="mx-auto titleStyled textBorder">
+                        Jonas Dahlberg
+                      </span>
+                    </div>
+                    <div className="w-100 d-flex">
+                      <span className="mx-auto textStyled textBorder">
+                        {t('graphicDesign')}
+                      </span>
+                    </div>
+                    <div className="d-flex">
+                      <div className="d-flex mx-auto">
+                        <div className="socialIcon m-2">
+                          <a className="community-text-link link-community" href="https://t.me/eYm1990" style={{color: 'rgb(255, 255, 255)'}}>
+                            <i className="fab fa-telegram fa-lg"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                </Grid>
                 <Grid item lg={4} md={6} sm={12} xs={12} className={`mt-${theme.spacing.marginTopItem}`}>
                   <div className="w-100 d-flex">
                     <span className="mx-auto">

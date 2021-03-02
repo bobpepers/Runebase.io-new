@@ -13,6 +13,7 @@ import Pools from '../components/Pools';
 import Download from '../components/Download';
 import ChainInfo from '../components/ChainInfo';
 import Roadmap from '../components/Roadmap';
+import Services from '../components/Services';
 
 import './Home.scss';
 
@@ -28,9 +29,10 @@ class Home extends Component {
     return (
       <div>
           <ParticlesRunebase />
-          <ChainInfo />
+          <ChainInfo />          
           <Download />
           <Product />
+          <Services />
           <Exchanges />
           <Pools />
           <Community />

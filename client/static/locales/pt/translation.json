@@ -1,4 +1,5 @@
 {
+  "guides": "Guides",
   "en": "Inglês",
   "pt": "Português",
   "nl": "Holandês",
@@ -48,7 +49,7 @@
   "tradeExchanges": "Comercialização de RUNES nas Exchanges",
   "altmarketDescription": "Comercialização de RUNES na Altmarkets",
   "txbitDescription": "Comercialização de RUNES na Txbit",
-  "fcexchangeDescription": "Comercialização de RUNES na Fanaticos Exchange",
+  "bololexDescription": "Comercialização de RUNES na Bololex",
   "stakesDescription": "Stake de RUNES em uma Pool",
   "FourStakeDescription": "Stake RUNES na 4Stake",
   "StakingWorldDescription": "Stake de RUNES na StakingWorld",

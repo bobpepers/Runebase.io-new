@@ -18,6 +18,7 @@ import Download from './views/Download';
 import Status from './views/Status';
 import Wallet from './views/Wallet';
 import Home from './views/Home';
+import Guides from './views/Guides';
 
 import requireAuth from './components/hoc/RequireAuth';
 import requireNotAuth from './components/hoc/RequireNotAuth';
@@ -28,6 +29,7 @@ export default (
         <Route path="/download" component={Download} />
         <Route path="/radio" component={Radio} />
         <Route path="/exchange" component={Exchange} />
+        <Route path="/guides" component={Guides} />
         <Route path="/status" component={Status} />
         <Route path="/wallet" component={Wallet} />
         <Route path="/signin" component={requireNotAuth(Signin)} />
