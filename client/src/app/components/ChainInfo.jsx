@@ -34,9 +34,9 @@ class ChainInfo extends Component {
     //console.log(this.props);
     //console.log(this.props.chaininfo);
     this.setState(() => ({
-        price: this.props.chaininfo[0].price,
-        blockNumber: this.props.chaininfo[0].blockNumber,
-        moneySupply: this.props.chaininfo[0].moneySupply,
+        price: this.props.chaininfo[0] ? this.props.chaininfo[0].price : "undefined",
+        blockNumber: this.props.chaininfo[0] ? this.props.chaininfo[0].blockNumber : "undefined",
+        moneySupply: this.props.chaininfo[0] ? this.props.chaininfo[0].moneySupply : "undefined",
     }));
     //console.log(this.props);
     this.pusher = new Pusher(PUSHER_APP_KEY, {
@@ -98,7 +98,7 @@ class ChainInfo extends Component {
     }
     return (
       <section className='chainInfoBG'>
-        <div className="chainInfo">          
+        <div className="chainInfo">
           <Grid container className="d-flex justify-content-around justify-content-md-center Grid itemst-unstyled categories ng-scope" ng-controller="myController">
             <Grid item className="text-center col-md-4 borderGray">
               <p className='noBottomMargin'>{t('blockTime')}</p>
@@ -126,8 +126,8 @@ class ChainInfo extends Component {
             </Grid>
           </Grid>
           <Grid container>
-            <Grid 
-            container 
+            <Grid
+            container
             item
             xs={12}
             justify="center"
